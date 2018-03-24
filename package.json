@@ -1,0 +1,63 @@
+{
+  "name": "rebul",
+  "version": "0.0.0",
+  "description": "React components for the Bulma CSS Framework",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run clean && rollup -c rollup.config.js",
+    "clean": "node clean.js",
+    "develop": "rollup -c rollup.config.js -w",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "test": "npm run lint",
+    "prepublish": "npm run lint && npm run build",
+    "postpublish": "npm run clean",
+    "catalog-start": "catalog start",
+    "catalog-build": "catalog build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jxom/react-bulma.git"
+  },
+  "author": "Jake Moxey",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jxom/react-bulma/issues"
+  },
+  "homepage": "https://github.com/jxom/react-bulma#readme",
+  "devDependencies": {
+    "@medipass/eslint-config-react-medipass": "8.3.4",
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.0",
+    "babel-eslint": "8.2.2",
+    "babel-plugin-external-helpers": "6.22.0",
+    "babel-plugin-transform-class-properties": "6.24.1",
+    "babel-plugin-transform-object-rest-spread": "6.26.0",
+    "babel-preset-env": "1.6.1",
+    "babel-preset-react": "6.24.1",
+    "catalog": "^3.0.0-rc.4",
+    "eslint": "4.19.1",
+    "eslint-config-react-app": "2.1.0",
+    "eslint-plugin-import": "2.9.0",
+    "eslint-plugin-jsx-a11y": "^5.0.0",
+    "eslint-plugin-prettier": "2.6.0",
+    "eslint-plugin-react": "7.7.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "recursive-readdir-sync": "1.0.6",
+    "rollup-plugin-babel": "3.0.3"
+  },
+  "dependencies": {
+    "classnames": "2.2.5",
+    "prop-types": "15.6.1"
+  },
+  "peerDependencies": {
+    "react": ">=16.0.0",
+    "react-dom": ">=16.0.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@medipass/react-medipass"
+    ]
+  }
+}
