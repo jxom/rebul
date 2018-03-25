@@ -1,30 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
-const getClassNames = ({ color, isInverted, isOutlined, isRounded, size } = {}) => {
-  let classNames = [];
-  if (color) {
-    classNames = [...classNames, `is-${color}`];
-  }
-  if (size) {
-    classNames = [...classNames, `is-${size}`];
-  }
-  if (isOutlined) {
-    classNames = [...classNames, 'is-outlined'];
-  }
-  if (isInverted) {
-    classNames = [...classNames, 'is-inverted'];
-  }
-  if (isRounded) {
-    classNames = [...classNames, 'is-rounded'];
-  }
-  return classNames.join(' ');
-};
-
-const Button = ({ children, color, element, isInverted, isOutlined, isRounded, size, ...props }) => {
+const Button = ({
+  children,
+  color,
+  element,
+  isInverted,
+  isLoading,
+  isOutlined,
+  isRounded,
+  isStatic,
+  size,
+  state,
+  ...props
+}) => {
   const Element = element || 'button';
   return (
-    <Element className={`button ${getClassNames({ color, isInverted, isOutlined, isRounded, size })}`} {...props}>
+    <Element
+      className={`button ${classNames(
+        color ? `is-${color}` : '',
+        size ? `is-${size}` : '',
+        isInverted ? 'is-inverted' : '',
+        isLoading ? 'is-loading' : '',
+        isOutlined ? 'is-outlined' : '',
+        isRounded ? 'is-rounded' : '',
+        isStatic ? 'is-static' : '',
+        state ? `is-${state}` : ''
+      )}`}
+      {...props}
+    >
       {children}
     </Element>
   );
@@ -47,9 +52,12 @@ Button.propTypes = {
   ]),
   element: PropTypes.string,
   isInverted: PropTypes.boolean,
+  isLoading: PropTypes.boolean,
   isOutlined: PropTypes.boolean,
   isRounded: PropTypes.boolean,
-  size: PropTypes.oneOf(['small', 'medium', 'large'])
+  isStatic: PropTypes.boolean,
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  state: PropTypes.oneOf(['hovered', 'active', 'focused'])
 };
 
 Button.defaultProps = {
@@ -57,9 +65,12 @@ Button.defaultProps = {
   color: null,
   element: null,
   isInverted: false,
+  isLoading: false,
   isOutlined: false,
   isRounded: false,
-  size: null
+  isStatic: false,
+  size: null,
+  state: null
 };
 
 export default Button;

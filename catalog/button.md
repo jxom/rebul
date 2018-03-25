@@ -121,6 +121,7 @@ showSource: true
 	<Button isRounded color="link">Link</Button>
 	<Button isRounded color="info">Info</Button>
 	<Button isRounded color="success">Success</Button>
+	<Button isRounded color="warning">Warning</Button>
 	<Button isRounded color="danger">Danger</Button>
 </Buttons>
 ```
@@ -129,15 +130,81 @@ showSource: true
 
 #### Hover
 
+```react
+showSource: true
+---
+<Buttons>
+	<Button color="primary" state="hovered">Primary</Button>
+	<Button color="link" state="hovered">Link</Button>
+	<Button color="info" state="hovered">Info</Button>
+	<Button color="success" state="hovered">Success</Button>
+	<Button color="warning" state="hovered">Warning</Button>
+	<Button color="danger" state="hovered">Danger</Button>
+</Buttons>
+```
+
 #### Focus
+```react
+showSource: true
+---
+<Buttons>
+	<Button color="primary" state="focused">Primary</Button>
+	<Button color="link" state="focused">Link</Button>
+	<Button color="info" state="focused">Info</Button>
+	<Button color="success" state="focused">Success</Button>
+	<Button color="warning" state="focused">Warning</Button>
+	<Button color="danger" state="focused">Danger</Button>
+</Buttons>
+```
 
 #### Active
+```react
+showSource: true
+---
+<Buttons>
+	<Button color="primary" state="active">Primary</Button>
+	<Button color="link" state="active">Link</Button>
+	<Button color="info" state="active">Info</Button>
+	<Button color="success" state="active">Success</Button>
+	<Button color="warning" state="active">Warning</Button>
+	<Button color="danger" state="active">Danger</Button>
+</Buttons>
+```
 
 #### Loading
+```react
+showSource: true
+---
+<Buttons>
+	<Button color="primary" isLoading>Primary</Button>
+	<Button color="link" isLoading>Link</Button>
+	<Button color="info" isLoading>Info</Button>
+	<Button color="success" isLoading>Success</Button>
+	<Button color="warning" isLoading>Warning</Button>
+	<Button color="danger" isLoading>Danger</Button>
+</Buttons>
+```
 
 #### Static
+```react
+showSource: true
+---
+<Button isStatic>Hello world</Button>
+```
 
 #### Disabled
+```react
+showSource: true
+---
+<Buttons>
+	<Button color="primary" disabled>Primary</Button>
+	<Button color="link" disabled>Link</Button>
+	<Button color="info" disabled>Info</Button>
+	<Button color="success" disabled>Success</Button>
+	<Button color="warning" disabled>Warning</Button>
+	<Button color="danger" disabled>Danger</Button>
+</Buttons>
+```
 
 ### Button group
 
