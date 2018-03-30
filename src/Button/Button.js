@@ -10,6 +10,7 @@ const Button = ({
   isLoading,
   isOutlined,
   isRounded,
+  isSelected,
   isStatic,
   size,
   state,
@@ -25,6 +26,7 @@ const Button = ({
         isLoading ? 'is-loading' : '',
         isOutlined ? 'is-outlined' : '',
         isRounded ? 'is-rounded' : '',
+        isSelected ? 'is-selected' : '',
         isStatic ? 'is-static' : '',
         state ? `is-${state}` : ''
       )}`}
@@ -55,6 +57,7 @@ Button.propTypes = {
   isLoading: PropTypes.boolean,
   isOutlined: PropTypes.boolean,
   isRounded: PropTypes.boolean,
+  isSelected: PropTypes.boolean,
   isStatic: PropTypes.boolean,
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   state: PropTypes.oneOf(['hovered', 'active', 'focused'])
@@ -68,6 +71,7 @@ Button.defaultProps = {
   isLoading: false,
   isOutlined: false,
   isRounded: false,
+  isSelected: false,
   isStatic: false,
   size: null,
   state: null

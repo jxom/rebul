@@ -206,10 +206,27 @@ showSource: true
 </Buttons>
 ```
 
-### Button group
-
-### Button addons
-
-### Button group with addons
-
 ### List of buttons
+
+You can show a list of buttons using the `<Buttons>` component.
+
+```react
+showSource: true
+---
+<Buttons>
+	<Button color="info">Save changes</Button>
+	<Button>Cancel</Button>
+</Buttons>
+```
+
+#### Addons
+
+```react
+showSource: true
+---
+<Buttons hasAddons>
+	<Button color="success" isSelected>Yes</Button>
+	<Button>Maybe</Button>
+	<Button>No</Button>
+</Buttons>
+```
