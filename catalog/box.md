@@ -1,3 +1,5 @@
+Render a simple box by using `<Box>`.
+
 ```react
 showSource: true
 ---
