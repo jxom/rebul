@@ -17,7 +17,7 @@ export default components.map(component => {
       file: `${name}.js`,
       format: 'umd',
       globals: {
-				'prop-types': 'PropTypes',
+        'prop-types': 'PropTypes',
         react: 'React',
         'react-dom': 'ReactDOM'
       }
@@ -26,11 +26,7 @@ export default components.map(component => {
     plugins: [
       babel({
         presets: [['env', { modules: false }], 'react'],
-        plugins: [
-          'external-helpers',
-          'transform-class-properties',
-          'transform-object-rest-spread'
-        ]
+        plugins: ['external-helpers', 'transform-class-properties', 'transform-object-rest-spread']
       })
     ]
   };

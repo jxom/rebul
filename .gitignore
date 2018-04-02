@@ -9,5 +9,8 @@ npm-debug.log
 *.env
 
 /Button/
+/Box/
+/Column/
+/Columns/
 
 package-lock.json

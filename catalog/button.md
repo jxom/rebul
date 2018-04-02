@@ -58,7 +58,7 @@ showSource: true
 ---
 <Buttons>
 	<Button size="small">Small</Button>
-	<Button size="normal">Normal</Button>
+	<Button>Normal</Button>
 	<Button size="medium">Medium</Button>
 	<Button size="large">Large</Button>
 </Buttons>
@@ -229,4 +229,50 @@ showSource: true
 	<Button>Maybe</Button>
 	<Button>No</Button>
 </Buttons>
+```
+
+## Props
+
+```table
+rows:
+  - Prop: color
+    Type: 'string (optional)'
+    Default value:
+    Description: 'Button color. Available options: `white`, `light`, `dark`, `black`, `text`, `primary`, `link`, `info`, `success`, `warning`, `danger`'
+  - Prop: element
+    Type: 'string (optional)'
+    Default value: '`button`'
+    Description: Button element type
+  - Prop: isInverted
+    Type: 'boolean (optional)'
+    Default value: '`false`'
+    Description: Is button color inverted?
+  - Prop: isLoading
+    Type: 'boolean (optional)'
+    Default value: '`false`'
+    Description: Is button loading?
+  - Prop: isOutlined
+    Type: 'boolean (optional)'
+    Default value: '`false`'
+    Description: Is button outlined?
+  - Prop: isRounded
+    Type: 'boolean (optional)'
+    Default value: '`false`'
+    Description: Is button round?
+  - Prop: isSelected
+    Type: 'boolean (optional)'
+    Default value: '`false`'
+    Description: Is button selected?
+  - Prop: isStatic
+    Type: 'boolean (optional)'
+    Default value: '`false`'
+    Description: Is button static?
+  - Prop: size
+    Type: 'string (optional)'
+    Default value:
+    Description: 'Size of button. Available values: `small`, `medium`, `large`'
+  - Prop: state
+    Type: 'string (optional)'
+    Default value:
+    Description: 'State of button. Available values: `hovered`, `active`, `focused`'
 ```

@@ -16,7 +16,7 @@ const Button = ({
   state,
   ...props
 }) => {
-  const Element = element || 'button';
+  const Element = element;
   return (
     <Element
       className={`button ${classNames(
@@ -53,12 +53,12 @@ Button.propTypes = {
     'danger'
   ]),
   element: PropTypes.string,
-  isInverted: PropTypes.boolean,
-  isLoading: PropTypes.boolean,
-  isOutlined: PropTypes.boolean,
-  isRounded: PropTypes.boolean,
-  isSelected: PropTypes.boolean,
-  isStatic: PropTypes.boolean,
+  isInverted: PropTypes.bool,
+  isLoading: PropTypes.bool,
+  isOutlined: PropTypes.bool,
+  isRounded: PropTypes.bool,
+  isSelected: PropTypes.bool,
+  isStatic: PropTypes.bool,
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   state: PropTypes.oneOf(['hovered', 'active', 'focused'])
 };
@@ -66,7 +66,7 @@ Button.propTypes = {
 Button.defaultProps = {
   children: null,
   color: null,
-  element: null,
+  element: 'button',
   isInverted: false,
   isLoading: false,
   isOutlined: false,
