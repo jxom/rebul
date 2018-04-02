@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import * as sharedPropTypes from '../prop-types';
 
 const Button = ({
   children,
@@ -39,19 +40,7 @@ const Button = ({
 
 Button.propTypes = {
   children: PropTypes.node,
-  color: PropTypes.oneOf([
-    'white',
-    'light',
-    'dark',
-    'black',
-    'text',
-    'primary',
-    'link',
-    'info',
-    'success',
-    'warning',
-    'danger'
-  ]),
+  color: sharedPropTypes.color,
   element: PropTypes.string,
   isInverted: PropTypes.bool,
   isLoading: PropTypes.bool,
@@ -59,8 +48,8 @@ Button.propTypes = {
   isRounded: PropTypes.bool,
   isSelected: PropTypes.bool,
   isStatic: PropTypes.bool,
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
-  state: PropTypes.oneOf(['hovered', 'active', 'focused'])
+  size: sharedPropTypes.size,
+  state: sharedPropTypes.state
 };
 
 Button.defaultProps = {
