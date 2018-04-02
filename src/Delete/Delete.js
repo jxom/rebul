@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import * as sharedPropTypes from '../prop-types';
+import * as sharedPropTypes from '../_prop-types';
 
 const Delete = ({ children, element: Element, size, ...props }) => (
   <Element className={`delete ${size ? `is-${size}` : ''}`} {...props}>

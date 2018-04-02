@@ -238,7 +238,7 @@ rows:
   - Prop: color
     Type: 'string (optional)'
     Default value:
-    Description: 'Button color. Available options: `white`, `light`, `dark`, `black`, `text`, `primary`, `link`, `info`, `success`, `warning`, `danger`'
+    Description: 'Button color. Available values: `white`, `light`, `dark`, `black`, `text`, `primary`, `link`, `info`, `success`, `warning`, `danger`'
   - Prop: element
     Type: 'string (optional)'
     Default value: '`button`'

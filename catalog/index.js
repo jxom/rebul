@@ -10,7 +10,8 @@ const imports = {
   // Column: require('../src/Column/Column'),
   Content: require('../src/Content/Content'),
   Delete: require('../src/Delete/Delete'),
-  Icon: require('../src/Icon/Icon')
+  Icon: require('../src/Icon/Icon'),
+  Image: require('../src/Image/Image')
 };
 const pages = [
   // {
@@ -50,6 +51,11 @@ const pages = [
         title: 'Icon',
         path: '/elements/icon',
         content: pageLoader(() => import('./icon.md'))
+      },
+      {
+        title: 'Image',
+        path: '/elements/image',
+        content: pageLoader(() => import('./image.md'))
       }
     ]
   }

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import * as sharedPropTypes from '../prop-types';
+import * as sharedPropTypes from '../_prop-types';
 
 const Icon = ({ color, iconClass, size, ...props }) => (
   <span className={`icon ${classNames(size ? `is-${size}` : '', color ? `has-text-${color}` : '')}`} {...props}>
