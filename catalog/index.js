@@ -6,9 +6,10 @@ const imports = {
   Box: require('../src/Box/Box'),
   Button: require('../src/Button/Button'),
   Buttons: require('../src/Button/Buttons'),
-  Content: require('../src/Content/Content')
   // Columns: require('../src/Columns/Columns'),
-  // Column: require('../src/Column/Column')
+  // Column: require('../src/Column/Column'),
+  Content: require('../src/Content/Content'),
+  Delete: require('../src/Delete/Delete')
 };
 const pages = [
   // {
@@ -38,9 +39,14 @@ const pages = [
         title: 'Content',
         path: '/elements/content',
         content: pageLoader(() => import('./content.md'))
+      },
+      {
+        title: 'Delete',
+        path: '/elements/delete',
+        content: pageLoader(() => import('./delete.md'))
       }
     ]
   }
 ];
 
-ReactDOM.render(<Catalog title="Catalog" imports={imports} pages={pages} />, document.getElementById('catalog'));
+ReactDOM.render(<Catalog title="Rebul" imports={imports} pages={pages} />, document.getElementById('catalog'));

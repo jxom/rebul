@@ -19,10 +19,11 @@ export default components.map(component => {
       globals: {
         'prop-types': 'PropTypes',
         react: 'React',
-        'react-dom': 'ReactDOM'
+        'react-dom': 'ReactDOM',
+        classnames: 'classNames'
       }
     },
-    external: ['prop-types', 'react', 'react-dom'],
+    external: ['prop-types', 'react', 'react-dom', 'classnames'],
     plugins: [
       babel({
         presets: [['env', { modules: false }], 'react'],

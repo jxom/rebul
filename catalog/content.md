@@ -1,4 +1,6 @@
 ```react
+showSource: true
+---
 <Content>
   <h1>Hello World</h1>
   <p>
