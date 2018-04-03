@@ -11,7 +11,8 @@ const imports = {
   Content: require('../src/Content/Content'),
   Delete: require('../src/Delete/Delete'),
   Icon: require('../src/Icon/Icon'),
-  Image: require('../src/Image/Image')
+  Image: require('../src/Image/Image'),
+  Notification: require('../src/Notification/Notification')
 };
 const pages = [
   // {
@@ -56,6 +57,11 @@ const pages = [
         title: 'Image',
         path: '/elements/image',
         content: pageLoader(() => import('./image.md'))
+      },
+      {
+        title: 'Notification',
+        path: '/elements/notification',
+        content: pageLoader(() => import('./notification.md'))
       }
     ]
   }

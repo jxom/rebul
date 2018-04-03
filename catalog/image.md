@@ -21,3 +21,21 @@ showSource: true
   <Image alt="Placeholder" size="128" src="https://bulma.io/images/placeholders/128x128.png" />
 </div>
 ```
+
+## Props
+
+```table
+rows:
+  - Prop: alt
+    Type: 'string'
+    Default value:
+    Description: 'Image alt text'
+  - Prop: size
+    Type: 'string'
+    Default value:
+    Description: 'Size of image. Available values: `16`, `24`, `32`, `48`, `64`, `96`, `128`'
+  - Prop: src
+    Type: 'string'
+    Default value:
+    Description: 'Image source'
+```
