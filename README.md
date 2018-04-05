@@ -1,6 +1,6 @@
 <p align="center"><img src="./rebul.png" width="300px"></img></p>
 
-# Rebul (Work In Progress 🚧)
+# [Rebul](https://rebul.io) (Work In Progress 🚧)
 
 > React UI Component Library built with the [Bulma CSS Framework](https://bulma.io/)
 
