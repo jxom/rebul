@@ -2,7 +2,7 @@
 
 # Rebul (Work In Progress 🚧)
 
-> React components for the [Bulma CSS Framework](https://bulma.io/)
+> React UI Component Library built with the [Bulma CSS Framework](https://bulma.io/)
 
 This library is currently under development, meaning the component API's will most likely change. Please have a look at the [1.0.0 Roadmap](https://github.com/jxom/rebul/issues/1) for detailed progress of the status of each component, and where you might like to help out.
 
