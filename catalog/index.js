@@ -67,4 +67,17 @@ const pages = [
   }
 ];
 
-ReactDOM.render(<Catalog title="Rebul" imports={imports} pages={pages} />, document.getElementById('catalog'));
+ReactDOM.render(
+  <Catalog
+    title="Rebul"
+    logoSrc="./rebul.png"
+    imports={imports}
+    pages={pages}
+    theme={{
+      linkColor: '#3273dc',
+      sidebarColorTextActive: '#3273dc',
+      pageHeadingBackground: '#3273dc'
+    }}
+  />,
+  document.getElementById('catalog')
+);
