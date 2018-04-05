@@ -15,16 +15,16 @@ const imports = {
   Notification: require('../src/Notification/Notification')
 };
 const pages = [
-  // {
-  //   title: 'Layout',
-  //   pages: [
-  //     {
-  //       title: 'Columns',
-  //       path: '/elements/columns',
-  //       content: pageLoader(() => import('./columns.md'))
-  //     }
-  //   ]
-  // },
+  {
+    title: 'Welcome',
+    pages: [
+      {
+        title: 'Welcome',
+        path: '/welcome',
+        content: pageLoader(() => import('./welcome.md'))
+      }
+    ]
+  },
   {
     title: 'Elements',
     pages: [
