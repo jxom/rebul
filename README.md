@@ -1,3 +1,5 @@
+<p align="center"><img src="./rebul.png" width="300px"></img></p>
+
 # Rebul (Work In Progress 🚧)
 
 > React components for the [Bulma CSS Framework](https://bulma.io/)
