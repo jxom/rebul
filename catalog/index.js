@@ -17,13 +17,8 @@ const imports = {
 const pages = [
   {
     title: 'Welcome',
-    pages: [
-      {
-        title: 'Welcome',
-        path: '/welcome',
-        content: pageLoader(() => import('./welcome.md'))
-      }
-    ]
+    path: '/',
+    content: pageLoader(() => import('./welcome.md'))
   },
   {
     title: 'Elements',
