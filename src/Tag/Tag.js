@@ -17,13 +17,14 @@ const getDeleteWrapperMarginLeft = ({ children, size }) => {
   return 0;
 };
 
-const Tag = ({ children, color, isRounded, onClickDelete, size, ...props }) => {
+const Tag = ({ children, className, color, isRounded, onClickDelete, size, ...props }) => {
   return (
     <span
       className={`tag ${classNames(
         color ? `is-${color}` : '',
         size ? `is-${size}` : '',
-        isRounded ? 'is-rounded' : ''
+        isRounded ? 'is-rounded' : '',
+        className || ''
       )}`}
       {...props}
     >
@@ -39,6 +40,7 @@ const Tag = ({ children, color, isRounded, onClickDelete, size, ...props }) => {
 
 Tag.propTypes = {
   children: PropTypes.node,
+  className: PropTypes.string,
   color: sharedPropTypes.color,
   isRounded: PropTypes.bool,
   onClickDelete: PropTypes.func,
@@ -47,6 +49,7 @@ Tag.propTypes = {
 
 Tag.defaultProps = {
   children: null,
+  className: null,
   color: null,
   isRounded: false,
   onClickDelete: null,

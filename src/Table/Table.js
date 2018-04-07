@@ -21,12 +21,12 @@ class Table extends React.Component {
     return (
       <table
         className={`table ${classNames(
-          className || '',
           isBordered ? 'is-bordered' : '',
           isFullWidth ? 'is-fullwidth' : '',
           isHoverable ? 'is-hoverable' : '',
           isNarrow ? 'is-narrow' : '',
-          isStriped ? 'is-striped' : ''
+          isStriped ? 'is-striped' : '',
+          className || ''
         )}`}
         {...props}
       >

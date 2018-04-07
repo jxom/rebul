@@ -5,6 +5,7 @@ import * as sharedPropTypes from '../_prop-types';
 
 const Button = ({
   children,
+  className,
   color,
   element,
   isInverted,
@@ -29,7 +30,8 @@ const Button = ({
         isRounded ? 'is-rounded' : '',
         isSelected ? 'is-selected' : '',
         isStatic ? 'is-static' : '',
-        state ? `is-${state}` : ''
+        state ? `is-${state}` : '',
+        className || ''
       )}`}
       {...props}
     >
@@ -40,6 +42,7 @@ const Button = ({
 
 Button.propTypes = {
   children: PropTypes.node,
+  className: PropTypes.string,
   color: sharedPropTypes.color,
   element: PropTypes.string,
   isInverted: PropTypes.bool,
@@ -54,6 +57,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   children: null,
+  className: null,
   color: null,
   element: 'button',
   isInverted: false,

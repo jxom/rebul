@@ -16,7 +16,8 @@ const imports = {
   Progress: require('../src/Progress/Progress'),
   Table: require('../src/Table/Table'),
   Tag: require('../src/Tag/Tag'),
-  Tags: require('../src/Tag/Tags')
+  Tags: require('../src/Tag/Tags'),
+  Title: require('../src/Title/Title')
 };
 const pages = [
   {
@@ -76,6 +77,11 @@ const pages = [
         title: 'Tag',
         path: '/elements/tag',
         content: pageLoader(() => import('./tag.md'))
+      },
+      {
+        title: 'Title',
+        path: '/elements/title',
+        content: pageLoader(() => import('./title.md'))
       }
     ]
   }
