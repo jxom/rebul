@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import * as sharedPropTypes from '../_prop-types';
-import Delete from '../Delete';
+import Delete from '../Delete/Delete';
 
 const Notification = ({ children, className, color, onClickClose, ...props }) => {
   return (

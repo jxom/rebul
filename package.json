@@ -42,7 +42,9 @@
     "eslint-plugin-jsx-a11y": "^5.0.0",
     "eslint-plugin-prettier": "2.6.0",
     "eslint-plugin-react": "7.7.0",
+    "pify": "3.0.0",
     "react": "^16.3.0",
+    "react-docgen": "2.20.1",
     "react-dom": "^16.3.0",
     "recursive-readdir-sync": "1.0.6",
     "rollup-plugin-babel": "3.0.3"

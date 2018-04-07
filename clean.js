@@ -4,6 +4,7 @@ const rimraf = require('rimraf');
 globby([
   '*',
   '!catalog',
+  '!scripts',
   '!src',
   '!node_modules',
   '!.npmignore',

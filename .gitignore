@@ -19,5 +19,7 @@ npm-debug.log
 /Image/
 /Notification/
 /Progress/
+/Table/
+/_prop-types.js
 
 package-lock.json

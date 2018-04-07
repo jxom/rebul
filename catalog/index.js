@@ -13,7 +13,8 @@ const imports = {
   Icon: require('../src/Icon/Icon'),
   Image: require('../src/Image/Image'),
   Notification: require('../src/Notification/Notification'),
-  Progress: require('../src/Progress/Progress')
+  Progress: require('../src/Progress/Progress'),
+  Table: require('../src/Table/Table')
 };
 const pages = [
   {
@@ -63,6 +64,11 @@ const pages = [
         title: 'Progress',
         path: '/elements/progress',
         content: pageLoader(() => import('./progress.md'))
+      },
+      {
+        title: 'Table',
+        path: '/elements/table',
+        content: pageLoader(() => import('./table.md'))
       }
     ]
   }
