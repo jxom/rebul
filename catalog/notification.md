@@ -1,3 +1,13 @@
+## Import
+
+```code
+lang: jsx
+---
+import Notification from 'rebul/Notification';
+```
+
+## Usage
+
 ### Simple
 
 Render a notifcation using the `<Notification>` component.

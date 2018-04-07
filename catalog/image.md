@@ -1,3 +1,13 @@
+## Import
+
+```code
+lang: jsx
+---
+import Image from 'rebul/Image';
+```
+
+## Usage
+
 ### Simple
 
 ```react

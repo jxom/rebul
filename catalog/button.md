@@ -1,3 +1,14 @@
+## Import
+
+```code
+lang: jsx
+---
+import Button from 'rebul/Button';
+import Buttons from 'rebul/Buttons';
+```
+
+## Usage
+
 ### Simple
 
 Render a simple button using the `<Button>` component.

@@ -1,3 +1,13 @@
+## Import
+
+```code
+lang: jsx
+---
+import Content from 'rebul/Content';
+```
+
+## Usage
+
 ```react
 showSource: true
 ---

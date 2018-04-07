@@ -1,3 +1,13 @@
+## Import
+
+```code
+lang: jsx
+---
+import Table from 'rebul/Table';
+```
+
+## Usage
+
 ### Simple
 
 ```react

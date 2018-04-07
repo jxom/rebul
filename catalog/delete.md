@@ -1,3 +1,13 @@
+## Import
+
+```code
+lang: jsx
+---
+import Delete from 'rebul/Delete';
+```
+
+## Usage
+
 ### Simple
 
 Render a remove-type button using the `<Delete>` component.

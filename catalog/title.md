@@ -1,3 +1,13 @@
+## Import
+
+```code
+lang: jsx
+---
+import Title from 'rebul/Title';
+```
+
+## Usage
+
 Render a simple title and sub-title using the `<Title>` component.
 
 ```react

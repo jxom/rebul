@@ -1,3 +1,13 @@
+## Import
+
+```code
+lang: jsx
+---
+import Box from 'rebul/Box';
+```
+
+## Usage
+
 Render a simple box by using `<Box>`.
 
 ```react

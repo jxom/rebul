@@ -1,3 +1,13 @@
+## Import
+
+```code
+lang: jsx
+---
+import Progress from 'rebul/Progress';
+```
+
+## Usage
+
 ### Simple
 
 ```react

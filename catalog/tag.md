@@ -1,3 +1,14 @@
+## Import
+
+```code
+lang: jsx
+---
+import Tag from 'rebul/Tag';
+import Tags from 'rebul/Tags';
+```
+
+## Usage
+
 ### Simple
 
 Render a simple tag using the `<Tag>` component.

@@ -1,3 +1,13 @@
+## Import
+
+```code
+lang: jsx
+---
+import Icon from 'rebul/Icon';
+```
+
+## Usage
+
 ### Simple
 
 Render an icon using the `<Icon>` component
