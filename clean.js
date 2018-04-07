@@ -11,5 +11,6 @@ globby([
   '!package.json',
   '!LICENSE',
   '!README.md',
-  '!rollup.config.js'
+  '!rollup.config.js',
+  '!rebul.png'
 ]).then(paths => paths.map(item => rimraf.sync(item)));
