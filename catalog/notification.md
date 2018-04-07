@@ -55,11 +55,15 @@ showSource: true
 ```table
 rows:
   - Prop: onClickClose
-    Type: 'Function'
+    Type: Function (optional)
     Default value:
     Description: 'Function to invoke when close button clicked'
   - Prop: color
-    Type: String
+    Type: String (optional)
     Default value:
     Description: 'Color of notifcation. Available values: `white`, `light`, `dark`, `black`, `text`, `primary`, `link`, `info`, `success`, `warning`, `danger`'
 ```
+
+## Reference
+
+[https://bulma.io/documentation/elements/notification/](https://bulma.io/documentation/elements/notification/)

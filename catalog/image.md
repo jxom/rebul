@@ -27,15 +27,19 @@ showSource: true
 ```table
 rows:
   - Prop: alt
-    Type: 'string'
+    Type: 'String'
     Default value:
     Description: 'Image alt text'
   - Prop: size
-    Type: 'string'
+    Type: 'String (optional)'
     Default value:
     Description: 'Size of image. Available values: `16`, `24`, `32`, `48`, `64`, `96`, `128`'
   - Prop: src
-    Type: 'string'
+    Type: 'String'
     Default value:
     Description: 'Image source'
 ```
+
+## Reference
+
+[https://bulma.io/documentation/elements/image/](https://bulma.io/documentation/elements/image/)

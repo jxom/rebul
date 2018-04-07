@@ -11,7 +11,11 @@ showSource: true
 ```table
 rows:
   - Prop: className
-    Type: '`string` (optional)'
+    Type: 'String (optional)'
     Default value:
     Description: Element class name
 ```
+
+## Reference
+
+[https://bulma.io/documentation/elements/box/](https://bulma.io/documentation/elements/box/)

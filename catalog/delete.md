@@ -38,12 +38,15 @@ showSource: true
 ```table
 rows:
   - Prop: element
-    Type: 'string (optional)'
+    Type: 'String (optional)'
     Default value: '`button`'
     Description: 'Custom wrapper element for `<Button>`'
   - Prop: size
-    Type: 'string (optional)'
+    Type: 'String (optional)'
     Default value:
     Description: 'Size of delete button. Available values: `small`, `medium`, `large`'
 ```
 
+## Reference
+
+[https://bulma.io/documentation/elements/delete/](https://bulma.io/documentation/elements/delete/)

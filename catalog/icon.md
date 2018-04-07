@@ -46,15 +46,19 @@ showSource: true
 ```table
 rows:
   - Prop: iconClass
-    Type: 'string'
+    Type: 'String'
     Default value:
     Description: 'Icon class name. Example (Font Awesome 5): `fa fa-home`'
   - Prop: color
-    Type: 'string (optional)'
+    Type: 'String (optional)'
     Default value:
     Description: 'Color of the icon. Available values: `white`, `light`, `dark`, `black`, `text`, `primary`, `link`, `info`, `success`, `warning`, `danger`'
   - Prop: size
-    Type: 'string'
+    Type: 'String (optional)'
     Default value:
     Description: 'Size of the icon. Available values: `small`, `medium`, `large`'
 ```
+
+## Reference
+
+[https://bulma.io/documentation/elements/icon/](https://bulma.io/documentation/elements/icon/)

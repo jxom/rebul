@@ -236,43 +236,47 @@ showSource: true
 ```table
 rows:
   - Prop: color
-    Type: 'string (optional)'
+    Type: 'String (optional)'
     Default value:
     Description: 'Button color. Available values: `white`, `light`, `dark`, `black`, `text`, `primary`, `link`, `info`, `success`, `warning`, `danger`'
   - Prop: element
-    Type: 'string (optional)'
+    Type: 'String (optional)'
     Default value: '`button`'
     Description: Button element type
   - Prop: isInverted
-    Type: 'boolean (optional)'
+    Type: 'Boolean (optional)'
     Default value: '`false`'
     Description: Is button color inverted?
   - Prop: isLoading
-    Type: 'boolean (optional)'
+    Type: 'Boolean (optional)'
     Default value: '`false`'
     Description: Is button loading?
   - Prop: isOutlined
-    Type: 'boolean (optional)'
+    Type: 'Boolean (optional)'
     Default value: '`false`'
     Description: Is button outlined?
   - Prop: isRounded
-    Type: 'boolean (optional)'
+    Type: 'Boolean (optional)'
     Default value: '`false`'
     Description: Is button round?
   - Prop: isSelected
-    Type: 'boolean (optional)'
+    Type: 'Boolean (optional)'
     Default value: '`false`'
     Description: Is button selected?
   - Prop: isStatic
-    Type: 'boolean (optional)'
+    Type: 'Boolean (optional)'
     Default value: '`false`'
     Description: Is button static?
   - Prop: size
-    Type: 'string (optional)'
+    Type: 'String (optional)'
     Default value:
     Description: 'Size of button. Available values: `small`, `medium`, `large`'
   - Prop: state
-    Type: 'string (optional)'
+    Type: 'String (optional)'
     Default value:
     Description: 'State of button. Available values: `hovered`, `active`, `focused`'
 ```
+
+## Reference
+
+[https://bulma.io/documentation/elements/button/](https://bulma.io/documentation/elements/button/)
