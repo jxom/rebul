@@ -20,10 +20,12 @@ export default components.map(component => {
         'prop-types': 'PropTypes',
         react: 'React',
         'react-dom': 'ReactDOM',
-        classnames: 'classNames'
+        classnames: 'classNames',
+        'styled-components': 'styled',
+        'styled-system': 'styledSystem'
       }
     },
-    external: ['prop-types', 'react', 'react-dom', 'classnames'],
+    external: ['prop-types', 'react', 'react-dom', 'classnames', 'styled-components', 'styled-system'],
     plugins: [
       babel({
         presets: [['env', { modules: false }], 'react'],
