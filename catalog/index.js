@@ -14,7 +14,9 @@ const imports = {
   Image: require('../src/Image/Image'),
   Notification: require('../src/Notification/Notification'),
   Progress: require('../src/Progress/Progress'),
-  Table: require('../src/Table/Table')
+  Table: require('../src/Table/Table'),
+  Tag: require('../src/Tag/Tag'),
+  Tags: require('../src/Tag/Tags')
 };
 const pages = [
   {
@@ -69,6 +71,11 @@ const pages = [
         title: 'Table',
         path: '/elements/table',
         content: pageLoader(() => import('./table.md'))
+      },
+      {
+        title: 'Tag',
+        path: '/elements/tag',
+        content: pageLoader(() => import('./tag.md'))
       }
     ]
   }
