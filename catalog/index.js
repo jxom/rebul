@@ -6,8 +6,8 @@ const imports = {
   Box: require('../src/Box/Box'),
   Button: require('../src/Button/Button'),
   Buttons: require('../src/Button/Buttons'),
-  // Columns: require('../src/Columns/Columns'),
-  // Column: require('../src/Column/Column'),
+  Columns: require('../src/Columns/Columns'),
+  Column: require('../src/Column/Column'),
   Content: require('../src/Content/Content'),
   Delete: require('../src/Delete/Delete'),
   Icon: require('../src/Icon/Icon'),
@@ -24,6 +24,17 @@ const pages = [
     title: 'Introduction',
     path: '/',
     content: pageLoader(() => import('./introduction.md'))
+  },
+  {
+    title: 'Layout',
+    pages: [
+      {
+        title: 'Columns',
+        path: '/elements/columns',
+        styles: ['/columns.css'],
+        content: pageLoader(() => import('./columns.md'))
+      }
+    ]
   },
   {
     title: 'Elements',
