@@ -1,6 +1,6 @@
 {
   "name": "rebul",
-  "version": "1.0.0-canary.3",
+  "version": "1.0.0-canary.4",
   "description": "React components for the Bulma CSS Framework",
   "main": "index.js",
   "scripts": {
