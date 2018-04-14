@@ -230,3 +230,25 @@ showSource: true
   </Hero.Body>
 </Hero>
 ```
+
+## `<Hero>` Props
+
+```table
+rows:
+  - Prop: color
+    Type: 'String (optional)'
+    Default value:
+    Description: 'Adds a background color to hero. Available values: `white`, `light`, `dark`, `black`, `text`, `primary`, `link`, `info`, `success`, `warning`, `danger`'
+  - Prop: isBold
+    Type: 'Boolean (optional)'
+    Default value:
+    Description: 'If true, adds a gradient to hero'
+  - Prop: size
+    Type: 'String (optional)'
+    Default value:
+    Description: 'Size of hero. Available values: `medium`, `large`, `fullheight`'
+```
+
+## Reference
+
+[https://bulma.io/documentation/layout/hero/](https://bulma.io/documentation/layout/hero/)
