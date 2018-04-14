@@ -8,6 +8,7 @@ const imports = {
   Buttons: require('../src/Button/Buttons'),
   Columns: require('../src/Columns/Columns'),
   Column: require('../src/Column/Column'),
+  Container: require('../src/Container/Container'),
   Content: require('../src/Content/Content'),
   Delete: require('../src/Delete/Delete'),
   Icon: require('../src/Icon/Icon'),
@@ -33,6 +34,12 @@ const pages = [
         path: '/elements/columns',
         styles: ['/columns.css'],
         content: pageLoader(() => import('./columns.md'))
+      },
+      {
+        title: 'Container',
+        path: '/elements/container',
+        styles: ['/columns.css'],
+        content: pageLoader(() => import('./container.md'))
       }
     ]
   },

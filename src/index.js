@@ -3,6 +3,7 @@ export * from './Button/index.js';
 export * from './Column/index.js';
 export * from './Columns/index.js';
 export * from './Content/index.js';
+export * from './Container/index.js';
 export * from './Delete/index.js';
 export * from './Icon/index.js';
 export * from './Image/index.js';
