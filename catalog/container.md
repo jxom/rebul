@@ -1,3 +1,12 @@
+## Import
+
+```code
+lang: jsx
+---
+import Container from 'rebul/Container';
+```
+
+## Usage
 ### Basic
 
 ```react
@@ -50,7 +59,7 @@ dark: true
 </Container>
 ```
 
-### Props
+## Props
 
 ```table
 rows:
@@ -60,6 +69,6 @@ rows:
     Description: 'Available values: `fluid`, `desktop`, `widescreen`, `fullhd`'
 ```
 
-### Reference
+## Reference
 
 [https://bulma.io/documentation/layout/container/](https://bulma.io/documentation/layout/container/)

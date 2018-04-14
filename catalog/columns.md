@@ -1,3 +1,14 @@
+## Import
+
+```code
+lang: jsx
+---
+import Columns from 'rebul/Columns';
+import Column from 'rebul/Column';
+```
+
+## Usage
+
 ### Basic
 
 ```react
@@ -491,7 +502,7 @@ dark: true
 </Columns>
 ```
 
-### `<Columns>` Props
+## `<Columns>` Props
 
 ```table
 rows:
@@ -509,7 +520,7 @@ rows:
     Description: Do the columns span on multiple lines?
 ```
 
-### `<Column>` Props
+## `<Column>` Props
 
 ```table
 rows:
@@ -603,6 +614,6 @@ rows:
 - `is-two-fifths`
 - `is-one-fifth`
 
-### Reference
+## Reference
 
 [https://bulma.io/documentation/columns/basics/](https://bulma.io/documentation/columns/basics/)

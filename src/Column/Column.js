@@ -21,9 +21,9 @@ const COLUMN_SIZES = [
   'one-third',
   'one-quarter',
   'four-fifths',
-  'is-three-fifths',
-  'is-two-fifths',
-  'is-one-fifth'
+  'three-fifths',
+  'two-fifths',
+  'one-fifth'
 ];
 
 const Column = ({

@@ -1,3 +1,12 @@
+## Import
+
+```code
+lang: jsx
+---
+import Hero from 'rebul/Hero';
+```
+
+## Usage
 ### Basic
 
 ```react

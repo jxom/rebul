@@ -22,7 +22,7 @@ const Title = ({ children, className, element, isSpaced, isSubTitle, size, ...pr
 Title.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  element: PropTypes.element,
+  element: PropTypes.string,
   isSpaced: PropTypes.bool,
   isSubTitle: PropTypes.bool,
   size: PropTypes.oneOf(['1', '2', '3', '4', '5', '6'])

@@ -14,6 +14,8 @@ const imports = {
   Hero: require('../src/Hero/Hero'),
   Icon: require('../src/Icon/Icon'),
   Image: require('../src/Image/Image'),
+  Level: require('../src/Level/Level'),
+  Media: require('../src/Media/Media'),
   Notification: require('../src/Notification/Notification'),
   Progress: require('../src/Progress/Progress'),
   Table: require('../src/Table/Table'),
@@ -47,6 +49,16 @@ const pages = [
         path: '/elements/hero',
         styles: ['/columns.css'],
         content: pageLoader(() => import('./hero.md'))
+      },
+      {
+        title: 'Level',
+        path: '/elements/level',
+        content: pageLoader(() => import('./level.md'))
+      },
+      {
+        title: 'Media',
+        path: '/elements/media',
+        content: pageLoader(() => import('./media.md'))
       }
     ]
   },
