@@ -11,6 +11,7 @@ const imports = {
   Container: require('../src/Container/Container'),
   Content: require('../src/Content/Content'),
   Delete: require('../src/Delete/Delete'),
+  Footer: require('../src/Footer/Footer'),
   Hero: require('../src/Hero/Hero'),
   Icon: require('../src/Icon/Icon'),
   Image: require('../src/Image/Image'),
@@ -44,6 +45,11 @@ const pages = [
         path: '/elements/container',
         styles: ['/columns.css'],
         content: pageLoader(() => import('./container.md'))
+      },
+      {
+        title: 'Footer',
+        path: '/elements/footer',
+        content: pageLoader(() => import('./footer.md'))
       },
       {
         title: 'Hero',
