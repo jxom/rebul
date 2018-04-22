@@ -18,6 +18,7 @@ const imports = {
   Media: require('../src/Media/Media'),
   Notification: require('../src/Notification/Notification'),
   Progress: require('../src/Progress/Progress'),
+  Section: require('../src/Section/Section'),
   Table: require('../src/Table/Table'),
   Tag: require('../src/Tag/Tag'),
   Tags: require('../src/Tag/Tags'),
@@ -59,6 +60,11 @@ const pages = [
         title: 'Media',
         path: '/elements/media',
         content: pageLoader(() => import('./media.md'))
+      },
+      {
+        title: 'Section',
+        path: '/elements/section',
+        content: pageLoader(() => import('./section.md'))
       }
     ]
   },
