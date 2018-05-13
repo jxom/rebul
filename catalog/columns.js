@@ -1,9 +1,11 @@
 import React from 'react';
 import { markdown, TableSpecimen } from 'catalog';
+import Playground from 'component-playground';
 import parsePropTypes from './utils/parse-prop-types';
 
 import Column from '../src/Column/Column';
 import Columns from '../src/Columns/Columns';
+import Notification from '../src/Notification/Notification';
 
 export default () =>
   markdown`
@@ -510,6 +512,30 @@ dark: true
   </Column>
 </Columns>
 \`\`\`
+
+## Playground
+
+${(
+    <Playground
+      codeText={`<Columns>
+  <Column>
+    <Notification color="primary">Column 1</Notification>
+  </Column>
+  <Column>
+    <Notification color="primary">Column 2</Notification>
+  </Column>
+  <Column>
+    <Notification color="primary">Column 3</Notification>
+  </Column>
+  <Column>
+    <Notification color="primary">Column 4</Notification>
+  </Column>
+</Columns>
+      `}
+      scope={{ React, Notification, Column, Columns }}
+      theme="dracula"
+    />
+  )}
 
 ## \`<Columns>\` Props
 

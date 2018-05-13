@@ -1,5 +1,6 @@
 import React from 'react';
 import { markdown, TableSpecimen } from 'catalog';
+import Playground from 'component-playground';
 import parsePropTypes from './utils/parse-prop-types';
 
 import Delete from '../src/Delete/Delete';
@@ -50,6 +51,10 @@ showSource: true
   <Delete size="large" />
 </div>
 \`\`\`
+
+## Playground
+
+${<Playground codeText={`<Delete size="medium" />`} scope={{ React, Delete }} theme="dracula" />}
 
 ## Props
 

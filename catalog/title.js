@@ -1,5 +1,6 @@
 import React from 'react';
 import { markdown, TableSpecimen } from 'catalog';
+import Playground from 'component-playground';
 import parsePropTypes from './utils/parse-prop-types';
 
 import Title from '../src/Title/Title';
@@ -54,6 +55,10 @@ showSource: true
   <Title isSubTitle size="6">Title 6</Title>
 </React.Fragment>
 \`\`\`
+
+## Playground
+
+${<Playground codeText={`<Title isSubTitle>Hello world</Title>`} scope={{ React, Title }} theme="dracula" />}
 
 ## Props
 

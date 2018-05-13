@@ -1,5 +1,6 @@
 import React from 'react';
 import { markdown, TableSpecimen } from 'catalog';
+import Playground from 'component-playground';
 import parsePropTypes from './utils/parse-prop-types';
 
 import TextField from '../src/TextField/TextField';
@@ -21,6 +22,16 @@ import TextField from 'rebul/TextField';
 \`\`\`react
 <TextField label="Name" placeholder="Bill Gates" />
 \`\`\`
+
+## Playground
+
+${(
+    <Playground
+      codeText={`<TextField label="Name" placeholder="Bill Gates" />`}
+      scope={{ React, TextField }}
+      theme="dracula"
+    />
+  )}
 
 ## Props
 

@@ -1,5 +1,6 @@
 import React from 'react';
-import { markdown, CodeSpecimen, ReactSpecimen, TableSpecimen } from 'catalog';
+import { markdown, TableSpecimen } from 'catalog';
+import Playground from 'component-playground';
 import parsePropTypes from './utils/parse-prop-types';
 
 import Button from '../src/Button/Button';
@@ -252,6 +253,10 @@ showSource: true
   <Button>No</Button>
 </Buttons>
 \`\`\`
+
+## Playground
+
+${<Playground codeText={`<Button color="primary">Primary</Button>`} scope={{ React, Button }} theme="dracula" />}
 
 ## \`<Button>\` Props
 

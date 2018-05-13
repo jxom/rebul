@@ -1,5 +1,6 @@
 import React from 'react';
 import { markdown, TableSpecimen } from 'catalog';
+import Playground from 'component-playground';
 import parsePropTypes from './utils/parse-prop-types';
 
 import Notification from '../src/Notification/Notification';
@@ -67,6 +68,16 @@ showSource: true
 ---
 <Notification color="danger">Hello world</Notification>
 \`\`\`
+
+## Playground
+
+${(
+    <Playground
+      codeText={`<Notification color="primary">Hello world</Notification>`}
+      scope={{ React, Notification }}
+      theme="dracula"
+    />
+  )}
 
 ## Props
 

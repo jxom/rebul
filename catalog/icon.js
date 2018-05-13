@@ -1,5 +1,6 @@
 import React from 'react';
 import { markdown, TableSpecimen } from 'catalog';
+import Playground from 'component-playground';
 import parsePropTypes from './utils/parse-prop-types';
 
 import Icon from '../src/Icon/Icon';
@@ -58,6 +59,10 @@ showSource: true
   <Icon iconClass="fas fa-3x fa-home" size="large" />
 </div>
 \`\`\`
+
+## Playground
+
+${<Playground codeText={`<Icon iconClass="fas fa-home" size="small" />`} scope={{ React, Icon }} theme="dracula" />}
 
 ## Props
 

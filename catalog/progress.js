@@ -1,5 +1,6 @@
 import React from 'react';
 import { markdown, TableSpecimen } from 'catalog';
+import Playground from 'component-playground';
 import parsePropTypes from './utils/parse-prop-types';
 
 import Progress from '../src/Progress/Progress';
@@ -51,6 +52,16 @@ showSource: true
   <Progress maxValue="100" size="large" value="60">60%</Progress>
 </React.Fragment>
 \`\`\`
+
+## Playground
+
+${(
+    <Playground
+      codeText={`<Progress color="success" maxValue="100" value="60">60%</Progress>`}
+      scope={{ React, Progress }}
+      theme="dracula"
+    />
+  )}
 
 ## Props
 

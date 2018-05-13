@@ -1,8 +1,10 @@
 import React from 'react';
 import { markdown, TableSpecimen } from 'catalog';
+import Playground from 'component-playground';
 import parsePropTypes from './utils/parse-prop-types';
 
 import Level from '../src/Level/Level';
+import Notification from '../src/Notification/Notification';
 
 export default () =>
   markdown`
@@ -58,6 +60,33 @@ dark: true
   </Level.Item>
 </Level>
 \`\`\`
+
+## Playground
+
+${(
+    <Playground
+      codeText={`<Level>
+  <Level.Left>
+    <Level.Item>
+      <Notification color="primary">Left item 1</Notification>
+    </Level.Item>
+    <Level.Item>
+      <Notification color="primary">Left item 2</Notification>
+    </Level.Item>
+  </Level.Left>
+  <Level.Right>
+    <Level.Item>
+      <Notification color="primary">Right item 1</Notification>
+    </Level.Item>
+    <Level.Item>
+      <Notification color="primary">Right item 2</Notification>
+    </Level.Item>
+  </Level.Right>
+</Level>`}
+      scope={{ React, Level, Notification }}
+      theme="dracula"
+    />
+  )}
 
 ## Props
 

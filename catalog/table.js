@@ -1,5 +1,6 @@
 import React from 'react';
 import { markdown, TableSpecimen } from 'catalog';
+import Playground from 'component-playground';
 import parsePropTypes from './utils/parse-prop-types';
 
 import Table from '../src/Table/Table';
@@ -232,6 +233,42 @@ showSource: true
   </Table.Body>
 </Table>
 \`\`\`
+
+## Playground
+
+${(
+    <Playground
+      codeText={`<Table isFullWidth>
+  <Table.Head>
+    <Table.Row>
+      <Table.CellHead>
+        Product
+      </Table.CellHead>
+      <Table.CellHead>
+        Quantity
+      </Table.CellHead>
+      <Table.CellHead>
+        Price (each)
+      </Table.CellHead>
+    </Table.Row>
+  </Table.Head>
+  <Table.Body>
+    <Table.Row>
+      <Table.Cell>Gatorade</Table.Cell>
+      <Table.Cell>2</Table.Cell>
+      <Table.Cell>$3.50</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell>Coke</Table.Cell>
+      <Table.Cell>5</Table.Cell>
+      <Table.Cell>$2.50</Table.Cell>
+    </Table.Row>
+  </Table.Body>
+</Table>`}
+      scope={{ React, Table }}
+      theme="dracula"
+    />
+  )}
 
 ## \`<Table>\` Props
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { markdown, TableSpecimen } from 'catalog';
+import Playground from 'component-playground';
 import parsePropTypes from './utils/parse-prop-types';
 
 import Image from '../src/Image/Image';
@@ -39,6 +40,16 @@ showSource: true
   <Image alt="Placeholder" size="128" src="https://bulma.io/images/placeholders/128x128.png" />
 </div>
 \`\`\`
+
+## Playground
+
+${(
+    <Playground
+      codeText={`<Image alt="Placeholder" size="96" src="https://bulma.io/images/placeholders/96x96.png" />`}
+      scope={{ React, Image }}
+      theme="dracula"
+    />
+  )}
 
 ## Props
 

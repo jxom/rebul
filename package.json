@@ -4,7 +4,7 @@
   "description": "React components for the Bulma CSS Framework",
   "main": "index.js",
   "scripts": {
-    "build": "npm run clean && rollup -c rollup.config.js",
+    "build": "npm run clean && NODE_ENV='production' rollup -c rollup.config.js",
     "clean": "node clean.js",
     "develop": "rollup -c rollup.config.js -w",
     "lint": "eslint src/",
@@ -37,6 +37,7 @@
     "babel-preset-env": "1.6.1",
     "babel-preset-react": "6.24.1",
     "catalog": "3.5.3",
+    "component-playground": "3.1.2",
     "eslint": "4.19.1",
     "eslint-config-react-app": "2.1.0",
     "eslint-plugin-import": "2.9.0",
@@ -47,6 +48,8 @@
     "react": "^16.3.0",
     "react-docgen": "2.20.1",
     "react-dom": "^16.3.0",
+    "react-live": "1.10.1",
+    "react-markings": "1.3.0",
     "recursive-readdir-sync": "1.0.6",
     "rollup-plugin-babel": "3.0.3"
   },

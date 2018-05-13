@@ -1,5 +1,6 @@
 import React from 'react';
 import { markdown, TableSpecimen } from 'catalog';
+import Playground from 'component-playground';
 import parsePropTypes from './utils/parse-prop-types';
 
 import Tag from '../src/Tag/Tag';
@@ -107,6 +108,19 @@ dark: true
   <Tag color="primary">Bulma</Tag>
 </Tags>
 \`\`\`
+
+## Playground
+
+${(
+    <Playground
+      codeText={`<Tags hasAddons>
+  <Tag>Package</Tag>
+  <Tag color="primary">Bulma</Tag>
+</Tags>`}
+      scope={{ React, Tag, Tags }}
+      theme="dracula"
+    />
+  )}
 
 ## \`<Tag>\` Props
 
