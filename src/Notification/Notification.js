@@ -16,7 +16,9 @@ const Notification = ({ children, className, color, onClickClose, ...props }) =>
 Notification.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
+  /** Color of notifcation. Available values: `white`, `light`, `dark`, `black`, `text`, `primary`, `link`, `info`, `success`, `warning`, `danger` */
   color: sharedPropTypes.color,
+  /** Function to invoke when close button clicked */
   onClickClose: PropTypes.func
 };
 

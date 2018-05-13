@@ -8,6 +8,7 @@ globby([
   '!src',
   '!node_modules',
   '!.npmignore',
+  '!.babelrc',
   '!clean.js',
   '!package.json',
   '!LICENSE',

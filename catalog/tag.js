@@ -1,28 +1,37 @@
+import React from 'react';
+import { markdown, TableSpecimen } from 'catalog';
+import parsePropTypes from './utils/parse-prop-types';
+
+import Tag from '../src/Tag/Tag';
+import Tags from '../src/Tag/Tags';
+
+export default () =>
+  markdown`
 ## Import
 
-```code
+\`\`\`code
 lang: jsx
 ---
 import Tag from 'rebul/Tag';
 import Tags from 'rebul/Tags';
-```
+\`\`\`
 
 ## Usage
 
 ### Simple
 
-Render a simple tag using the `<Tag>` component.
+Render a simple tag using the \`<Tag>\` component.
 
-```react
+\`\`\`react
 showSource: true
 dark: true
 ---
 <Tag>Hello world</Tag>
-```
+\`\`\`
 
 ### Colors
 
-```react
+\`\`\`react
 showSource: true
 ---
 <Tags>
@@ -37,31 +46,31 @@ showSource: true
   <Tag color="warning">Warning</Tag>
   <Tag color="danger">Danger</Tag>
 </Tags>
-```
+\`\`\`
 
 ### Sizes
 
-```react
+\`\`\`react
 showSource: true
 ---
 <Tags>
   <Tag color="primary" size="medium">Medium</Tag>
   <Tag color="link" size="large">Large</Tag>
 </Tags>
-```
+\`\`\`
 
 ### Rounded
 
-```react
+\`\`\`react
 showSource: true
 dark: true
 ---
 <Tag isRounded>Hello world</Tag>
-```
+\`\`\`
 
 ### Delete
 
-```react
+\`\`\`react
 showSource: true
 dark: true
 ---
@@ -70,13 +79,13 @@ dark: true
   <Tag onClickDelete={() => console.log('delete')} size="medium">Hello world</Tag>
   <Tag onClickDelete={() => console.log('delete')} size="large">Hello world</Tag>
 </Tags>
-```
+\`\`\`
 
 ### List of tags
 
-To render a list of tags, use the `<Tags>` component.
+To render a list of tags, use the \`<Tags>\` component.
 
-```react
+\`\`\`react
 showSource: true
 dark: true
 ---
@@ -85,11 +94,11 @@ dark: true
   <Tag>Two</Tag>
   <Tag>Three</Tag>
 </Tags>
-```
+\`\`\`
 
 ### List of tags with addons
 
-```react
+\`\`\`react
 showSource: true
 dark: true
 ---
@@ -97,40 +106,19 @@ dark: true
   <Tag>Package</Tag>
   <Tag color="primary">Bulma</Tag>
 </Tags>
-```
+\`\`\`
 
-## `<Tag>` Props
+## \`<Tag>\` Props
 
-```table
-rows:
-  - Prop: color
-    Type: 'String (optional)'
-    Default value:
-    Description: 'Tag color. Available values: `white`, `light`, `dark`, `black`, `text`, `primary`, `link`, `info`, `success`, `warning`, `danger`'
-  - Prop: isRounded
-    Type: 'Boolean (optional)'
-    Default value: '`false`'
-    Description: Is tag round?
-  - Prop: onClickDelete
-    Type: 'Function (optional)'
-    Default value:
-    Description: 'Function to invoke when the delete button is pressed. Delete button is visible when `onClickDelete` is populated.'
-  - Prop: size
-    Type: 'String (optional)'
-    Default value:
-    Description: 'Size of tag. Available values: `medium`, `large`'
-```
+${<TableSpecimen rows={parsePropTypes(Tag)} />}
 
-## `<Tags>` Props
+## \`<Tags>\` Props
 
-```table
-rows:
-  - Prop: hasAddons
-    Type: 'Boolean (optional)'
-    Default value: '`false`'
-    Description: ''
-```
+${<TableSpecimen rows={parsePropTypes(Tags)} />}
+
 
 ## Reference
 
 [https://bulma.io/documentation/elements/tag/](https://bulma.io/documentation/elements/tag/)
+
+`;

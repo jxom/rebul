@@ -41,9 +41,13 @@ const Tag = ({ children, className, color, isRounded, onClickDelete, size, ...pr
 Tag.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
+  /** Tag color. Available values: `white`, `light`, `dark`, `black`, `text`, `primary`, `link`, `info`, `success`, `warning`, `danger` */
   color: sharedPropTypes.color,
+  /** Is tag round? */
   isRounded: PropTypes.bool,
+  /** Function to invoke when the delete button is pressed. Delete button is visible when `onClickDelete` is populated. */
   onClickDelete: PropTypes.func,
+  /** Size of tag. Available values: `medium`, `large` */
   size: sharedPropTypes.size
 };
 

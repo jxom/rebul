@@ -79,17 +79,29 @@ Column.propTypes = {
   isNarrowMobile: PropTypes.bool,
   isNarrowTablet: PropTypes.bool,
   isNarrowDesktop: PropTypes.bool,
+  /** Default offset size. Available values: View **Column Sizes** */
   offset: PropTypes.oneOf(COLUMN_SIZES),
+  /** Mobile offset size (mobile as min breakpoint). Available values: View **Column Sizes** */
   offsetMobile: PropTypes.oneOf(COLUMN_SIZES),
+  /** Tablet offset size (tablet as min breakpoint). Available values: View **Column Sizes** */
   offsetTablet: PropTypes.oneOf(COLUMN_SIZES),
+  /** Desktop offset size (desktop as min breakpoint). Available values: View **Column Sizes** */
   offsetDesktop: PropTypes.oneOf(COLUMN_SIZES),
+  /** Widescreen offset size (widescreen as min breakpoint). Available values: View **Column Sizes** */
   offsetWidescreen: PropTypes.oneOf(COLUMN_SIZES),
+  /** Full HD offset size (fullhd as min breakpoint). Available values: View **Column Sizes** */
   offsetFullHD: PropTypes.oneOf(COLUMN_SIZES),
+  /** Default size. Available values: View **Column Sizes** */
   size: PropTypes.oneOf(COLUMN_SIZES),
+  /** Mobile size (mobile as min breakpoint). Available values: View **Column Sizes** */
   sizeMobile: PropTypes.oneOf(COLUMN_SIZES),
+  /** Tablet size (tablet as min breakpoint). Available values: View **Column Sizes** */
   sizeTablet: PropTypes.oneOf(COLUMN_SIZES),
+  /** Desktop size (desktop as min breakpoint). Available values: View **Column Sizes** */
   sizeDesktop: PropTypes.oneOf(COLUMN_SIZES),
+  /** Widescreen size (widescreen as min breakpoint). Available values: View **Column Sizes** */
   sizeWidescreen: PropTypes.oneOf(COLUMN_SIZES),
+  /** Full HD size (fullhd as min breakpoint). Available values: View **Column Sizes** */
   sizeFullHD: PropTypes.oneOf(COLUMN_SIZES)
 };
 

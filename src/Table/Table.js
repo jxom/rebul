@@ -39,10 +39,15 @@ class Table extends React.Component {
 Table.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
+  /** Is the table bordered? */
   isBordered: PropTypes.bool,
+  /** Is the table full width? */
   isFullWidth: PropTypes.bool,
+  /** Is the table hoverable? */
   isHoverable: PropTypes.bool,
+  /** Is the table narrow? */
   isNarrow: PropTypes.bool,
+  /** Is the table striped? */
   isStriped: PropTypes.bool
 };
 

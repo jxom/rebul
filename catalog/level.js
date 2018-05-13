@@ -1,14 +1,22 @@
+import React from 'react';
+import { markdown, TableSpecimen } from 'catalog';
+import parsePropTypes from './utils/parse-prop-types';
+
+import Level from '../src/Level/Level';
+
+export default () =>
+  markdown`
 ## Import
 
-```code
+\`\`\`code
 lang: jsx
 ---
 import Level from 'rebul/Level';
-```
+\`\`\`
 
 ### Basic
 
-```react
+\`\`\`react
 showSource: true
 dark: true
 ---
@@ -30,11 +38,11 @@ dark: true
     </Level.Item>
   </Level.Right>
 </Level>
-```
+\`\`\`
 
 ### Mobile level
 
-```react
+\`\`\`react
 showSource: true
 dark: true
 ---
@@ -49,18 +57,14 @@ dark: true
     <Notification>Level item 3</Notification>
   </Level.Item>
 </Level>
-```
+\`\`\`
 
-## `<Level>` Props
+## Props
 
-```table
-rows:
-  - Prop: isMobile
-    Type: 'Boolean (optional)'
-    Default value: '`false`'
-    Description: 'Is level horizontal on mobile?'
-```
+${<TableSpecimen rows={parsePropTypes(Level)} />}
 
 ## Reference
 
 [https://bulma.io/documentation/layout/hero/](https://bulma.io/documentation/layout/hero/)
+
+`;

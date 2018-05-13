@@ -23,6 +23,7 @@ const imports = {
   Table: require('../src/Table/Table'),
   Tag: require('../src/Tag/Tag'),
   Tags: require('../src/Tag/Tags'),
+  TextField: require('../src/TextField/TextField'),
   Title: require('../src/Title/Title')
 };
 const pages = [
@@ -38,39 +39,39 @@ const pages = [
         title: 'Columns',
         path: '/elements/columns',
         styles: ['/columns.css'],
-        content: pageLoader(() => import('./columns.md'))
+        content: pageLoader(() => import('./columns.js'))
       },
       {
         title: 'Container',
         path: '/elements/container',
         styles: ['/columns.css'],
-        content: pageLoader(() => import('./container.md'))
+        content: pageLoader(() => import('./container.js'))
       },
       {
         title: 'Footer',
         path: '/elements/footer',
-        content: pageLoader(() => import('./footer.md'))
+        content: pageLoader(() => import('./footer.js'))
       },
       {
         title: 'Hero',
         path: '/elements/hero',
         styles: ['/columns.css'],
-        content: pageLoader(() => import('./hero.md'))
+        content: pageLoader(() => import('./hero.js'))
       },
       {
         title: 'Level',
         path: '/elements/level',
-        content: pageLoader(() => import('./level.md'))
+        content: pageLoader(() => import('./level.js'))
       },
       {
         title: 'Media',
         path: '/elements/media',
-        content: pageLoader(() => import('./media.md'))
+        content: pageLoader(() => import('./media.js'))
       },
       {
         title: 'Section',
         path: '/elements/section',
-        content: pageLoader(() => import('./section.md'))
+        content: pageLoader(() => import('./section.js'))
       }
     ]
   },
@@ -80,57 +81,67 @@ const pages = [
       {
         title: 'Box',
         path: '/elements/box',
-        content: pageLoader(() => import('./box.md'))
+        content: pageLoader(() => import('./box.js'))
       },
       {
         title: 'Button',
         path: '/elements/button',
-        content: pageLoader(() => import('./button.md'))
+        content: pageLoader(() => import('./button.js'))
       },
       {
         title: 'Content',
         path: '/elements/content',
-        content: pageLoader(() => import('./content.md'))
+        content: pageLoader(() => import('./content.js'))
       },
       {
         title: 'Delete',
         path: '/elements/delete',
-        content: pageLoader(() => import('./delete.md'))
+        content: pageLoader(() => import('./delete.js'))
       },
       {
         title: 'Icon',
         path: '/elements/icon',
-        content: pageLoader(() => import('./icon.md'))
+        content: pageLoader(() => import('./icon.js'))
       },
       {
         title: 'Image',
         path: '/elements/image',
-        content: pageLoader(() => import('./image.md'))
+        content: pageLoader(() => import('./image.js'))
       },
       {
         title: 'Notification',
         path: '/elements/notification',
-        content: pageLoader(() => import('./notification.md'))
+        content: pageLoader(() => import('./notification.js'))
       },
       {
         title: 'Progress',
         path: '/elements/progress',
-        content: pageLoader(() => import('./progress.md'))
+        content: pageLoader(() => import('./progress.js'))
       },
       {
         title: 'Table',
         path: '/elements/table',
-        content: pageLoader(() => import('./table.md'))
+        content: pageLoader(() => import('./table.js'))
       },
       {
         title: 'Tag',
         path: '/elements/tag',
-        content: pageLoader(() => import('./tag.md'))
+        content: pageLoader(() => import('./tag.js'))
       },
       {
         title: 'Title',
         path: '/elements/title',
-        content: pageLoader(() => import('./title.md'))
+        content: pageLoader(() => import('./title.js'))
+      }
+    ]
+  },
+  {
+    title: 'Form',
+    pages: [
+      {
+        title: 'Text Field',
+        path: '/form/text-field',
+        content: pageLoader(() => import('./text-field.js'))
       }
     ]
   }

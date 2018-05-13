@@ -1,24 +1,32 @@
+import React from 'react';
+import { markdown, TableSpecimen } from 'catalog';
+import parsePropTypes from './utils/parse-prop-types';
+
+import Image from '../src/Image/Image';
+
+export default () =>
+  markdown`
 ## Import
 
-```code
+\`\`\`code
 lang: jsx
 ---
 import Image from 'rebul/Image';
-```
+\`\`\`
 
 ## Usage
 
 ### Simple
 
-```react
+\`\`\`react
 showSource: true
 ---
 <Image alt="Placeholder" size="128" src="https://bulma.io/images/placeholders/128x128.png" />
-```
+\`\`\`
 
 ### Fixed square images
 
-```react
+\`\`\`react
 showSource: true
 ---
 <div>
@@ -30,26 +38,13 @@ showSource: true
   <Image alt="Placeholder" size="96" src="https://bulma.io/images/placeholders/96x96.png" style={{ marginBottom: '10px' }} />
   <Image alt="Placeholder" size="128" src="https://bulma.io/images/placeholders/128x128.png" />
 </div>
-```
+\`\`\`
 
 ## Props
 
-```table
-rows:
-  - Prop: alt
-    Type: 'String'
-    Default value:
-    Description: 'Image alt text'
-  - Prop: size
-    Type: 'String (optional)'
-    Default value:
-    Description: 'Size of image. Available values: `16`, `24`, `32`, `48`, `64`, `96`, `128`'
-  - Prop: src
-    Type: 'String'
-    Default value:
-    Description: 'Image source'
-```
+${<TableSpecimen rows={parsePropTypes(Image)} />}
 
 ## Reference
 
 [https://bulma.io/documentation/elements/image/](https://bulma.io/documentation/elements/image/)
+`;

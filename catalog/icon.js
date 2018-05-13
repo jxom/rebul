@@ -1,28 +1,36 @@
+import React from 'react';
+import { markdown, TableSpecimen } from 'catalog';
+import parsePropTypes from './utils/parse-prop-types';
+
+import Icon from '../src/Icon/Icon';
+
+export default () =>
+  markdown`
 ## Import
 
-```code
+\`\`\`code
 lang: jsx
 ---
 import Icon from 'rebul/Icon';
-```
+\`\`\`
 
 ## Usage
 
 ### Simple
 
-Render an icon using the `<Icon>` component
+Render an icon using the \`<Icon>\` component
 
-```react
+\`\`\`react
 showSource: true
 ---
 <Icon iconClass="fas fa-home" />
-```
+\`\`\`
 
 ### Colors
 
-Use the `color` prop to render icons with a color.
+Use the \`color\` prop to render icons with a color.
 
-```react
+\`\`\`react
 showSource: true
 ---
 <div>
@@ -32,15 +40,15 @@ showSource: true
   <Icon iconClass="fas fa-home" color="warning" />
   <Icon iconClass="fas fa-home" color="danger" />
 </div>
-```
+\`\`\`
 
 ### Sizes
 
-You can specify a custom size with the `size` prop. Available sizes are: `small`, `medium` and `large`.
+You can specify a custom size with the \`size\` prop. Available sizes are: \`small\`, \`medium\` and \`large\`.
 
 Note: This will alter the container size of the icon. To alter the actual icon size, use the icons size class name.
 
-```react
+\`\`\`react
 showSource: true
 ---
 <div>
@@ -49,26 +57,14 @@ showSource: true
   <Icon iconClass="fas fa-2x fa-home" size="medium" />
   <Icon iconClass="fas fa-3x fa-home" size="large" />
 </div>
-```
+\`\`\`
 
 ## Props
 
-```table
-rows:
-  - Prop: iconClass
-    Type: 'String'
-    Default value:
-    Description: 'Icon class name. Example (Font Awesome 5): `fa fa-home`'
-  - Prop: color
-    Type: 'String (optional)'
-    Default value:
-    Description: 'Color of the icon. Available values: `white`, `light`, `dark`, `black`, `text`, `primary`, `link`, `info`, `success`, `warning`, `danger`'
-  - Prop: size
-    Type: 'String (optional)'
-    Default value:
-    Description: 'Size of the icon. Available values: `small`, `medium`, `large`'
-```
+${<TableSpecimen rows={parsePropTypes(Icon)} />}
 
 ## Reference
 
 [https://bulma.io/documentation/elements/icon/](https://bulma.io/documentation/elements/icon/)
+
+`;

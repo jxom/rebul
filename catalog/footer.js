@@ -1,16 +1,20 @@
+import { markdown } from 'catalog';
+
+export default () =>
+  markdown`
 ## Import
 
-```code
+\`\`\`code
 lang: jsx
 ---
 import Footer from 'rebul/Footer';
-```
+\`\`\`
 
 ## Usage
 
 ### Simple
 
-```react
+\`\`\`react
 showSource: true
 ---
 <Footer>
@@ -20,8 +24,9 @@ showSource: true
     </Content>
   </Container>
 </Footer>
-```
+\`\`\`
 
 ## Reference
 
 [https://bulma.io/documentation/layout/section/](https://bulma.io/documentation/layout/section/)
+`;

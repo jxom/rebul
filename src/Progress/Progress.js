@@ -19,9 +19,13 @@ const Progress = ({ children, className, color, maxValue, size, value, ...props 
 Progress.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
+  /** Color of notifcation. Available values: `white`, `light`, `dark`, `black`, `text`, `primary`, `link`, `info`, `success`, `warning`, `danger` */
   color: sharedPropTypes.color,
+  /** Max value */
   maxValue: PropTypes.string,
+  /** Size of progress bar. Available values: `small`, `medium`, `large` */
   size: sharedPropTypes.size,
+  /** Value of progress bar */
   value: PropTypes.string.isRequired
 };
 

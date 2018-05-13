@@ -1,0 +1,4 @@
+{
+  "presets": ["babel-preset-react-app", "catalog/babel"],
+  "plugins": ["react-docgen"]
+}

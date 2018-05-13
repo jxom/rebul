@@ -34,8 +34,11 @@ class Hero extends React.Component {
 Hero.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
+  /** Adds a background color to hero. Available values: `white`, `light`, `dark`, `black`, `text`, `primary`, `link`, `info`, `success`, `warning`, `danger` */
   color: sharedPropTypes.color,
+  /** If true, adds a gradient to hero */
   isBold: PropTypes.bool,
+  /** Size of hero. Available values: `medium`, `large`, `fullheight` */
   size: PropTypes.oneOf(HERO_SIZES)
 };
 

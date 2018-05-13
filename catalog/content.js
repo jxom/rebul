@@ -1,16 +1,20 @@
-## Import
+import { markdown } from 'catalog';
 
-```code
-lang: jsx
----
-import Content from 'rebul/Content';
-```
+export default () =>
+  markdown`
+  ## Import
 
-## Usage
+  \`\`\`code
+  lang: jsx
+  ---
+  import Content from 'rebul/Content';
+  \`\`\`
 
-```react
-showSource: true
----
+  ## Usage
+
+  \`\`\`react
+  showSource: true
+  ---
 <Content>
   <h1>Hello World</h1>
   <p>
@@ -142,8 +146,9 @@ showSource: true
     tortor maximus dui, sed varius sapien odio vitae est. Etiam at cursus metus.
   </p>
 </Content>
-```
+  \`\`\`
 
-## Reference
+  ## Reference
 
-[https://bulma.io/documentation/elements/content/](https://bulma.io/documentation/elements/content/)
+  [https://bulma.io/documentation/elements/content/](https://bulma.io/documentation/elements/content/)
+`;

@@ -9,7 +9,9 @@ const Delete = ({ className, element: Element, size, ...props }) => (
 
 Delete.propTypes = {
   className: PropTypes.string,
+  /** Custom wrapper element */
   element: PropTypes.string,
+  /** Size of delete button. Available values: `small`, `medium`, `large` */
   size: sharedPropTypes.size
 };
 

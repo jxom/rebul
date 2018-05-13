@@ -1,15 +1,23 @@
+import React from 'react';
+import { markdown, TableSpecimen } from 'catalog';
+import parsePropTypes from './utils/parse-prop-types';
+
+import Hero from '../src/Hero/Hero';
+
+export default () =>
+  markdown`
 ## Import
 
-```code
+\`\`\`code
 lang: jsx
 ---
 import Hero from 'rebul/Hero';
-```
+\`\`\`
 
 ## Usage
 ### Basic
 
-```react
+\`\`\`react
 showSource: true
 ---
 <Hero>
@@ -20,11 +28,11 @@ showSource: true
     </Container>
   </Hero.Body>
 </Hero>
-```
+\`\`\`
 
 ### Colors
 
-```react
+\`\`\`react
 showSource: true
 ---
 <Hero color="primary">
@@ -35,9 +43,9 @@ showSource: true
     </Container>
   </Hero.Body>
 </Hero>
-```
+\`\`\`
 
-```react
+\`\`\`react
 ---
 <Hero color="info">
   <Hero.Body>
@@ -47,9 +55,9 @@ showSource: true
     </Container>
   </Hero.Body>
 </Hero>
-```
+\`\`\`
 
-```react
+\`\`\`react
 ---
 <Hero color="success">
   <Hero.Body>
@@ -59,9 +67,9 @@ showSource: true
     </Container>
   </Hero.Body>
 </Hero>
-```
+\`\`\`
 
-```react
+\`\`\`react
 ---
 <Hero color="warning">
   <Hero.Body>
@@ -71,9 +79,9 @@ showSource: true
     </Container>
   </Hero.Body>
 </Hero>
-```
+\`\`\`
 
-```react
+\`\`\`react
 ---
 <Hero color="danger">
   <Hero.Body>
@@ -83,9 +91,9 @@ showSource: true
     </Container>
   </Hero.Body>
 </Hero>
-```
+\`\`\`
 
-```react
+\`\`\`react
 ---
 <Hero color="dark">
   <Hero.Body>
@@ -95,9 +103,9 @@ showSource: true
     </Container>
   </Hero.Body>
 </Hero>
-```
+\`\`\`
 
-```react
+\`\`\`react
 dark: true
 ---
 <Hero color="light">
@@ -108,11 +116,11 @@ dark: true
     </Container>
   </Hero.Body>
 </Hero>
-```
+\`\`\`
 
 ### Gradients
 
-```react
+\`\`\`react
 showSource: true
 dark: true
 ---
@@ -124,9 +132,9 @@ dark: true
     </Container>
   </Hero.Body>
 </Hero>
-```
+\`\`\`
 
-```react
+\`\`\`react
 ---
 <Hero color="info" isBold>
   <Hero.Body>
@@ -136,9 +144,9 @@ dark: true
     </Container>
   </Hero.Body>
 </Hero>
-```
+\`\`\`
 
-```react
+\`\`\`react
 ---
 <Hero color="success" isBold>
   <Hero.Body>
@@ -148,9 +156,9 @@ dark: true
     </Container>
   </Hero.Body>
 </Hero>
-```
+\`\`\`
 
-```react
+\`\`\`react
 ---
 <Hero color="warning" isBold>
   <Hero.Body>
@@ -160,9 +168,9 @@ dark: true
     </Container>
   </Hero.Body>
 </Hero>
-```
+\`\`\`
 
-```react
+\`\`\`react
 ---
 <Hero color="danger" isBold>
   <Hero.Body>
@@ -172,9 +180,9 @@ dark: true
     </Container>
   </Hero.Body>
 </Hero>
-```
+\`\`\`
 
-```react
+\`\`\`react
 ---
 <Hero color="dark" isBold>
   <Hero.Body>
@@ -184,9 +192,9 @@ dark: true
     </Container>
   </Hero.Body>
 </Hero>
-```
+\`\`\`
 
-```react
+\`\`\`react
 dark: true
 ---
 <Hero color="light" isBold>
@@ -197,11 +205,11 @@ dark: true
     </Container>
   </Hero.Body>
 </Hero>
-```
+\`\`\`
 
 ### Sizes
 
-```react
+\`\`\`react
 showSource: true
 ---
 <Hero color="primary" size="medium">
@@ -212,9 +220,9 @@ showSource: true
     </Container>
   </Hero.Body>
 </Hero>
-```
+\`\`\`
 
-```react
+\`\`\`react
 showSource: true
 ---
 <Hero color="primary" size="large">
@@ -225,9 +233,9 @@ showSource: true
     </Container>
   </Hero.Body>
 </Hero>
-```
+\`\`\`
 
-```react
+\`\`\`react
 showSource: true
 ---
 <Hero color="primary" size="fullheight">
@@ -238,26 +246,14 @@ showSource: true
     </Container>
   </Hero.Body>
 </Hero>
-```
+\`\`\`
 
-## `<Hero>` Props
+## \`<Hero>\` Props
 
-```table
-rows:
-  - Prop: color
-    Type: 'String (optional)'
-    Default value:
-    Description: 'Adds a background color to hero. Available values: `white`, `light`, `dark`, `black`, `text`, `primary`, `link`, `info`, `success`, `warning`, `danger`'
-  - Prop: isBold
-    Type: 'Boolean (optional)'
-    Default value:
-    Description: 'If true, adds a gradient to hero'
-  - Prop: size
-    Type: 'String (optional)'
-    Default value:
-    Description: 'Size of hero. Available values: `medium`, `large`, `fullheight`'
-```
+${<TableSpecimen rows={parsePropTypes(Hero)} />}
 
 ## Reference
 
 [https://bulma.io/documentation/layout/hero/](https://bulma.io/documentation/layout/hero/)
+
+`;

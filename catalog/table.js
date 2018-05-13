@@ -1,16 +1,30 @@
+import React from 'react';
+import { markdown, TableSpecimen } from 'catalog';
+import parsePropTypes from './utils/parse-prop-types';
+
+import Table from '../src/Table/Table';
+import TableBody from '../src/Table/TableBody';
+import TableCell from '../src/Table/TableCell';
+import TableCellHead from '../src/Table/TableCellHead';
+import TableFoot from '../src/Table/TableFoot';
+import TableHead from '../src/Table/TableHead';
+import TableRow from '../src/Table/TableRow';
+
+export default () =>
+  markdown`
 ## Import
 
-```code
+\`\`\`code
 lang: jsx
 ---
 import Table from 'rebul/Table';
-```
+\`\`\`
 
 ## Usage
 
 ### Simple
 
-```react
+\`\`\`react
 showSource: true
 ---
 <Table>
@@ -47,11 +61,11 @@ showSource: true
     </Table.Row>
   </Table.Foot>
 </Table>
-```
+\`\`\`
 
 ### Hoverable
 
-```react
+\`\`\`react
 showSource: true
 ---
 <Table isHoverable>
@@ -81,11 +95,11 @@ showSource: true
     </Table.Row>
   </Table.Body>
 </Table>
-```
+\`\`\`
 
 ### Bordered
 
-```react
+\`\`\`react
 showSource: true
 ---
 <Table isBordered>
@@ -115,11 +129,11 @@ showSource: true
     </Table.Row>
   </Table.Body>
 </Table>
-```
+\`\`\`
 
 ### Full width
 
-```react
+\`\`\`react
 showSource: true
 ---
 <Table isFullWidth>
@@ -149,11 +163,11 @@ showSource: true
     </Table.Row>
   </Table.Body>
 </Table>
-```
+\`\`\`
 
 ### Narrow
 
-```react
+\`\`\`react
 showSource: true
 ---
 <Table isNarrow>
@@ -183,11 +197,11 @@ showSource: true
     </Table.Row>
   </Table.Body>
 </Table>
-```
+\`\`\`
 
 ### Striped
 
-```react
+\`\`\`react
 showSource: true
 ---
 <Table isStriped>
@@ -217,44 +231,39 @@ showSource: true
     </Table.Row>
   </Table.Body>
 </Table>
-```
+\`\`\`
 
-## `<Table>` Props
+## \`<Table>\` Props
 
-```table
-rows:
-  - Prop: isBordered
-    Type: Boolean (optional)
-    Default value: '`false`'
-    Description: Is the table bordered?
-  - Prop: isFullWidth
-    Type: Boolean (optional)
-    Default value: '`false`'
-    Description: Is the table full width?
-  - Prop: isHoverable
-    Type: Boolean (optional)
-    Default value: '`false`'
-    Description: Are the table rows hoverable?
-  - Prop: isNarrow
-    Type: Boolean (optional)
-    Default value: '`false`'
-    Description: Is the table narrow?
-  - Prop: isStriped
-    Type: Boolean (optional)
-    Default value: '`false`'
-    Description: Are the table rows striped?
-```
+${<TableSpecimen rows={parsePropTypes(Table)} />}
 
-## `<Table.Row>` Props
+## \`<Table.Head>\` Props
 
-```table
-rows:
-  - Prop: isSelected
-    Type: Boolean (optional)
-    Default value: '`false`'
-    Description: Is the row bordered?
-```
+${<TableSpecimen rows={parsePropTypes(TableHead)} />}
+
+## \`<Table.Body>\` Props
+
+${<TableSpecimen rows={parsePropTypes(TableBody)} />}
+
+## \`<Table.Foot>\` Props
+
+${<TableSpecimen rows={parsePropTypes(TableFoot)} />}
+
+## \`<Table.Row>\` Props
+
+${<TableSpecimen rows={parsePropTypes(TableRow)} />}
+
+## \`<Table.Cell>\` Props
+
+${<TableSpecimen rows={parsePropTypes(TableCell)} />}
+
+## \`<Table.CellHead>\` Props
+
+${<TableSpecimen rows={parsePropTypes(TableCellHead)} />}
+
 
 ## Reference
 
 [https://bulma.io/documentation/elements/table/](https://bulma.io/documentation/elements/table/)
+
+`;

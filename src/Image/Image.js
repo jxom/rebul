@@ -9,9 +9,12 @@ const Image = ({ alt, className, size, src, ...props }) => (
 );
 
 Image.propTypes = {
+  /** Image alt text */
   alt: PropTypes.string.isRequired,
   className: PropTypes.string,
+  /** Size of image. Available values: `16`, `24`, `32`, `48`, `64`, `96`, `128` */
   size: PropTypes.oneOf(['16', '24', '32', '48', '64', '96', '128']).isRequired,
+  /** Image source URL */
   src: PropTypes.string.isRequired
 };
 

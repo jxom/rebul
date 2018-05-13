@@ -43,15 +43,27 @@ const Button = ({
 Button.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
+  /**
+   * Button color. Available values: `white`, `light`, `dark`, `black`, `text`, `primary`, `link`, `info`, `success`, `warning`, `danger`
+   */
   color: sharedPropTypes.color,
+  /** Button element type */
   element: PropTypes.string,
+  /** Is button color inverted? */
   isInverted: PropTypes.bool,
+  /** Is button loading? */
   isLoading: PropTypes.bool,
+  /** Is button outlined? */
   isOutlined: PropTypes.bool,
+  /** Is button round? */
   isRounded: PropTypes.bool,
+  /** Is button selected? */
   isSelected: PropTypes.bool,
+  /** Is button static? */
   isStatic: PropTypes.bool,
+  /** Size of button. Available values: `small`, `medium`, `large` */
   size: sharedPropTypes.size,
+  /** State of button. Available values: `hovered`, `active`, `focused` */
   state: sharedPropTypes.state
 };
 

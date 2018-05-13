@@ -1,14 +1,18 @@
+import { markdown } from 'catalog';
+
+export default () =>
+  markdown`
 ## Import
 
-```code
+\`\`\`code
 lang: jsx
 ---
 import Media from 'rebul/Media';
-```
+\`\`\`
 
 ### Basic
 
-```react
+\`\`\`react
 showSource: true
 ---
 <Media>
@@ -41,8 +45,9 @@ showSource: true
     <Delete />
   </Media.Right>
 </Media>
-```
+\`\`\`
 
 ## Reference
 
 [https://bulma.io/documentation/layout/media-object/](https://bulma.io/documentation/layout/media-object/)
+`;

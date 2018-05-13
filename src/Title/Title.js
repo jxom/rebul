@@ -22,9 +22,13 @@ const Title = ({ children, className, element, isSpaced, isSubTitle, size, ...pr
 Title.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
+  /** Custom element to use for title. Example: `'p'` */
   element: PropTypes.string,
+  /** Does the title have padding? */
   isSpaced: PropTypes.bool,
+  /** Is the title a subtitle? */
   isSubTitle: PropTypes.bool,
+  /** Size of title. Available values: `"1"`, `"2"`, `"3"`, `"4"`, `"5"`, `"6"` */
   size: PropTypes.oneOf(['1', '2', '3', '4', '5', '6'])
 };
 

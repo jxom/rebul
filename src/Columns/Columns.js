@@ -17,10 +17,13 @@ const Columns = ({ breakpoint, children, className, isGapless, isMultiline }) =>
 );
 
 Columns.propTypes = {
+  /** Minimum breakpoint of where responsive columns is effective. Available values: `mobile`, `tablet`, `desktop`, `widescreen`, `fullhd` */
   breakpoint: PropTypes.oneOf(['mobile', 'tablet', 'desktop', 'widescreen', 'fullhd']),
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
+  /** Do the columns have no gaps? */
   isGapless: PropTypes.bool,
+  /** Do the columns span on multiple lines? */
   isMultiline: PropTypes.bool
 };
 

@@ -11,6 +11,7 @@ const Container = ({ children, className, size }) => (
 Container.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
+  /** Available values: `fluid`, `desktop`, `widescreen`, `fullhd` */
   size: PropTypes.oneOf(CONTAINER_SIZES)
 };
 

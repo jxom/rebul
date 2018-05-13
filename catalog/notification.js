@@ -1,79 +1,79 @@
+import React from 'react';
+import { markdown, TableSpecimen } from 'catalog';
+import parsePropTypes from './utils/parse-prop-types';
+
+import Notification from '../src/Notification/Notification';
+
+export default () =>
+  markdown`
 ## Import
 
-```code
+\`\`\`code
 lang: jsx
 ---
 import Notification from 'rebul/Notification';
-```
+\`\`\`
 
 ## Usage
 
 ### Simple
 
-Render a notifcation using the `<Notification>` component.
+Render a notifcation using the \`<Notification>\` component.
 
-```react
+\`\`\`react
 showSource: true
 dark: true
 ---
 <Notification>Hello world</Notification>
-```
+\`\`\`
 
-Specify an `onClickClose` prop to show a close button.
+Specify an \`onClickClose\` prop to show a close button.
 
-```react
+\`\`\`react
 showSource: true
 dark: true
 ---
 <Notification onClickClose={() => console.log('close notification')}>Hello world</Notification>
-```
+\`\`\`
 
 ### Colors
 
-```react
+\`\`\`react
 showSource: true
 ---
 <Notification color="primary">Hello world</Notification>
-```
+\`\`\`
 
-```react
+\`\`\`react
 showSource: true
 ---
 <Notification color="info">Hello world</Notification>
-```
+\`\`\`
 
-```react
+\`\`\`react
 showSource: true
 ---
 <Notification color="success">Hello world</Notification>
-```
+\`\`\`
 
-```react
+\`\`\`react
 showSource: true
 ---
 <Notification color="warning">Hello world</Notification>
-```
+\`\`\`
 
-```react
+\`\`\`react
 showSource: true
 ---
 <Notification color="danger">Hello world</Notification>
-```
+\`\`\`
 
 ## Props
 
-```table
-rows:
-  - Prop: onClickClose
-    Type: Function (optional)
-    Default value:
-    Description: 'Function to invoke when close button clicked'
-  - Prop: color
-    Type: String (optional)
-    Default value:
-    Description: 'Color of notifcation. Available values: `white`, `light`, `dark`, `black`, `text`, `primary`, `link`, `info`, `success`, `warning`, `danger`'
-```
+${<TableSpecimen rows={parsePropTypes(Notification)} />}
 
 ## Reference
 
 [https://bulma.io/documentation/elements/notification/](https://bulma.io/documentation/elements/notification/)
+
+`;

@@ -1,16 +1,20 @@
+import { markdown } from 'catalog';
+
+export default () =>
+  markdown`
 ## Import
 
-```code
+\`\`\`code
 lang: jsx
 ---
 import Section from 'rebul/Section';
-```
+\`\`\`
 
 ## Usage
 
 ### Simple
 
-```react
+\`\`\`react
 showSource: true
 ---
 <Section>
@@ -21,8 +25,10 @@ showSource: true
     </Title>
   </Container>
 </Section>
-```
+\`\`\`
 
 ## Reference
 
 [https://bulma.io/documentation/layout/section/](https://bulma.io/documentation/layout/section/)
+
+`;

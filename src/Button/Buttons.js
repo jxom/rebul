@@ -13,7 +13,7 @@ const Buttons = ({ children, className, hasAddons, ...props }) => {
 Buttons.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  hasAddons: PropTypes.boolean
+  hasAddons: PropTypes.bool
 };
 
 Buttons.defaultProps = {

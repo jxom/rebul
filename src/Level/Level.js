@@ -19,6 +19,7 @@ class Level extends React.Component {
 Level.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
+  /** Is level horizontal on mobile? */
   isMobile: PropTypes.bool
 };
 
