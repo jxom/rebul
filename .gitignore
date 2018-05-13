@@ -9,25 +9,4 @@ npm-debug.log
 *.env
 /catalog/build/
 
-/Button/
-/Box/
-/Column/
-/Columns/
-/Container/
-/Content/
-/Delete/
-/Hero/
-/Icon/
-/Image/
-/Level/
-/Media/
-/Notification/
-/Progress/
-/Section/
-/Table/
-/Tag/
-/Title/
-/_prop-types.js
-/index.js
-
 package-lock.json
