@@ -22,10 +22,19 @@ export default components.map(component => {
         'react-dom': 'ReactDOM',
         classnames: 'classNames',
         'styled-components': 'styled',
-        'styled-system': 'styledSystem'
+        'styled-system': 'styledSystem',
+        'react-autosize-textarea': 'TextareaAutosize'
       }
     },
-    external: ['prop-types', 'react', 'react-dom', 'classnames', 'styled-components', 'styled-system'],
+    external: [
+      'prop-types',
+      'react',
+      'react-dom',
+      'classnames',
+      'styled-components',
+      'styled-system',
+      'react-autosize-textarea'
+    ],
     plugins: [
       babel({
         presets: [['env', { modules: false }], 'react'],

@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import TextareaAutosize from 'react-autosize-textarea';
 import * as sharedPropTypes from '../_prop-types';
 
 import Field from '../_common/Field';
