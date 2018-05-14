@@ -46,6 +46,136 @@ export default () =>
   </Message>
   \`\`\`
 
+  ### Colors
+
+  \`\`\`react
+  showSource: true
+  dark: true
+  ---
+  <Message color="dark">
+    <Message.Header>
+      Hello World
+    </Message.Header>
+    <Message.Body>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque risus mi, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum felis venenatis efficitur. Aenean ac eleifend lacus, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+    </Message.Body>
+  </Message>
+  \`\`\`
+
+  \`\`\`react
+  showSource: true
+  dark: true
+  ---
+  <Message color="primary">
+    <Message.Header>
+      Hello World
+    </Message.Header>
+    <Message.Body>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque risus mi, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum felis venenatis efficitur. Aenean ac eleifend lacus, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+    </Message.Body>
+  </Message>
+  \`\`\`
+
+  \`\`\`react
+  showSource: true
+  dark: true
+  ---
+  <Message color="success">
+    <Message.Header>
+      Hello World
+    </Message.Header>
+    <Message.Body>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque risus mi, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum felis venenatis efficitur. Aenean ac eleifend lacus, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+    </Message.Body>
+  </Message>
+  \`\`\`
+
+  \`\`\`react
+  showSource: true
+  dark: true
+  ---
+  <Message color="link">
+    <Message.Header>
+      Hello World
+    </Message.Header>
+    <Message.Body>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque risus mi, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum felis venenatis efficitur. Aenean ac eleifend lacus, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+    </Message.Body>
+  </Message>
+  \`\`\`
+
+  \`\`\`react
+  showSource: true
+  dark: true
+  ---
+  <Message color="danger">
+    <Message.Header>
+      Hello World
+    </Message.Header>
+    <Message.Body>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque risus mi, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum felis venenatis efficitur. Aenean ac eleifend lacus, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+    </Message.Body>
+  </Message>
+  \`\`\`
+
+  \`\`\`react
+  showSource: true
+  dark: true
+  ---
+  <Message color="warning">
+    <Message.Header>
+      Hello World
+    </Message.Header>
+    <Message.Body>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque risus mi, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum felis venenatis efficitur. Aenean ac eleifend lacus, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+    </Message.Body>
+  </Message>
+  \`\`\`
+
+  ### Sizes
+
+  \`\`\`react
+  showSource: true
+  dark: true
+  ---
+  <Message textSize="small">
+    <Message.Header>
+      Hello World
+    </Message.Header>
+    <Message.Body>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque risus mi, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum felis venenatis efficitur. Aenean ac eleifend lacus, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+    </Message.Body>
+  </Message>
+  \`\`\`
+
+  \`\`\`react
+  showSource: true
+  dark: true
+  ---
+  <Message textSize="medium">
+    <Message.Header>
+      Hello World
+    </Message.Header>
+    <Message.Body>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque risus mi, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum felis venenatis efficitur. Aenean ac eleifend lacus, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+    </Message.Body>
+  </Message>
+  \`\`\`
+
+  \`\`\`react
+  showSource: true
+  dark: true
+  ---
+  <Message textSize="large">
+    <Message.Header>
+      Hello World
+    </Message.Header>
+    <Message.Body>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque risus mi, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum felis venenatis efficitur. Aenean ac eleifend lacus, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+    </Message.Body>
+  </Message>
+  \`\`\`
+
   ## Playground
 
 ${(
@@ -55,7 +185,7 @@ ${(
     Hello World
   </Message.Header>
   <Message.Body>
-    Edit me :)
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque risus mi, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum felis venenatis efficitur. Aenean ac eleifend lacus, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
   </Message.Body>
 </Message>`}
       scope={{ React, Message }}

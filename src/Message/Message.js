@@ -9,18 +9,28 @@ class Message extends React.Component {
   static Body = MessageBody;
 
   render = () => {
-    const { children, className } = this.props;
-    return <div className={classNames('message', className || '')}>{children}</div>;
+    const { children, className, color, textSize } = this.props;
+    return (
+      <div
+        className={classNames('message', className || '', color ? `is-${color}` : '', textSize ? `is-${textSize}` : '')}
+      >
+        {children}
+      </div>
+    );
   };
 }
 
 Message.propTypes = {
   children: PropTypes.node.isRequired,
-  className: PropTypes.string
+  className: PropTypes.string,
+  color: PropTypes.string,
+  textSize: PropTypes.string
 };
 
 Message.defaultProps = {
-  className: null
+  className: null,
+  color: null,
+  textSize: null
 };
 
 export default Message;
