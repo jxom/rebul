@@ -39,7 +39,16 @@ import TextField from 'rebul/TextField';
     value="jake@"
   />
   <TextField
-    helpText="Your password must contain 8 characters."
+    helpText={
+      <div className="content">
+        Your password must contain:
+        <ul style={{ marginTop: '0.2em' }}>
+          <li>8 characters</li>
+          <li>1 upper-case character</li>
+          <li>1 number</li>
+        </ul>
+      </div>
+    }
     label="Password"
     leftIconName="fa fa-lock"
     type="password"

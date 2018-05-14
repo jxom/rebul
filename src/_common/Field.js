@@ -28,7 +28,7 @@ Field.propTypes = {
   className: PropTypes.string,
   color: sharedPropTypes.color,
   hasAddons: PropTypes.bool,
-  helpText: PropTypes.string,
+  helpText: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   isHorizontal: PropTypes.bool,
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   labelSize: sharedPropTypes.size

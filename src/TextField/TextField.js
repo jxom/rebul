@@ -84,7 +84,7 @@ TextField.propTypes = {
   /** Color of input field. */
   color: sharedPropTypes.color,
   /** Displays help text */
-  helpText: PropTypes.string,
+  helpText: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   /** The label that appears above the input */
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   /** Size of the label field */
