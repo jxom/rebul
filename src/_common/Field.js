@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import * as sharedPropTypes from '../_prop-types';
 
 import FieldLabel from './FieldLabel';
+import HelpText from './HelpText';
 
 const Field = ({ children, className, color, hasAddons, helpText, isHorizontal, label, labelSize, ...props }) => (
   <div
@@ -20,7 +21,7 @@ const Field = ({ children, className, color, hasAddons, helpText, isHorizontal, 
       </FieldLabel>
     )}
     {children}
-    {helpText && <p className={`help ${classNames(color ? `is-${color}` : '')}`}>{helpText}</p>}
+    {helpText && <HelpText color={color}>{helpText}</HelpText>}
   </div>
 );
 
