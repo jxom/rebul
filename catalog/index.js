@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import { Catalog, pageLoader } from 'catalog';
 
 const imports = {
+  Field: require('../src/_common/Field'),
+  FieldBody: require('../src/_common/FieldBody'),
+  FieldControl: require('../src/_common/FieldControl'),
+  FieldLabel: require('../src/_common/FieldLabel'),
   Box: require('../src/Box/Box'),
   Button: require('../src/Button/Button'),
   Buttons: require('../src/Button/Buttons'),

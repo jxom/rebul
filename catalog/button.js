@@ -256,7 +256,13 @@ showSource: true
 
 ## Playground
 
-${<Playground codeText={`<Button color="primary">Primary</Button>`} scope={{ React, Button }} theme="dracula" />}
+${(
+    <Playground
+      codeText={`<Button color="primary">Primary</Button>`}
+      scope={{ React, Button, Buttons }}
+      theme="dracula"
+    />
+  )}
 
 ## \`<Button>\` Props
 
