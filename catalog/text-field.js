@@ -21,11 +21,11 @@ import TextField from 'rebul/TextField';
 
 \`\`\`react
 <React.Fragment>
-  <TextField label="Username" placeholder="Bill Gates" />
+  <TextField labelName="Username" placeholder="Bill Gates" />
   <TextField
     color="success"
     helpText="This name is available!"
-    label="Full name"
+    labelName="Full name"
     leftIconName="fa fa-user"
     rightIconName="fa fa-check has-text-success"
     value="Jake Moxey"
@@ -33,7 +33,7 @@ import TextField from 'rebul/TextField';
   <TextField
     color="danger"
     helpText="This email is invalid!"
-    label="Email"
+    labelName="Email"
     leftIconName="fa fa-envelope"
     rightIconName="fa fa-exclamation-triangle has-text-danger"
     value="jake@"
@@ -49,7 +49,7 @@ import TextField from 'rebul/TextField';
         </ul>
       </div>
     }
-    label="Password"
+    labelName="Password"
     leftIconName="fa fa-lock"
     type="password"
   />
@@ -61,26 +61,26 @@ import TextField from 'rebul/TextField';
 \`\`\`react
 <React.Fragment>
   <TextField
-    label="Username"
+    labelName="Username"
     leftIconName="fa fa-user"
     placeholder="Bill Gates"
     labelSize="small"
     inputSize="small"
   />
   <TextField
-    label="Username"
+    labelName="Username"
     leftIconName="fa fa-user"
     placeholder="Bill Gates"
   />
   <TextField
-    label="Username"
+    labelName="Username"
     leftIconName="fa fa-user"
     placeholder="Bill Gates"
     labelSize="medium"
     inputSize="medium"
   />
   <TextField
-    label="Username"
+    labelName="Username"
     leftIconName="fa fa-user"
     placeholder="Bill Gates"
     labelSize="large"
@@ -94,31 +94,31 @@ import TextField from 'rebul/TextField';
 \`\`\`react
 <React.Fragment>
   <TextField
-    label="Username"
+    labelName="Username"
     leftIconName="fa fa-user"
     placeholder="Bill Gates"
   />
   <TextField
-    label="Username"
+    labelName="Username"
     leftIconName="fa fa-user"
     placeholder="Bill Gates"
     state="hovered"
   />
   <TextField
-    label="Username"
+    labelName="Username"
     leftIconName="fa fa-user"
     placeholder="Bill Gates"
     state="focused"
   />
   <TextField
     isLoading
-    label="Username"
+    labelName="Username"
     leftIconName="fa fa-user"
     placeholder="Bill Gates"
   />
   <TextField
     disabled
-    label="Username"
+    labelName="Username"
     leftIconName="fa fa-user"
     placeholder="Bill Gates"
   />
@@ -130,7 +130,7 @@ import TextField from 'rebul/TextField';
 \`\`\`react
 <TextField
   isRounded
-  label="Username"
+  labelName="Username"
   leftIconName="fa fa-user"
   placeholder="Bill Gates"
 />
@@ -141,7 +141,7 @@ import TextField from 'rebul/TextField';
 \`\`\`react
 <TextField
   isReadOnly
-  label="Username"
+  labelName="Username"
   leftIconName="fa fa-user"
   placeholder="Bill Gates"
   value="This is read only"
@@ -152,12 +152,12 @@ import TextField from 'rebul/TextField';
 
 \`\`\`react
 <React.Fragment>
-  <TextField isHorizontal label="Username" placeholder="Bill Gates" />
+  <TextField isHorizontal labelName="Username" placeholder="Bill Gates" />
   <TextField
     color="danger"
     helpText="This email is invalid!"
     isHorizontal
-    label="Email"
+    labelName="Email"
     leftIconName="fa fa-envelope"
     rightIconName="fa fa-exclamation-triangle has-text-danger"
     value="jake@"
@@ -172,12 +172,12 @@ span: 3
 ---
 <React.Fragment>
   <TextField
-    label="Username"
+    labelName="Username"
     placeholder="Bill Gates"
     rightAddonComponent={<Button color="primary">Search</Button>}
   />
   <TextField
-    label="Username"
+    labelName="Username"
     placeholder="Amount of money"
     leftAddonComponent={<span className="select">
     <select>
@@ -189,7 +189,7 @@ span: 3
   />
   <TextField
     isExpanded
-    label="Username"
+    labelName="Username"
     placeholder="Amount of money"
     leftAddonComponent={<span className="select">
     <select>
@@ -207,7 +207,7 @@ span: 3
 
 ${(
     <Playground
-      codeText={`<TextField label="Name" placeholder="Bill Gates" />`}
+      codeText={`<TextField labelName="Name" placeholder="Bill Gates" />`}
       scope={{ React, TextField }}
       theme="dracula"
     />

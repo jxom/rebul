@@ -21,7 +21,8 @@ const TextField = ({
   isHorizontal,
   isReadOnly,
   isRounded,
-  label,
+  labelComponent,
+  labelName,
   labelSize,
   leftAddonComponent,
   leftIconName,
@@ -44,7 +45,7 @@ const TextField = ({
   ...props
 }) => {
   return (
-    <Field isHorizontal={isHorizontal} label={label} labelSize={labelSize}>
+    <Field isHorizontal={isHorizontal} label={labelComponent || labelName} labelSize={labelSize}>
       <FieldBody>
         <Field color={color} hasAddons={Boolean(leftAddonComponent || rightAddonComponent)} helpText={helpText}>
           {leftAddonComponent && <FieldControl>{leftAddonComponent}</FieldControl>}
@@ -56,6 +57,7 @@ const TextField = ({
             rightIconName={rightIconName}
           >
             <input
+              aria-label={labelName}
               autoComplete={autoComplete}
               autoFocus={autoFocus}
               className={`input ${classNames(
@@ -102,7 +104,9 @@ TextField.propTypes = {
   /** Displays help text */
   helpText: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   /** The label that appears above the input */
-  label: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+  labelComponent: PropTypes.element,
+  /** The label that appears above the input */
+  labelName: PropTypes.string,
   /** Size of the label field */
   labelSize: sharedPropTypes.size,
   /** Addon component to display on the left of the field */
@@ -166,7 +170,8 @@ TextField.defaultProps = {
   className: null,
   color: null,
   helpText: null,
-  label: null,
+  labelComponent: null,
+  labelName: null,
   labelSize: null,
   leftAddonComponent: null,
   leftIconName: null,
@@ -193,7 +198,7 @@ TextField.defaultProps = {
   state: null,
   step: null,
   type: 'text',
-  value: ''
+  value: undefined
 };
 
 export default TextField;
