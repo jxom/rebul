@@ -29,6 +29,7 @@ const imports = {
   Tags: require('../src/Tag/Tags'),
   TextField: require('../src/TextField/TextField'),
   TextAreaField: require('../src/TextAreaField/TextAreaField'),
+  SelectField: require('../src/SelectField/SelectField'),
   Title: require('../src/Title/Title')
 };
 const pages = [
@@ -152,6 +153,11 @@ const pages = [
         title: 'Text Area Field',
         path: '/form/text-area-field',
         content: pageLoader(() => import('./text-area-field.js'))
+      },
+      {
+        title: 'Select Field',
+        path: '/form/select-field',
+        content: pageLoader(() => import('./select-field.js'))
       }
     ]
   }
