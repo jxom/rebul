@@ -15,6 +15,7 @@ const TextField = ({
   color,
   helpText,
   inputSize,
+  id,
   isDisabled,
   isExpanded,
   isLoading,
@@ -25,26 +26,18 @@ const TextField = ({
   labelSize,
   leftAddonComponent,
   leftIconName,
-  max,
-  maxLength,
-  min,
-  minLength,
-  name,
   onBlur,
   onChange,
   onFocus,
-  pattern,
   placeholder,
   rightAddonComponent,
   rightIconName,
-  spellCheck,
   state,
-  step,
   value,
   ...props
 }) => {
   return (
-    <Field isHorizontal={isHorizontal} label={label} labelSize={labelSize}>
+    <Field id={id} isHorizontal={isHorizontal} label={label} labelSize={labelSize}>
       <FieldBody>
         <Field color={color} hasAddons={Boolean(leftAddonComponent || rightAddonComponent)} helpText={helpText}>
           {leftAddonComponent && <FieldControl>{leftAddonComponent}</FieldControl>}
@@ -66,19 +59,11 @@ const TextField = ({
                 className || ''
               )}`}
               disabled={isDisabled}
-              max={max}
-              maxLength={maxLength}
-              min={min}
-              minLength={minLength}
-              name={name}
               onBlur={onBlur}
               onChange={e => onChange && onChange(e.target.value, e)}
               onFocus={onBlur}
-              pattern={pattern}
               placeholder={placeholder}
               readOnly={isReadOnly}
-              spellCheck={spellCheck}
-              step={step}
               value={value}
               {...props}
             />
@@ -109,6 +94,8 @@ TextField.propTypes = {
   leftAddonComponent: PropTypes.element,
   /** Name of left field icon */
   leftIconName: PropTypes.string,
+  /** ID for the input field */
+  id: PropTypes.string,
   /** Size of the input field */
   inputSize: sharedPropTypes.size,
   /** Disable the input field */
@@ -123,36 +110,20 @@ TextField.propTypes = {
   isReadOnly: PropTypes.bool,
   /** Input field is rounded */
   isRounded: PropTypes.bool,
-  /** Max value for numeric field */
-  max: PropTypes.number,
-  /** Max length for a alphanumeric field */
-  maxLength: PropTypes.number,
-  /** Min value for numeric field */
-  min: PropTypes.number,
-  /** Min length for a alphanumeric field */
-  minLength: PropTypes.number,
-  /** Name of the input field */
-  name: PropTypes.string,
   /** Function to invoke on blur */
   onBlur: PropTypes.func,
   /** Function to invoke on change */
   onChange: PropTypes.func,
   /** Function to invoke on focus */
   onFocus: PropTypes.func,
-  /** Regex to check value against */
-  pattern: PropTypes.string,
   /** Placeholder of the input */
   placeholder: PropTypes.string,
   /** Addon component to display on the right of the field */
   rightAddonComponent: PropTypes.element,
   /** Name of right field icon */
   rightIconName: PropTypes.string,
-  /** Enable spell check for input field */
-  spellCheck: PropTypes.bool,
   /** State of field */
   state: sharedPropTypes.state,
-  /** Increment/decrement step value for numeric field */
-  step: PropTypes.number,
   /** Type of input */
   type: PropTypes.string,
   /** Value of the input */
@@ -170,6 +141,7 @@ TextField.defaultProps = {
   labelSize: null,
   leftAddonComponent: null,
   leftIconName: null,
+  id: null,
   inputSize: null,
   isDisabled: false,
   isExpanded: false,
@@ -177,21 +149,13 @@ TextField.defaultProps = {
   isHorizontal: false,
   isReadOnly: false,
   isRounded: false,
-  max: null,
-  maxLength: null,
-  min: null,
-  minLength: null,
-  name: null,
   onBlur: null,
   onChange: null,
   onFocus: null,
-  pattern: null,
   placeholder: null,
   rightAddonComponent: null,
   rightIconName: null,
-  spellCheck: false,
   state: null,
-  step: null,
   type: 'text',
   value: ''
 };

@@ -12,6 +12,7 @@ const Field = ({ children, className, color, hasAddons, helpText, isHorizontal, 
       hasAddons ? 'has-addons' : '',
       className || ''
     )}`}
+    {...props}
   >
     {label && (
       <FieldLabel isHorizontal={isHorizontal} size={labelSize}>
