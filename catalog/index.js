@@ -22,6 +22,7 @@ const imports = {
   Image: require('../src/Image/Image'),
   Level: require('../src/Level/Level'),
   Media: require('../src/Media/Media'),
+  Message: require('../src/Message/Message'),
   Notification: require('../src/Notification/Notification'),
   Progress: require('../src/Progress/Progress'),
   Section: require('../src/Section/Section'),
@@ -169,6 +170,11 @@ const pages = [
         title: 'Card',
         path: '/elements/card',
         content: pageLoader(() => import('./card.js'))
+      },
+      {
+        title: 'Message',
+        path: '/elements/message',
+        content: pageLoader(() => import('./message.js'))
       }
     ]
   }

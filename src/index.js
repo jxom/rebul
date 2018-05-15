@@ -12,6 +12,7 @@ export * from './Icon/index.js';
 export * from './Image/index.js';
 export * from './Level/index.js';
 export * from './Media/index.js';
+export * from './Message/index.js';
 export * from './Notification/index.js';
 export * from './Progress/index.js';
 export * from './Section/index.js';
