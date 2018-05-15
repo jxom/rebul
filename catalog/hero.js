@@ -252,6 +252,18 @@ showSource: true
 
 ${<TableSpecimen rows={parsePropTypes(Hero)} />}
 
+## \`<Hero.Head>\` Props
+
+${<TableSpecimen rows={parsePropTypes(Hero.Head)} />}
+
+## \`<Hero.Body>\` Props
+
+${<TableSpecimen rows={parsePropTypes(Hero.Body)} />}
+
+## \`<Hero.Foot>\` Props
+
+${<TableSpecimen rows={parsePropTypes(Hero.Foot)} />}
+
 ## Reference
 
 [https://bulma.io/documentation/layout/hero/](https://bulma.io/documentation/layout/hero/)

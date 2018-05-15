@@ -1,4 +1,8 @@
-import { markdown } from 'catalog';
+import React from 'react';
+import { TableSpecimen, markdown } from 'catalog';
+import parsePropTypes from './utils/parse-prop-types';
+
+import Media from '../src/Media/Media';
 
 export default () =>
   markdown`
@@ -46,6 +50,26 @@ showSource: true
   </Media.Right>
 </Media>
 \`\`\`
+
+## \`<Media>\` Props
+
+${<TableSpecimen rows={parsePropTypes(Media)} />}
+
+## \`<Media.Left>\` Props
+
+${<TableSpecimen rows={parsePropTypes(Media.Left)} />}
+
+## \`<Media.Right>\` Props
+
+${<TableSpecimen rows={parsePropTypes(Media.Right)} />}
+
+## \`<Media.Content>\` Props
+
+${<TableSpecimen rows={parsePropTypes(Media.Content)} />}
+
+## \`<Media.Image>\` Props
+
+${<TableSpecimen rows={parsePropTypes(Media.Image)} />}
 
 ## Reference
 

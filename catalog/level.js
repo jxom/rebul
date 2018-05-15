@@ -88,9 +88,21 @@ ${(
     />
   )}
 
-## Props
+## \`<Level>\` Props
 
 ${<TableSpecimen rows={parsePropTypes(Level)} />}
+
+## \`<Level.Right>\` Props
+
+${<TableSpecimen rows={parsePropTypes(Level.Right)} />}
+
+## \`<Level.Left>\` Props
+
+${<TableSpecimen rows={parsePropTypes(Level.Left)} />}
+
+## \`<Level.Item>\` Props
+
+${<TableSpecimen rows={parsePropTypes(Level.Item)} />}
 
 ## Reference
 
