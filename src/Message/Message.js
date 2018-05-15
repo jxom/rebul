@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+
+import * as sharedPropTypes from '../_prop-types';
 import MessageHeader from './MessageHeader';
 import MessageBody from './MessageBody';
 
@@ -23,8 +25,8 @@ class Message extends React.Component {
 Message.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  color: PropTypes.string,
-  textSize: PropTypes.string
+  color: sharedPropTypes.color,
+  textSize: sharedPropTypes.size
 };
 
 Message.defaultProps = {
