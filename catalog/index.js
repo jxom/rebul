@@ -10,6 +10,7 @@ const imports = {
   Box: require('../src/Box/Box'),
   Button: require('../src/Button/Button'),
   Buttons: require('../src/Button/Buttons'),
+  Card: require('../src/Card/Card'),
   Columns: require('../src/Columns/Columns'),
   Column: require('../src/Column/Column'),
   Container: require('../src/Container/Container'),
@@ -158,6 +159,16 @@ const pages = [
         title: 'Select Field',
         path: '/form/select-field',
         content: pageLoader(() => import('./select-field.js'))
+      }
+    ]
+  },
+  {
+    title: 'Components',
+    pages: [
+      {
+        title: 'Card',
+        path: '/elements/card',
+        content: pageLoader(() => import('./card.js'))
       }
     ]
   }
