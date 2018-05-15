@@ -4,11 +4,20 @@ import Playground from 'component-playground';
 import parsePropTypes from './utils/parse-prop-types';
 
 import Card from '../src/Card/Card';
+import CardHeader from '../src/Card/CardHeader';
+import CardHeaderTitle from '../src/Card/CardHeaderTitle';
+import CardHeaderIcon from '../src/Card/CardHeaderIcon';
+import CardContent from '../src/Card/CardContent';
+import CardImage from '../src/Card/CardImage';
+import CardFooter from '../src/Card/CardFooter';
+import CardFooterItem from '../src/Card/CardFooterItem';
+
 import Icon from '../src/Icon/Icon';
 import Column from '../src/Column/Column';
 import Columns from '../src/Columns/Columns';
 import Image from '../src/Image/Image';
 import Media from '../src/Media/Media';
+import Content from '../src/Content/Content';
 
 export default () =>
   markdown`
@@ -26,34 +35,32 @@ import Level from 'rebul/Card';
 showSource: true
 dark: true
 ---
-<Columns>
-  <Column size="one-third">
-    <Card>
-      <Card.Header>
-        <Card.HeaderTitle>
-          Hello World
-        </Card.HeaderTitle>
-        <Card.HeaderIcon>
-          <Icon iconClass="fas fa-home" />
-        </Card.HeaderIcon>
-      </Card.Header>
-      <Card.Content>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
-      </Card.Content>
-      <Card.Footer>
-        <Card.FooterItem>
-          Save
-        </Card.FooterItem>
-        <Card.FooterItem>
-          Edit
-        </Card.FooterItem>
-        <Card.FooterItem>
-          Delete
-        </Card.FooterItem>
-      </Card.Footer>
-    </Card>
-  </Column>
-</Columns>
+<div style={{ maxWidth: '400px' }}>
+  <Card>
+    <Card.Header>
+      <Card.HeaderTitle>
+        Hello World
+      </Card.HeaderTitle>
+      <Card.HeaderIcon>
+        <Icon iconClass="fas fa-home" />
+      </Card.HeaderIcon>
+    </Card.Header>
+    <Card.Content>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+    </Card.Content>
+    <Card.Footer>
+      <Card.FooterItem>
+        Save
+      </Card.FooterItem>
+      <Card.FooterItem>
+        Edit
+      </Card.FooterItem>
+      <Card.FooterItem>
+        Delete
+      </Card.FooterItem>
+    </Card.Footer>
+  </Card>
+</div>
 \`\`\`
 
 ### Card Media 
@@ -62,65 +69,95 @@ dark: true
 showSource: true
 dark: true
 ---
-<Columns>
-  <Column size="one-third">
-    <Card>
-      <Card.Content>
-        <Media>
-          <Media.Left>
-            <Card.Image>
-              <Image alt="media-left" size="48" src="https://bulma.io/images/placeholders/48x48.png" />
-            </Card.Image>
-          </Media.Left>
-          <Media.Content>
-            <Content>
-              <p>
-                <strong>John Smith</strong><br />
-                <small>@johnsmith</small>
-              </p>
-            </Content>
-          </Media.Content>
-        </Media>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
-      </Card.Content>
-    </Card>
-  </Column>
-</Columns>
+<div style={{ maxWidth: '400px' }}>
+  <Card>
+    <Card.Content>
+      <Media>
+        <Media.Left>
+          <Card.Image>
+            <Image alt="media-left" size="48" src="https://bulma.io/images/placeholders/48x48.png" />
+          </Card.Image>
+        </Media.Left>
+        <Media.Content>
+          <Content>
+            <p>
+              <strong>John Smith</strong><br />
+              <small>@johnsmith</small>
+            </p>
+          </Content>
+        </Media.Content>
+      </Media>
+      <Content>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+      </Content>
+    </Card.Content>
+  </Card>
+</div>
 \`\`\`
 
 ## Playground
 
 ${(
     <Playground
-      codeText={`<Card>
-  <Card.Header>
-    <Card.HeaderTitle>
-      Hello World
-    </Card.HeaderTitle>
-  </Card.Header>
-  <Card.Content>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
-  </Card.Content>
-  <Card.Footer>
-    <Card.FooterItem>
-      Save
-    </Card.FooterItem>
-    <Card.FooterItem>
-      Edit
-    </Card.FooterItem>
-    <Card.FooterItem>
-      Delete
-    </Card.FooterItem>
-  </Card.Footer>
-</Card>`}
+      codeText={`<div style={{ maxWidth: '400px' }}>
+  <Card>
+    <Card.Header>
+      <Card.HeaderTitle>
+        Hello World
+      </Card.HeaderTitle>
+    </Card.Header>
+    <Card.Content>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+    </Card.Content>
+    <Card.Footer>
+      <Card.FooterItem>
+        Save
+      </Card.FooterItem>
+      <Card.FooterItem>
+        Edit
+      </Card.FooterItem>
+      <Card.FooterItem>
+        Delete
+      </Card.FooterItem>
+    </Card.Footer>
+  </Card>
+</div>`}
       scope={{ React, Card }}
       theme="dracula"
     />
   )}
 
-## Props
+## Card Props
 
 ${<TableSpecimen rows={parsePropTypes(Card)} />}
+
+## CardHeader Props
+
+${<TableSpecimen rows={parsePropTypes(CardHeader)} />}
+
+## CardHeaderIcon Props
+
+${<TableSpecimen rows={parsePropTypes(CardHeaderIcon)} />}
+
+## CardHeaderTitle Props
+
+${<TableSpecimen rows={parsePropTypes(CardHeaderTitle)} />}
+
+## CardContent Props
+
+${<TableSpecimen rows={parsePropTypes(CardContent)} />}
+
+## CardImage Props
+
+${<TableSpecimen rows={parsePropTypes(CardImage)} />}
+
+## CardFooter Props
+
+${<TableSpecimen rows={parsePropTypes(CardFooter)} />}
+
+## CardFooterItem Props
+
+${<TableSpecimen rows={parsePropTypes(CardFooterItem)} />}
 
 ## Reference
 

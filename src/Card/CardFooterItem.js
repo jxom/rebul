@@ -6,7 +6,7 @@ class CardFooterItem extends React.Component {
   render = () => {
     const { children, className, element } = this.props;
     const Element = element || 'a';
-    return <Element className={classNames('card-content', className || '')}>{children}</Element>;
+    return <Element className={classNames('card-footer-item', className || '')}>{children}</Element>;
   };
 }
 

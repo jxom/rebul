@@ -4,18 +4,21 @@ import classNames from 'classnames';
 
 class CardHeaderTitle extends React.Component {
   render = () => {
-    const { children, className } = this.props;
-    return <p className={classNames('card-header-title', className || '')}>{children}</p>;
+    const { children, className, element } = this.props;
+    const Element = element || 'p';
+    return <Element className={classNames('card-header-title', className || '')}>{children}</Element>;
   };
 }
 
 CardHeaderTitle.propTypes = {
   children: PropTypes.node.isRequired,
-  className: PropTypes.string
+  className: PropTypes.string,
+  element: PropTypes.string
 };
 
 CardHeaderTitle.defaultProps = {
-  className: null
+  className: null,
+  element: null
 };
 
 export default CardHeaderTitle;

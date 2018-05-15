@@ -5,7 +5,7 @@ import classNames from 'classnames';
 class CardFooter extends React.Component {
   render = () => {
     const { children, className } = this.props;
-    return <footer className={classNames('card-content', className || '')}>{children}</footer>;
+    return <footer className={classNames('card-footer', className || '')}>{children}</footer>;
   };
 }
 
