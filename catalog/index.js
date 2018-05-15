@@ -21,6 +21,7 @@ const imports = {
   Image: require('../src/Image/Image'),
   Level: require('../src/Level/Level'),
   Media: require('../src/Media/Media'),
+  Message: require('../src/Message/Message'),
   Notification: require('../src/Notification/Notification'),
   Progress: require('../src/Progress/Progress'),
   Section: require('../src/Section/Section'),
@@ -164,6 +165,16 @@ const pages = [
         title: 'Select Field',
         path: '/form/select-field',
         content: pageLoader(() => import('./select-field.js'))
+      }
+    ]
+  },
+  {
+    title: 'Components',
+    pages: [
+      {
+        title: 'Message',
+        path: '/elements/message',
+        content: pageLoader(() => import('./message.js'))
       }
     ]
   }

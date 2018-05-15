@@ -106,6 +106,6 @@ ${<TableSpecimen rows={parsePropTypes(Level.Item)} />}
 
 ## Reference
 
-[https://bulma.io/documentation/layout/hero/](https://bulma.io/documentation/layout/hero/)
+[https://bulma.io/documentation/layout/level/](https://bulma.io/documentation/layout/level/)
 
 `;
