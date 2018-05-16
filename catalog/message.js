@@ -4,6 +4,8 @@ import Playground from 'component-playground';
 import parsePropTypes from './utils/parse-prop-types';
 
 import Message from '../src/Message/Message';
+import MessageHeader from '../src/Message/MessageHeader';
+import MessageBody from '../src/Message/MessageBody';
 
 export default () =>
   markdown`
@@ -193,9 +195,19 @@ ${(
     />
   )}
 
-## Props
+## Message Props
 
 ${<TableSpecimen rows={parsePropTypes(Message)} />}
+
+## MessageHeader Props
+
+${<TableSpecimen rows={parsePropTypes(MessageHeader)} />}
+
+
+## MessageBody Props
+
+${<TableSpecimen rows={parsePropTypes(MessageBody)} />}
+
 
 ## Reference
 
