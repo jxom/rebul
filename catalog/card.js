@@ -12,13 +12,6 @@ import CardImage from '../src/Card/CardImage';
 import CardFooter from '../src/Card/CardFooter';
 import CardFooterItem from '../src/Card/CardFooterItem';
 
-import Icon from '../src/Icon/Icon';
-import Column from '../src/Column/Column';
-import Columns from '../src/Columns/Columns';
-import Image from '../src/Image/Image';
-import Media from '../src/Media/Media';
-import Content from '../src/Content/Content';
-
 export default () =>
   markdown`
 ## Import
@@ -26,7 +19,7 @@ export default () =>
 \`\`\`code
 lang: jsx
 ---
-import Level from 'rebul/Card';
+import Card from 'rebul/Card';
 \`\`\`
 
 ### Card Header and Footer
@@ -63,7 +56,7 @@ dark: true
 </div>
 \`\`\`
 
-### Card Media 
+### Card Media
 
 \`\`\`react
 showSource: true
@@ -127,35 +120,35 @@ ${(
     />
   )}
 
-## Card Props
+## \`<Card>\` Props
 
 ${<TableSpecimen rows={parsePropTypes(Card)} />}
 
-## CardHeader Props
+## \`<CardHeader>\` Props
 
 ${<TableSpecimen rows={parsePropTypes(CardHeader)} />}
 
-## CardHeaderIcon Props
+## \`<CardHeaderIcon>\` Props
 
 ${<TableSpecimen rows={parsePropTypes(CardHeaderIcon)} />}
 
-## CardHeaderTitle Props
+## \`<CardHeaderTitle>\` Props
 
 ${<TableSpecimen rows={parsePropTypes(CardHeaderTitle)} />}
 
-## CardContent Props
+## \`<CardContent>\` Props
 
 ${<TableSpecimen rows={parsePropTypes(CardContent)} />}
 
-## CardImage Props
+## \`<CardImage>\` Props
 
 ${<TableSpecimen rows={parsePropTypes(CardImage)} />}
 
-## CardFooter Props
+## \`<CardFooter>\` Props
 
 ${<TableSpecimen rows={parsePropTypes(CardFooter)} />}
 
-## CardFooterItem Props
+## \`<CardFooterItem>\` Props
 
 ${<TableSpecimen rows={parsePropTypes(CardFooterItem)} />}
 

@@ -195,16 +195,16 @@ ${(
     />
   )}
 
-## Message Props
+## \`<Message>\` Props
 
 ${<TableSpecimen rows={parsePropTypes(Message)} />}
 
-## MessageHeader Props
+## \`<Message.Header>\` Props
 
 ${<TableSpecimen rows={parsePropTypes(MessageHeader)} />}
 
 
-## MessageBody Props
+## \`<Message.Body>\` Props
 
 ${<TableSpecimen rows={parsePropTypes(MessageBody)} />}
 
