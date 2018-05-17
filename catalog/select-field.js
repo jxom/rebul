@@ -195,6 +195,21 @@ import SelectField from 'rebul/SelectField';
 />
 \`\`\`
 
+### Horizontal
+
+\`\`\`react
+  <SelectField
+    isHorizontal
+    labelName="Select"
+    options={
+      [
+        { label: 'Select option', value: 'select-option' },
+        { label: 'With options', value: 'with-options' }
+      ]
+    }
+  />
+\`\`\`
+
 ## Playground
 
 ${(

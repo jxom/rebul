@@ -3,38 +3,78 @@ import PropTypes from 'prop-types';
 // import classNames from 'classnames';
 import * as sharedPropTypes from '../_prop-types';
 
-import Field from '../_common/Field';
-import FieldBody from '../_common/FieldBody';
-import FieldControl from '../_common/FieldControl';
+import Field from '../Field/Field';
+import FieldBody from '../Field/FieldBody';
+import FieldControl from '../Field/FieldControl';
+import FieldLabel from '../Field/FieldLabel';
 
-const RadioField = ({
-  children,
-  className,
-  color,
-  helpText,
-  isHorizontal,
-  labelComponent,
-  labelName,
-  labelSize,
-  name,
-  onChange,
-  value,
-  ...props
-}) => {
-  return (
-    <Field isHorizontal={isHorizontal} label={labelComponent || labelName} labelSize={labelSize}>
-      <FieldBody>
-        <Field color={color} helpText={helpText}>
-          <FieldControl>
-            <label className="radio">
-              <input type="radio" name="rsvp" /> Going
-            </label>
-          </FieldControl>
-        </Field>
-      </FieldBody>
-    </Field>
-  );
-};
+class RadioField extends React.Component {
+  state = { value: this.props.value };
+
+  static getDerivedStateFromProps = (nextProps, prevState) => {
+    const { value } = nextProps;
+    const { value: prevValue } = prevState;
+    if (value !== prevValue) {
+      return { value };
+    }
+    return null;
+  };
+
+  handleChange = value => {
+    const { onChange, value: propValue } = this.props;
+    if (propValue) return;
+    this.setState({ value });
+    onChange && onChange(value);
+  };
+
+  render = () => {
+    const {
+      children,
+      className,
+      color,
+      helpText,
+      isHorizontal,
+      labelComponent,
+      labelName,
+      labelSize,
+      name,
+      onChange,
+      options,
+      ...props
+    } = this.props;
+    const { value } = this.state;
+    return (
+      <Field isHorizontal={isHorizontal}>
+        {(labelName || labelComponent) && (
+          <FieldLabel isHorizontal={isHorizontal} size={labelSize}>
+            {labelName || labelComponent}
+          </FieldLabel>
+        )}
+        <FieldBody>
+          <Field color={color} helpText={helpText}>
+            <FieldControl>
+              {options.map((option, i) => (
+                /* eslint-disable react/no-array-index-key */
+                <label key={i} className="radio" disabled={option.disabled}>
+                  <input
+                    checked={option.value === value}
+                    disabled={option.disabled}
+                    onChange={e => this.handleChange(option.value)}
+                    name={name}
+                    type="radio"
+                    value={option.value}
+                    {...props}
+                  />{' '}
+                  {option.label}
+                </label>
+              ))}
+            </FieldControl>
+          </Field>
+        </FieldBody>
+      </Field>
+    );
+  };
+}
 
 RadioField.propTypes = {
   children: PropTypes.node,
@@ -55,6 +95,8 @@ RadioField.propTypes = {
   name: PropTypes.string,
   /** Function to invoke on change */
   onChange: PropTypes.func,
+  /** List of selectable options */
+  options: PropTypes.array,
   /** Value of the input */
   value: PropTypes.string
 };
@@ -70,6 +112,7 @@ RadioField.defaultProps = {
   isHorizontal: false,
   name: null,
   onChange: null,
+  options: [],
   value: undefined
 };
 

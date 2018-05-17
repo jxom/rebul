@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import * as sharedPropTypes from '../_prop-types';
 
-import Field from '../_common/Field';
-import FieldBody from '../_common/FieldBody';
-import FieldControl from '../_common/FieldControl';
+import Field from '../Field/Field';
+import FieldBody from '../Field/FieldBody';
+import FieldControl from '../Field/FieldControl';
+import FieldLabel from '../Field/FieldLabel';
 
 const TextField = ({
   autoComplete,
@@ -45,7 +46,12 @@ const TextField = ({
   ...props
 }) => {
   return (
-    <Field isHorizontal={isHorizontal} label={labelComponent || labelName} labelSize={labelSize}>
+    <Field isHorizontal={isHorizontal}>
+      {(labelName || labelComponent) && (
+        <FieldLabel isHorizontal={isHorizontal} isNormal size={labelSize}>
+          {labelName || labelComponent}
+        </FieldLabel>
+      )}
       <FieldBody>
         <Field color={color} hasAddons={Boolean(leftAddonComponent || rightAddonComponent)} helpText={helpText}>
           {leftAddonComponent && <FieldControl>{leftAddonComponent}</FieldControl>}

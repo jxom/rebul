@@ -25,8 +25,8 @@ import RadioField from 'rebul/RadioField';
     labelName="Select an option"
     options={
       [
-        { label: 'Select option', value: 'select-option' },
-        { label: 'With options', value: 'with-options' }
+        { label: 'Yes', value: 'yes' },
+        { label: 'No', value: 'no' }
       ]
     }
   />
@@ -36,24 +36,56 @@ import RadioField from 'rebul/RadioField';
     labelName="Select an option"
     options={
       [
-        { label: 'Select option', value: 'select-option' },
-        { label: 'With options', value: 'with-options' }
+        { label: 'Yes', value: 'yes' },
+        { label: 'No', value: 'no' }
       ]
     }
-    value="with-options"
+    value="no"
   />
 </React.Fragment>
 \`\`\`
+
+### With disabled option
+
+\`\`\`react
+<RadioField
+  labelName="Select an option"
+  options={
+    [
+      { label: 'Yes', value: 'yes' },
+      { label: 'No', value: 'no' },
+      { label: 'Maybe', value: 'maybe', disabled: true }
+    ]
+  }
+/>
+\`\`\`
+
+### Horizontal
+
+\`\`\`react
+<RadioField
+  isHorizontal
+  labelName="Select an option:"
+  options={
+    [
+      { label: 'Yes', value: 'yes' },
+      { label: 'No', value: 'no' }
+    ]
+  }
+/>
+\`\`\`
+
 ## Playground
 
 ${(
     <Playground
       codeText={`<RadioField
   labelName="Name"
+  onChange={value => console.log('value changed: ' + value)}
   options={
     [
-      { label: 'Select option', value: 'select-option' },
-      { label: 'With options', value: 'with-options' }
+      { label: 'Yes', value: 'yes' },
+      { label: 'No', value: 'no' }
     ]
   }
 />`}

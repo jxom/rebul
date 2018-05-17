@@ -7,9 +7,9 @@ const Label = ({ children, className, size }) => (
   <label className={`label ${classNames(size ? `is-${size}` : '', className || '')}`}>{children}</label>
 );
 
-const FieldLabel = ({ children, className, isHorizontal, size, ...props }) =>
+const FieldLabel = ({ children, className, isHorizontal, isNormal, size, ...props }) =>
   isHorizontal ? (
-    <div className={classNames(isHorizontal ? 'field-label is-normal' : '')}>
+    <div className={classNames(isHorizontal ? 'field-label' : '', isNormal ? 'is-normal' : '')}>
       <Label className={className} size={size}>
         {children}
       </Label>
@@ -35,12 +35,14 @@ FieldLabel.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   isHorizontal: PropTypes.bool,
+  isNormal: PropTypes.bool,
   size: sharedPropTypes.size
 };
 
 FieldLabel.defaultProps = {
   className: null,
   isHorizontal: false,
+  isNormal: false,
   size: null
 };
 

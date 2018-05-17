@@ -4,9 +4,10 @@ import classNames from 'classnames';
 import TextareaAutosize from 'react-autosize-textarea';
 import * as sharedPropTypes from '../_prop-types';
 
-import Field from '../_common/Field';
-import FieldBody from '../_common/FieldBody';
-import FieldControl from '../_common/FieldControl';
+import Field from '../Field/Field';
+import FieldBody from '../Field/FieldBody';
+import FieldControl from '../Field/FieldControl';
+import FieldLabel from '../Field/FieldLabel';
 
 const TextAreaField = ({
   autoComplete,
@@ -22,6 +23,7 @@ const TextAreaField = ({
   isHorizontal,
   isReadOnly,
   labelName,
+  labelComponent,
   labelSize,
   onBlur,
   onChange,
@@ -33,7 +35,12 @@ const TextAreaField = ({
   ...props
 }) => {
   return (
-    <Field id={id} isHorizontal={isHorizontal} label={labelName} labelSize={labelSize}>
+    <Field id={id} isHorizontal={isHorizontal}>
+      {(labelName || labelComponent) && (
+        <FieldLabel isHorizontal={isHorizontal} isNormal size={labelSize}>
+          {labelName || labelComponent}
+        </FieldLabel>
+      )}
       <FieldBody>
         <Field color={color} helpText={helpText}>
           <FieldControl color={color} isLoading={isLoading}>
@@ -75,6 +82,8 @@ TextAreaField.propTypes = {
   /** Displays help text */
   helpText: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   /** The label that appears above the input */
+  labelComponent: PropTypes.element,
+  /** The label that appears above the input */
   labelName: PropTypes.string,
   /** Size of the label field */
   labelSize: sharedPropTypes.size,
@@ -113,6 +122,7 @@ TextAreaField.defaultProps = {
   className: null,
   color: null,
   helpText: null,
+  labelComponent: null,
   labelName: null,
   labelSize: null,
   id: null,

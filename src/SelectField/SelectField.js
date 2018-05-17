@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import * as sharedPropTypes from '../_prop-types';
 
-import Field from '../_common/Field';
-import FieldBody from '../_common/FieldBody';
-import FieldControl from '../_common/FieldControl';
+import Field from '../Field/Field';
+import FieldBody from '../Field/FieldBody';
+import FieldControl from '../Field/FieldControl';
+import FieldLabel from '../Field/FieldLabel';
 
 const SelectField = ({
   children,
@@ -19,6 +20,7 @@ const SelectField = ({
   isLoading,
   isMultiSelect,
   isRounded,
+  labelComponent,
   labelName,
   labelSize,
   leftIconName,
@@ -32,6 +34,11 @@ const SelectField = ({
 }) => {
   return (
     <Field id={id} isHorizontal={isHorizontal} label={labelName} labelSize={labelSize}>
+      {(labelName || labelComponent) && (
+        <FieldLabel isHorizontal={isHorizontal} isNormal size={labelSize}>
+          {labelName || labelComponent}
+        </FieldLabel>
+      )}
       <FieldBody>
         <Field color={color} helpText={helpText}>
           <FieldControl leftIconName={leftIconName}>
@@ -77,6 +84,8 @@ SelectField.propTypes = {
   /** Displays help text */
   helpText: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   /** The label that appears above the input */
+  labelComponent: PropTypes.element,
+  /** The label that appears above the input */
   labelName: PropTypes.string,
   /** Size of the label field */
   labelSize: sharedPropTypes.size,
@@ -115,6 +124,7 @@ SelectField.defaultProps = {
   className: null,
   color: null,
   helpText: null,
+  labelComponent: null,
   labelName: null,
   labelSize: null,
   leftIconName: null,
