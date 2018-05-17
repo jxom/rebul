@@ -54,7 +54,7 @@ import RadioField from 'rebul/RadioField';
     [
       { label: 'Yes', value: 'yes' },
       { label: 'No', value: 'no' },
-      { label: 'Maybe', value: 'maybe', disabled: true }
+      { label: 'Maybe', value: 'maybe', isDisabled: true }
     ]
   }
 />

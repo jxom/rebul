@@ -54,6 +54,7 @@ const SelectField = ({
               disabled={isDisabled}
             >
               <select
+                aria-label={labelName}
                 className={classNames(state ? `is-${state}` : '')}
                 multiple={isMultiSelect}
                 onBlur={onBlur}

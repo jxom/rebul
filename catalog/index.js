@@ -29,6 +29,7 @@ const imports = {
   Table: require('../src/Table/Table'),
   Tag: require('../src/Tag/Tag'),
   Tags: require('../src/Tag/Tags'),
+  CheckboxField: require('../src/CheckboxField/CheckboxField'),
   TextField: require('../src/TextField/TextField'),
   TextAreaField: require('../src/TextAreaField/TextAreaField'),
   RadioField: require('../src/RadioField/RadioField'),
@@ -147,6 +148,11 @@ const pages = [
   {
     title: 'Form',
     pages: [
+      {
+        title: 'Checkbox Field',
+        path: '/form/checkbox-field',
+        content: pageLoader(() => import('./checkbox-field.js'))
+      },
       {
         title: 'Text Field',
         path: '/form/text-field',

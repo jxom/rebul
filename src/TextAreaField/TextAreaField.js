@@ -45,6 +45,7 @@ const TextAreaField = ({
         <Field color={color} helpText={helpText}>
           <FieldControl color={color} isLoading={isLoading}>
             <TextareaAutosize
+              aria-label={labelName}
               autoComplete={autoComplete}
               autoFocus={autoFocus}
               className={`textarea ${classNames(

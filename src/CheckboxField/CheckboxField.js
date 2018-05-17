@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import * as sharedPropTypes from '../_prop-types';
 
 import Field from '../Field/Field';
@@ -7,23 +8,23 @@ import FieldBody from '../Field/FieldBody';
 import FieldControl from '../Field/FieldControl';
 import FieldLabel from '../Field/FieldLabel';
 
-class RadioField extends React.Component {
+class CheckboxField extends React.Component {
   state = { value: this.props.value };
 
   static getDerivedStateFromProps = (nextProps, prevState) => {
-    const { value } = nextProps;
-    const { value: prevValue } = prevState;
-    if (value !== prevValue) {
-      return { value };
+    const { isChecked } = nextProps;
+    const { isChecked: prevIsChecked } = prevState;
+    if (isChecked !== prevIsChecked) {
+      return { isChecked };
     }
     return null;
   };
 
-  handleChange = value => {
-    const { onChange, value: propValue } = this.props;
-    if (propValue) return;
-    this.setState({ value });
-    onChange && onChange(value);
+  handleChange = isChecked => {
+    const { onChange, isChecked: propIsChecked } = this.props;
+    if (propIsChecked) return;
+    this.setState({ isChecked });
+    onChange && onChange(isChecked);
   };
 
   render = () => {
@@ -32,16 +33,17 @@ class RadioField extends React.Component {
       className,
       color,
       helpText,
+      isDisabled,
       isHorizontal,
       labelComponent,
       labelName,
       labelSize,
       name,
       onChange,
-      options,
+      text,
       ...props
     } = this.props;
-    const { value } = this.state;
+    const { isChecked } = this.state;
     return (
       <Field isHorizontal={isHorizontal}>
         {(labelName || labelComponent) && (
@@ -52,23 +54,18 @@ class RadioField extends React.Component {
         <FieldBody>
           <Field color={color} helpText={helpText}>
             <FieldControl>
-              {options.map((option, i) => (
-                /* eslint-disable react/no-array-index-key */
-                <label key={i} className="radio" disabled={option.isDisabled}>
-                  <input
-                    aria-label={labelName}
-                    checked={option.value === value}
-                    className={className}
-                    disabled={option.isDisabled}
-                    onChange={e => this.handleChange(option.value)}
-                    name={name}
-                    type="radio"
-                    value={option.value}
-                    {...props}
-                  />{' '}
-                  {option.label}
-                </label>
-              ))}
+              <label className={classNames('checkbox', className || '')} disabled={isDisabled}>
+                <input
+                  aria-label={labelName}
+                  disabled={isDisabled}
+                  name={name}
+                  onChange={() => this.handleChange(!isChecked)}
+                  type="checkbox"
+                  {...props}
+                  checked={isChecked}
+                />{' '}
+                {text}
+              </label>
             </FieldControl>
           </Field>
         </FieldBody>
@@ -77,13 +74,17 @@ class RadioField extends React.Component {
   };
 }
 
-RadioField.propTypes = {
+CheckboxField.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   /** Color of input field. */
   color: sharedPropTypes.color,
   /** Displays help text */
   helpText: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+  /* Whether the checkbox is selected */
+  isChecked: PropTypes.bool,
+  /** Whether the checkbox is disabled. */
+  isDisabled: PropTypes.bool,
   /** The label that appears above the input */
   labelComponent: PropTypes.element,
   /** The label that appears above the input */
@@ -96,25 +97,26 @@ RadioField.propTypes = {
   name: PropTypes.string,
   /** Function to invoke on change */
   onChange: PropTypes.func,
-  /** List of selectable options */
-  options: PropTypes.array,
+  /** Text to display next to the checkbox */
+  text: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
   /** Value of the input */
   value: PropTypes.string
 };
 
-RadioField.defaultProps = {
+CheckboxField.defaultProps = {
   children: null,
   className: null,
   color: null,
   helpText: null,
+  isChecked: false,
+  isDisabled: false,
   labelComponent: null,
   labelName: null,
   labelSize: null,
   isHorizontal: false,
   name: null,
   onChange: null,
-  options: [],
   value: undefined
 };
 
-export default RadioField;
+export default CheckboxField;
