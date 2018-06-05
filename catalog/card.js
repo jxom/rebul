@@ -42,13 +42,13 @@ dark: true
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
     </Card.Content>
     <Card.Footer>
-      <Card.FooterItem>
+      <Card.FooterItem element="a" href="#">
         Save
       </Card.FooterItem>
-      <Card.FooterItem>
+      <Card.FooterItem element="a" href="#">
         Edit
       </Card.FooterItem>
-      <Card.FooterItem>
+      <Card.FooterItem element="a" href="#">
         Delete
       </Card.FooterItem>
     </Card.Footer>
@@ -103,13 +103,13 @@ ${(
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
     </Card.Content>
     <Card.Footer>
-      <Card.FooterItem>
+      <Card.FooterItem element="a" href="#">
         Save
       </Card.FooterItem>
-      <Card.FooterItem>
+      <Card.FooterItem element="a" href="#">
         Edit
       </Card.FooterItem>
-      <Card.FooterItem>
+      <Card.FooterItem element="a" href="#">
         Delete
       </Card.FooterItem>
     </Card.Footer>

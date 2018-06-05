@@ -10,6 +10,8 @@ const imports = {
   Box: require('../src/Box/Box'),
   Button: require('../src/Button/Button'),
   Buttons: require('../src/Button/Buttons'),
+  Breadcrumb: require('../src/Breadcrumb/Breadcrumb'),
+  BreadcrumbItem: require('../src/Breadcrumb/BreadcrumbItem'),
   Card: require('../src/Card/Card'),
   Columns: require('../src/Columns/Columns'),
   Column: require('../src/Column/Column'),
@@ -179,13 +181,18 @@ const pages = [
     title: 'Components',
     pages: [
       {
+        title: 'Breadcrumb',
+        path: '/components/breadcrumb',
+        content: pageLoader(() => import('./breadcrumb.js'))
+      },
+      {
         title: 'Card',
-        path: '/elements/card',
+        path: '/components/card',
         content: pageLoader(() => import('./card.js'))
       },
       {
         title: 'Message',
-        path: '/elements/message',
+        path: '/components/message',
         content: pageLoader(() => import('./message.js'))
       }
     ]

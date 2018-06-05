@@ -1,4 +1,5 @@
 export * from './Box/index.js';
+export * from './Breadcrumb/index.js';
 export * from './Button/index.js';
 export * from './Card/index.js';
 export * from './Column/index.js';

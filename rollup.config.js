@@ -35,11 +35,6 @@ export default components.map(component => {
       'styled-system',
       'react-autosize-textarea'
     ],
-    plugins: [
-      babel({
-        presets: [['env', { modules: false }], 'react'],
-        plugins: ['external-helpers', 'transform-class-properties', 'transform-object-rest-spread']
-      })
-    ]
+    plugins: [babel()]
   };
 });

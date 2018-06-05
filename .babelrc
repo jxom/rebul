@@ -1,4 +1,12 @@
 {
-  "presets": ["babel-preset-react-app", "catalog/babel"],
-  "plugins": ["react-docgen"]
+  "env": {
+    "production": {
+      "presets": [["env", { "modules": false }], "react"],
+      "plugins": ["external-helpers", "transform-class-properties", "transform-object-rest-spread"]
+    },
+    "development": {
+      "presets": ["babel-preset-react-app", "catalog/babel"],
+      "plugins": ["react-docgen"]
+    }
+  }
 }

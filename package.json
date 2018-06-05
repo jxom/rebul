@@ -4,16 +4,16 @@
   "description": "React components for the Bulma CSS Framework",
   "main": "index.js",
   "scripts": {
-    "build": "npm run clean && NODE_ENV='production' rollup -c rollup.config.js",
+    "build": "npm run clean && BABEL_ENV='production' rollup -c rollup.config.js",
     "clean": "node clean.js",
-    "develop": "rollup -c rollup.config.js -w",
+    "develop": "BABEL_ENV='production' rollup -c rollup.config.js -w",
     "lint": "eslint src/",
     "lint:fix": "eslint src/ --fix",
     "test": "npm run lint",
     "prepublish": "npm run lint && npm run build",
     "postpublish": "npm run clean",
-    "catalog-start": "catalog start",
-    "catalog-build": "catalog build"
+    "catalog-start": "BABEL_ENV='development' catalog start",
+    "catalog-build": "BABEL_ENV='development' catalog build"
   },
   "repository": {
     "type": "git",
