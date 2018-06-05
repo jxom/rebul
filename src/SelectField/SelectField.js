@@ -64,6 +64,7 @@ const SelectField = ({
                 {...props}
               >
                 {options.map((option, i) => (
+                  /* eslint-disable react/no-array-index-key */
                   <option key={i} value={option.value}>
                     {option.label}
                   </option>
