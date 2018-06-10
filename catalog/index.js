@@ -18,6 +18,7 @@ const imports = {
   Container: require('../src/Container/Container'),
   Content: require('../src/Content/Content'),
   Delete: require('../src/Delete/Delete'),
+  Dropdown: require('../src/Dropdown/Dropdown'),
   Footer: require('../src/Footer/Footer'),
   Hero: require('../src/Hero/Hero'),
   Icon: require('../src/Icon/Icon'),
@@ -189,6 +190,11 @@ const pages = [
         title: 'Card',
         path: '/components/card',
         content: pageLoader(() => import('./card.js'))
+      },
+      {
+        title: 'Dropdown',
+        path: '/components/dropdown',
+        content: pageLoader(() => import('./dropdown.js'))
       },
       {
         title: 'Message',

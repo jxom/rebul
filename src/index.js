@@ -7,6 +7,7 @@ export * from './Columns/index.js';
 export * from './Container/index.js';
 export * from './Content/index.js';
 export * from './Delete/index.js';
+export * from './Dropdown/index.js';
 export * from './Field/index.js';
 export * from './Footer/index.js';
 export * from './Hero/index.js';
