@@ -17,6 +17,7 @@ export * from './Level/index.js';
 export * from './Media/index.js';
 export * from './Menu/index.js';
 export * from './Message/index.js';
+export * from './Modal/index.js';
 export * from './Notification/index.js';
 export * from './Progress/index.js';
 export * from './RadioField/index.js';
