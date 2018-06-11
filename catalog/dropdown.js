@@ -133,13 +133,27 @@ ${<TableSpecimen rows={parsePropTypes(Dropdown)} />}
 
 ## \`trigger\` render props
 
-${<TableSpecimen rows={[
-  { Property: 'getDropdownButtonProps', Type: 'func', Description: 'Provides the props you should apply to the button element you render. Includes `aria-` attributes' },
-  { Property: 'getDropdownElementProps', Type: 'func', Description: 'Provides the props you should apply to the element (excluding button) you render. Includes `aria-` attributes' },
-  { Property: 'show', Type: 'func', Description: 'Shows the dropdown' },
-  { Property: 'hide', Type: 'func', Description: 'Hides the dropdown' },
-  { Property: 'toggle', Type: 'func', Description: 'Toggles the dropdown to show or hide' }
-]} />}
+${(
+    <TableSpecimen
+      rows={[
+        {
+          Property: 'getDropdownButtonProps',
+          Type: 'func',
+          Description:
+            'Provides the props you should apply to the button element you render. Includes `aria-` attributes'
+        },
+        {
+          Property: 'getDropdownElementProps',
+          Type: 'func',
+          Description:
+            'Provides the props you should apply to the element (excluding button) you render. Includes `aria-` attributes'
+        },
+        { Property: 'show', Type: 'func', Description: 'Shows the dropdown' },
+        { Property: 'hide', Type: 'func', Description: 'Hides the dropdown' },
+        { Property: 'toggle', Type: 'func', Description: 'Toggles the dropdown to show or hide' }
+      ]}
+    />
+  )}
 
 ## \`<Dropdown.Item>\` Props
 

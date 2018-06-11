@@ -23,7 +23,7 @@ Title.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   /** Custom element to use for title. Example: `'p'` */
-  element: PropTypes.string,
+  element: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   /** Does the title have padding? */
   isSpaced: PropTypes.bool,
   /** Is the title a subtitle? */

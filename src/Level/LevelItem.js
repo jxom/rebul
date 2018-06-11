@@ -13,7 +13,7 @@ class LevelItem extends React.Component {
 LevelItem.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  element: PropTypes.string
+  element: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
 };
 
 LevelItem.defaultProps = {

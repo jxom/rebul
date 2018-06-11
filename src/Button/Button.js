@@ -48,7 +48,7 @@ Button.propTypes = {
    */
   color: sharedPropTypes.color,
   /** Button element type */
-  element: PropTypes.string,
+  element: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   /** Is button color inverted? */
   isInverted: PropTypes.bool,
   /** Is button loading? */

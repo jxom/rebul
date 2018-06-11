@@ -17,7 +17,7 @@ class CardHeaderIcon extends React.Component {
 CardHeaderIcon.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  element: PropTypes.string,
+  element: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   onClick: PropTypes.func
 };
 

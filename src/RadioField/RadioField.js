@@ -10,13 +10,12 @@ import FieldLabel from '../Field/FieldLabel';
 class RadioField extends React.Component {
   state = { value: this.props.value };
 
-  static getDerivedStateFromProps = (nextProps, prevState) => {
-    const { value } = nextProps;
-    const { value: prevValue } = prevState;
+  componentDidUpdate = prevProps => {
+    const { value } = this.props;
+    const { value: prevValue } = prevProps;
     if (value !== prevValue) {
-      return { value };
+      this.setState({ value });
     }
-    return null;
   };
 
   handleChange = value => {

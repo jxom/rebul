@@ -13,7 +13,7 @@ class MessageBody extends React.Component {
 MessageBody.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  element: PropTypes.string
+  element: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
 };
 
 MessageBody.defaultProps = {

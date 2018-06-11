@@ -9,15 +9,14 @@ import FieldControl from '../Field/FieldControl';
 import FieldLabel from '../Field/FieldLabel';
 
 class CheckboxField extends React.Component {
-  state = { value: this.props.value };
+  state = { isChecked: this.props.isChecked };
 
-  static getDerivedStateFromProps = (nextProps, prevState) => {
-    const { isChecked } = nextProps;
-    const { isChecked: prevIsChecked } = prevState;
+  componentDidUpdate = prevProps => {
+    const { isChecked } = this.props;
+    const { isChecked: prevIsChecked } = prevProps;
     if (isChecked !== prevIsChecked) {
-      return { isChecked };
+      this.setState({ isChecked });
     }
-    return null;
   };
 
   handleChange = isChecked => {
@@ -99,8 +98,6 @@ CheckboxField.propTypes = {
   onChange: PropTypes.func,
   /** Text to display next to the checkbox */
   text: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
-  /** Value of the input */
-  value: PropTypes.string
 };
 
 CheckboxField.defaultProps = {
@@ -115,8 +112,7 @@ CheckboxField.defaultProps = {
   labelSize: null,
   isHorizontal: false,
   name: null,
-  onChange: null,
-  value: undefined
+  onChange: null
 };
 
 export default CheckboxField;

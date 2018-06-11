@@ -31,7 +31,7 @@ class DropdownItem extends React.PureComponent {
 DropdownItem.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  element: PropTypes.string,
+  element: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   isActive: PropTypes.bool,
   onClick: PropTypes.func
 };
