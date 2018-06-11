@@ -1,5 +1,5 @@
-export { Menu } from './Menu';
-export { MenuItem } from './MenuItem';
-export { MenuLabel } from './MenuLabel';
-export { MenuList } from './MenuList';
+export { default as Menu } from './Menu';
+export { default as MenuItem } from './MenuItem';
+export { default as MenuLabel } from './MenuLabel';
+export { default as MenuList } from './MenuList';
 export { default } from './Menu';
