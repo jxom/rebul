@@ -97,7 +97,7 @@ CheckboxField.propTypes = {
   /** Function to invoke on change */
   onChange: PropTypes.func,
   /** Text to display next to the checkbox */
-  text: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
+  text: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired
 };
 
 CheckboxField.defaultProps = {
