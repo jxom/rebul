@@ -27,6 +27,7 @@ const imports = {
   Media: require('../src/Media/Media'),
   Menu: require('../src/Menu/Menu'),
   Message: require('../src/Message/Message'),
+  Modal: require('../src/Modal/Modal'),
   Notification: require('../src/Notification/Notification'),
   Progress: require('../src/Progress/Progress'),
   Section: require('../src/Section/Section'),
@@ -206,6 +207,11 @@ const pages = [
         title: 'Menu',
         path: '/components/menu',
         content: pageLoader(() => import('./menu.js'))
+      },
+      {
+        title: 'Modal',
+        path: '/components/modal',
+        content: pageLoader(() => import('./modal.js'))
       }
     ]
   }

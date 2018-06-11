@@ -37,7 +37,7 @@ class Dropdown extends React.Component {
       ...props
     } = this.props;
     return (
-      <Toggle defaultOn={initiallyIsActive} {...(typeof isActive === 'boolean' ? { on: isActive } : {})}>
+      <Toggle defaultOn={initiallyIsActive} {...(isActive !== null ? { on: isActive } : {})}>
         {({ getTogglerElementProps, getTogglerProps, on, setOn: show, setOff: hide, toggle }) => (
           <div
             className={`dropdown ${classNames(
