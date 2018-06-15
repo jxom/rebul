@@ -1,0 +1,14 @@
+node_modules/
+.DS_Store
+.idea/
+*.tgz
+npm-debug.log
+*/lib/
+*/docs/
+*/node_modules/
+*.env
+/catalog/build/
+.vscode/
+
+package-lock.json
+yarn-error.log
