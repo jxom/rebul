@@ -1,30 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import sharedPropTypes from '../_prop-types';
 
-const Tabs = ({
-  children,
-  className,
-  isRight,
-  isCentered,
-  isSmall,
-  isMedium,
-  isLarge,
-  isBoxed,
-  isToggle,
-  isToggleRounded,
-  isFullWidth,
-  ...props
-}) => {
+const Tabs = ({ children, className, align, size, isBoxed, isToggle, isToggleRounded, isFullWidth, ...props }) => {
   return (
     <div
       className={classNames(
         'tabs',
-        isRight ? 'is-right' : '',
-        isCentered ? 'is-centered' : '',
-        isSmall ? 'is-small' : '',
-        isMedium ? 'is-medium' : '',
-        isLarge ? 'is-large' : '',
+        align ? `is-${align}` : '',
+        size ? `is-${size}` : '',
         isBoxed ? 'is-boxed' : '',
         isToggle ? 'is-toggle' : '',
         isToggleRounded ? 'is-toggle-rounded' : '',
@@ -41,16 +26,10 @@ const Tabs = ({
 Tabs.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  /** Are tabs center aligned? */
-  isCentered: PropTypes.boolean,
-  /** Are tabs right aligned? */
-  isRight: PropTypes.boolean,
-  /** Are tabs small? */
-  isSmall: PropTypes.boolean,
-  /** Are tabs medium? */
-  isMedium: PropTypes.boolean,
-  /** Are tabs large? */
-  isLarge: PropTypes.boolean,
+  /** Alignment of the dropdown. Available values: `left`, `centered`, `right` */
+  align: PropTypes.oneOf(['left', 'centered', 'right']),
+  /** Size of the tabs Available values: `small`, `medium`, `large` */
+  size: sharedPropTypes.size,
   /** Are tabs box styled? */
   isBoxed: PropTypes.boolean,
   /** Are tabs toggle styled? */
@@ -63,11 +42,8 @@ Tabs.propTypes = {
 
 Tabs.defaultProps = {
   className: null,
-  isRight: false,
-  isCentered: false,
-  isSmall: false,
-  isMedium: false,
-  isLarge: false,
+  align: null,
+  size: null,
   isBoxed: false,
   isToggle: false,
   isToggleRounded: false,

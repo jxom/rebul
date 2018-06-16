@@ -42,7 +42,7 @@ showSource: true
 \`\`\`react
 showSource: true
 ---
-<Tabs isCentered>
+<Tabs align="centered">
   <Tab isActive>Pictures</Tab>
   <Tab>Music</Tab>
   <Tab>Videos</Tab>
@@ -53,7 +53,7 @@ showSource: true
 \`\`\`react
 showSource: true
 ---
-<Tabs isRight>
+<Tabs align="right">
   <Tab isActive>Pictures</Tab>
   <Tab>Music</Tab>
   <Tab>Videos</Tab>
@@ -91,7 +91,7 @@ showSource: true
 \`\`\`react
 showSource: true
 ---
-<Tabs isSmall>
+<Tabs size="small">
   <Tab isActive>Pictures</Tab>
   <Tab>Music</Tab>
   <Tab>Videos</Tab>
@@ -102,7 +102,7 @@ showSource: true
 \`\`\`react
 showSource: true
 ---
-<Tabs isMedium>
+<Tabs size="medium">
   <Tab isActive>Pictures</Tab>
   <Tab>Music</Tab>
   <Tab>Videos</Tab>
@@ -113,7 +113,7 @@ showSource: true
 \`\`\`react
 showSource: true
 ---
-<Tabs isLarge>
+<Tabs size="large">
   <Tab isActive>Pictures</Tab>
   <Tab>Music</Tab>
   <Tab>Videos</Tab>
