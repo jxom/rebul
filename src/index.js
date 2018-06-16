@@ -23,6 +23,7 @@ export * from './Progress/index.js';
 export * from './RadioField/index.js';
 export * from './Section/index.js';
 export * from './SelectField/index.js';
+export * from './Tabs/index.js';
 export * from './Table/index.js';
 export * from './Tag/index.js';
 export * from './TextAreaField/index.js';
