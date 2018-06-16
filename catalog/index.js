@@ -32,6 +32,8 @@ const imports = {
   Progress: require('../src/Progress/Progress'),
   Section: require('../src/Section/Section'),
   Table: require('../src/Table/Table'),
+  Tab: require('../src/Tabs/Tab'),
+  Tabs: require('../src/Tabs/Tabs'),
   Tag: require('../src/Tag/Tag'),
   Tags: require('../src/Tag/Tags'),
   CheckboxField: require('../src/CheckboxField/CheckboxField'),
@@ -212,6 +214,11 @@ const pages = [
         title: 'Modal',
         path: '/components/modal',
         content: pageLoader(() => import('./modal.js'))
+      },
+      {
+        title: 'Tabs',
+        path: '/components/tabs',
+        content: pageLoader(() => import('./tabs.js'))
       }
     ]
   }
