@@ -41,14 +41,23 @@ const Tabs = ({
 Tabs.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  isRight: PropTypes.boolean,
+  /** Are tabs center aligned? */
   isCentered: PropTypes.boolean,
+  /** Are tabs right aligned? */
+  isRight: PropTypes.boolean,
+  /** Are tabs small? */
   isSmall: PropTypes.boolean,
+  /** Are tabs medium? */
   isMedium: PropTypes.boolean,
+  /** Are tabs large? */
   isLarge: PropTypes.boolean,
+  /** Are tabs box styled? */
   isBoxed: PropTypes.boolean,
+  /** Are tabs toggle styled? */
   isToggle: PropTypes.boolean,
+  /** Are tabs rounded toggle styled? */
   isToggleRounded: PropTypes.boolean,
+  /** Are tabs fullwidth? */
   isFullWidth: PropTypes.boolean
 };
 

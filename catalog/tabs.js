@@ -241,6 +241,6 @@ ${<TableSpecimen rows={parsePropTypes(Tab)} />}
 
 ## Reference
 
-[https://bulma.io/documentation/elements/Tab/](https://bulma.io/documentation/elements/Tab/)
+[https://bulma.io/documentation/elements/Tabs/](https://bulma.io/documentation/elements/Tabs/)
 
 `;
