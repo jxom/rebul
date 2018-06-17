@@ -68,11 +68,11 @@ showSource: true
 ---
 <Tabs>
   <Tab isActive>
-  	<Icon iconClass="fas fa-image" size="small"/>
+    <Icon iconClass="fas fa-image" size="small"/>
     <span>Pictures</span>
   </Tab>
   <Tab>
-  	<Icon iconClass="fas fa-music" size="small"/>
+    <Icon iconClass="fas fa-music" size="small"/>
     <span>Music</span>
   </Tab>
   <Tab>
@@ -151,15 +151,15 @@ showSource: true
 ---
 <Tabs isToggle>
   <Tab isActive>
-  	<Icon iconClass="fas fa-image" size="small"/>
+    <Icon iconClass="fas fa-image" size="small"/>
     <span>Pictures</span>
   </Tab>
   <Tab>
-  	<Icon iconClass="fas fa-music" size="small"/>
+    <Icon iconClass="fas fa-music" size="small"/>
     <span>Music</span>
   </Tab>
   <Tab>
-  	<Icon iconClass="fas fa-film" size="small"/>
+    <Icon iconClass="fas fa-film" size="small"/>
     <span>Videos</span>
   </Tab>
   <Tab>
@@ -174,15 +174,15 @@ showSource: true
 ---
 <Tabs isToggle isToggleRounded>
   <Tab isActive>
-  	<Icon iconClass="fas fa-image" size="small"/>
+    <Icon iconClass="fas fa-image" size="small"/>
     <span>Pictures</span>
   </Tab>
   <Tab>
-  	<Icon iconClass="fas fa-music" size="small"/>
+    <Icon iconClass="fas fa-music" size="small"/>
     <span>Music</span>
   </Tab>
   <Tab>
-  	<Icon iconClass="fas fa-film" size="small"/>
+    <Icon iconClass="fas fa-film" size="small"/>
     <span>Videos</span>
   </Tab>
   <Tab>
@@ -197,15 +197,15 @@ showSource: true
 ---
 <Tabs isFullWidth>
   <Tab isActive>
-  	<Icon iconClass="fas fa-angle-left" size="small"/>
+    <Icon iconClass="fas fa-angle-left" size="small"/>
     <span>Left</span>
   </Tab>
   <Tab>
-  	<Icon iconClass="fas fa-angle-up" size="small"/>
+    <Icon iconClass="fas fa-angle-up" size="small"/>
     <span>Up</span>
   </Tab>
   <Tab>
-  	<Icon iconClass="fas fa-angle-right" size="small"/>
+    <Icon iconClass="fas fa-angle-right" size="small"/>
     <span>Right</span>
   </Tab>
 </Tabs>
