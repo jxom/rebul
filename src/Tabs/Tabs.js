@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import sharedPropTypes from '../_prop-types';
+import * as sharedPropTypes from '../_prop-types';
 
 const Tabs = ({ children, className, align, size, isBoxed, isToggle, isToggleRounded, isFullWidth, ...props }) => {
   return (
