@@ -18,6 +18,7 @@ const TextAreaField = ({
   helpText,
   inputSize,
   id,
+  inputProps,
   isDisabled,
   isLoading,
   isHorizontal,
@@ -35,7 +36,7 @@ const TextAreaField = ({
   ...props
 }) => {
   return (
-    <Field id={id} isHorizontal={isHorizontal}>
+    <Field id={id} isHorizontal={isHorizontal} {...props}>
       {(labelName || labelComponent) && (
         <FieldLabel isHorizontal={isHorizontal} isNormal size={labelSize}>
           {labelName || labelComponent}
@@ -62,7 +63,7 @@ const TextAreaField = ({
               readOnly={isReadOnly}
               rows={rows}
               value={value}
-              {...props}
+              {...inputProps}
             />
           </FieldControl>
         </Field>
@@ -82,6 +83,7 @@ TextAreaField.propTypes = {
   color: sharedPropTypes.color,
   /** Displays help text */
   helpText: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+  inputProps: PropTypes.object,
   /** The label that appears above the input */
   labelComponent: PropTypes.element,
   /** The label that appears above the input */
@@ -127,6 +129,7 @@ TextAreaField.defaultProps = {
   labelName: null,
   labelSize: null,
   id: null,
+  inputProps: {},
   inputSize: null,
   isDisabled: false,
   isLoading: false,

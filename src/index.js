@@ -19,6 +19,8 @@ export * from './Menu/index.js';
 export * from './Message/index.js';
 export * from './Modal/index.js';
 export * from './Notification/index.js';
+export * from './Pagination/index.js';
+export * from './Panel/index.js';
 export * from './Progress/index.js';
 export * from './RadioField/index.js';
 export * from './Section/index.js';

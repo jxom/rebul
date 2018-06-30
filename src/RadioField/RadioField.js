@@ -31,6 +31,7 @@ class RadioField extends React.Component {
       className,
       color,
       helpText,
+      inputProps,
       isHorizontal,
       labelComponent,
       labelName,
@@ -42,7 +43,7 @@ class RadioField extends React.Component {
     } = this.props;
     const { value } = this.state;
     return (
-      <Field isHorizontal={isHorizontal}>
+      <Field isHorizontal={isHorizontal} {...props}>
         {(labelName || labelComponent) && (
           <FieldLabel isHorizontal={isHorizontal} size={labelSize}>
             {labelName || labelComponent}
@@ -63,7 +64,7 @@ class RadioField extends React.Component {
                     name={name}
                     type="radio"
                     value={option.value}
-                    {...props}
+                    {...inputProps}
                   />{' '}
                   {option.label}
                 </label>
@@ -89,6 +90,7 @@ RadioField.propTypes = {
   labelName: PropTypes.string,
   /** Size of the label field */
   labelSize: sharedPropTypes.size,
+  inputProps: PropTypes.object,
   /** Input field is horizontal */
   isHorizontal: PropTypes.bool,
   /** Name of the input field */
@@ -109,6 +111,7 @@ RadioField.defaultProps = {
   labelComponent: null,
   labelName: null,
   labelSize: null,
+  inputProps: {},
   isHorizontal: false,
   name: null,
   onChange: null,

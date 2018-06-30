@@ -32,6 +32,7 @@ class CheckboxField extends React.Component {
       className,
       color,
       helpText,
+      inputProps,
       isDisabled,
       isHorizontal,
       labelComponent,
@@ -44,7 +45,7 @@ class CheckboxField extends React.Component {
     } = this.props;
     const { isChecked } = this.state;
     return (
-      <Field isHorizontal={isHorizontal}>
+      <Field isHorizontal={isHorizontal} {...props}>
         {(labelName || labelComponent) && (
           <FieldLabel isHorizontal={isHorizontal} size={labelSize}>
             {labelName || labelComponent}
@@ -60,7 +61,7 @@ class CheckboxField extends React.Component {
                   name={name}
                   onChange={() => this.handleChange(!isChecked)}
                   type="checkbox"
-                  {...props}
+                  {...inputProps}
                   checked={isChecked}
                 />{' '}
                 {text}
@@ -80,6 +81,7 @@ CheckboxField.propTypes = {
   color: sharedPropTypes.color,
   /** Displays help text */
   helpText: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+  inputProps: PropTypes.object,
   /* Whether the checkbox is selected */
   isChecked: PropTypes.bool,
   /** Whether the checkbox is disabled. */
@@ -105,6 +107,7 @@ CheckboxField.defaultProps = {
   className: null,
   color: null,
   helpText: null,
+  inputProps: {},
   isChecked: false,
   isDisabled: false,
   labelComponent: null,

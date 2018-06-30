@@ -15,6 +15,7 @@ const SelectField = ({
   helpText,
   inputSize,
   id,
+  inputProps,
   isDisabled,
   isHorizontal,
   isLoading,
@@ -33,7 +34,13 @@ const SelectField = ({
   ...props
 }) => {
   return (
-    <Field id={id} isHorizontal={isHorizontal} label={labelName} labelSize={labelSize}>
+    <Field
+      id={id}
+      isHorizontal={isHorizontal}
+      label={labelName}
+      labelSize={labelSize}
+      {...props}
+    >
       {(labelName || labelComponent) && (
         <FieldLabel isHorizontal={isHorizontal} isNormal size={labelSize}>
           {labelName || labelComponent}
@@ -61,7 +68,7 @@ const SelectField = ({
                 onChange={e => onChange && onChange(e.target.value, e)}
                 onFocus={onBlur}
                 value={value}
-                {...props}
+                {...inputProps}
               >
                 {options.map((option, i) => (
                   /* eslint-disable react/no-array-index-key */
@@ -95,6 +102,7 @@ SelectField.propTypes = {
   leftIconName: PropTypes.string,
   /** ID for the input field */
   id: PropTypes.string,
+  inputProps: PropTypes.object,
   /** Size of the input field */
   inputSize: sharedPropTypes.size,
   /** Disable the input field */
@@ -131,6 +139,7 @@ SelectField.defaultProps = {
   labelSize: null,
   leftIconName: null,
   id: null,
+  inputProps: {},
   inputSize: null,
   isDisabled: false,
   isHorizontal: false,

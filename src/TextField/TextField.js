@@ -15,6 +15,7 @@ const TextField = ({
   className,
   color,
   helpText,
+  inputProps,
   inputSize,
   isDisabled,
   isExpanded,
@@ -46,7 +47,7 @@ const TextField = ({
   ...props
 }) => {
   return (
-    <Field isHorizontal={isHorizontal}>
+    <Field isHorizontal={isHorizontal} {...props}>
       {(labelName || labelComponent) && (
         <FieldLabel isHorizontal={isHorizontal} isNormal size={labelSize}>
           {labelName || labelComponent}
@@ -88,7 +89,7 @@ const TextField = ({
               spellCheck={spellCheck}
               step={step}
               value={value}
-              {...props}
+              {...inputProps}
             />
           </FieldControl>
           {rightAddonComponent && <FieldControl>{rightAddonComponent}</FieldControl>}
@@ -109,6 +110,7 @@ TextField.propTypes = {
   color: sharedPropTypes.color,
   /** Displays help text */
   helpText: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+  inputProps: PropTypes.object,
   /** The label that appears above the input */
   labelComponent: PropTypes.element,
   /** The label that appears above the input */
@@ -181,6 +183,7 @@ TextField.defaultProps = {
   labelSize: null,
   leftAddonComponent: null,
   leftIconName: null,
+  inputProps: {},
   inputSize: null,
   isDisabled: false,
   isExpanded: false,

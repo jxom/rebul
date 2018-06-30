@@ -30,6 +30,7 @@ const imports = {
   Modal: require('../src/Modal/Modal'),
   Notification: require('../src/Notification/Notification'),
   Pagination: require('../src/Pagination/Pagination'),
+  Panel: require('../src/Panel/Panel'),
   Progress: require('../src/Progress/Progress'),
   Section: require('../src/Section/Section'),
   Table: require('../src/Table/Table'),
@@ -220,6 +221,11 @@ const pages = [
         title: 'Pagination',
         path: '/components/pagination',
         content: pageLoader(() => import('./pagination.js'))
+      },
+      {
+        title: 'Panel',
+        path: '/components/panel',
+        content: pageLoader(() => import('./panel.js'))
       },
       {
         title: 'Tabs',
