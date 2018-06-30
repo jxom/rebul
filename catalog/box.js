@@ -8,7 +8,13 @@ export default () =>
   markdown`
 ## Import
 
-${<CodeSpecimen lang="jsx">import Box from 'rebul/Box';</CodeSpecimen>}
+\`\`\`code
+  lang: jsx
+  ---
+  import Box from 'rebul/lib/Box';
+  // OR
+  import { Box } from 'rebul';
+  \`\`\`
 
 ## Usage
 

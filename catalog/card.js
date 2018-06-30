@@ -19,7 +19,9 @@ export default () =>
 \`\`\`code
 lang: jsx
 ---
-import Card from 'rebul/Card';
+import Card from 'rebul/lib/Card';
+// OR
+import { Card } from 'rebul';
 \`\`\`
 
 ### Card Header and Footer

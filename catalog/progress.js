@@ -12,7 +12,9 @@ export default () =>
 \`\`\`code
 lang: jsx
 ---
-import Progress from 'rebul/Progress';
+import Progress from 'rebul/lib/Progress';
+// OR
+import { Progress } from 'rebul';
 \`\`\`
 
 ## Usage

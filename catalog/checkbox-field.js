@@ -12,7 +12,9 @@ export default () =>
 \`\`\`code
 lang: jsx
 ---
-import CheckboxField from 'rebul/CheckboxField';
+import CheckboxField from 'rebul/lib/CheckboxField';
+// OR
+import { CheckboxField } from 'rebul';
 \`\`\`
 
 ## Usage

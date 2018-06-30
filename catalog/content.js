@@ -7,7 +7,9 @@ export default () =>
   \`\`\`code
   lang: jsx
   ---
-  import Content from 'rebul/Content';
+  import Content from 'rebul/lib/Content';
+  // OR
+  import { Content } from 'rebul';
   \`\`\`
 
   ## Usage

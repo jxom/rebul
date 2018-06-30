@@ -14,7 +14,9 @@ export default () =>
   \`\`\`code
   lang: jsx
   ---
-  import Breadcrumb from 'rebul/Breadcrumb';
+  import Breadcrumb from 'rebul/lib/Breadcrumb';
+  // OR
+  import { Breadcrumb } from 'rebul';
   \`\`\`
 
   ### Basic

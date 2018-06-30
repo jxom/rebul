@@ -12,7 +12,9 @@ export default () =>
 \`\`\`code
 lang: jsx
 ---
-import Title from 'rebul/Title';
+import Title from 'rebul/lib/Title';
+// OR
+import { Title } from 'rebul';
 \`\`\`
 
 ## Usage

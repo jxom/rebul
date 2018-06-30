@@ -15,7 +15,9 @@ export default () =>
   \`\`\`code
   lang: jsx
   ---
-  import Message from 'rebul/Message';
+  import Message from 'rebul/lib/Message';
+  // OR
+  import { Message } from 'rebul';
   \`\`\`
 
   ### Basic

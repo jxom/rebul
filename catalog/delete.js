@@ -12,7 +12,9 @@ export default () =>
 \`\`\`code
 lang: jsx
 ---
-import Delete from 'rebul/Delete';
+import Delete from 'rebul/lib/Delete';
+// OR
+import { Delete } from 'rebul';
 \`\`\`
 
 ## Usage

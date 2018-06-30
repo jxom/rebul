@@ -7,7 +7,9 @@ export default () =>
 \`\`\`code
 lang: jsx
 ---
-import Section from 'rebul/Section';
+import Section from 'rebul/lib/Section';
+// OR
+import { Section } from 'rebul';
 \`\`\`
 
 ## Usage

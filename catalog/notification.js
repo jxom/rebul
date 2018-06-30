@@ -12,7 +12,9 @@ export default () =>
 \`\`\`code
 lang: jsx
 ---
-import Notification from 'rebul/Notification';
+import Notification from 'rebul/lib/Notification';
+// OR
+import { Notification } from 'rebul';
 \`\`\`
 
 ## Usage

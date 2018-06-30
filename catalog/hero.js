@@ -11,7 +11,7 @@ export default () =>
 \`\`\`code
 lang: jsx
 ---
-import Hero from 'rebul/Hero';
+import Hero from 'rebul/lib/Hero';
 \`\`\`
 
 ## Usage

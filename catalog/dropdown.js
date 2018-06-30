@@ -15,7 +15,9 @@ export default () =>
   \`\`\`code
   lang: jsx
   ---
-  import Dropdown from 'rebul/Dropdown';
+  import Dropdown from 'rebul/lib/Dropdown';
+  // OR
+  import { Dropdown } from 'rebul';
   \`\`\`
 
   ### Basic

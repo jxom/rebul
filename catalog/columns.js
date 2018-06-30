@@ -14,8 +14,10 @@ export default () =>
 \`\`\`code
 lang: jsx
 ---
-import Columns from 'rebul/Columns';
-import Column from 'rebul/Column';
+import Columns from 'rebul/lib/Columns';
+import Column from 'rebul/lib/Column';
+// OR
+import { Column, Columns } from 'rebul';
 \`\`\`
 
 ## Usage

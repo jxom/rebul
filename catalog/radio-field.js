@@ -12,7 +12,9 @@ export default () =>
 \`\`\`code
 lang: jsx
 ---
-import RadioField from 'rebul/RadioField';
+import RadioField from 'rebul/lib/RadioField';
+// OR
+import { RadioField } from 'rebul';
 \`\`\`
 
 ## Usage

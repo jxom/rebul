@@ -7,7 +7,9 @@ export default () =>
 \`\`\`code
 lang: jsx
 ---
-import Footer from 'rebul/Footer';
+import Footer from 'rebul/lib/Footer';
+// OR
+import { Footer } from 'rebul';
 \`\`\`
 
 ## Usage

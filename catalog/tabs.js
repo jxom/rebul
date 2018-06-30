@@ -15,8 +15,10 @@ export default () =>
 \`\`\`code
 lang: jsx
 ---
-import Tab from 'rebul/Tab';
-import Tabs from 'rebul/Tabs';
+import Tab from 'rebul/lib/Tab';
+import Tabs from 'rebul/lib/Tabs';
+// OR
+import { Tabs, Tab } from 'rebul';
 \`\`\`
 
 ## Usage

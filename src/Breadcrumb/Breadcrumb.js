@@ -29,7 +29,7 @@ class Breadcrumb extends React.Component {
 
 Breadcrumb.propTypes = {
   /** Alignment of the breadcrumbs. Available values: `left`, `centered`, `right` */
-  align: PropTypes.oneOf(['left', 'centered', 'right']),
+  align: sharedPropTypes.align,
   children: PropTypes.node,
   className: PropTypes.string,
   /** Type of breadcrumb separator. Available values: `arrow`, `bullet`, `dot`, `succeeds` */

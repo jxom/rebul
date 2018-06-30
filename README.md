@@ -17,7 +17,7 @@ npm install rebul bulma
 Rebul does not depend on Bulma's stylesheets as we don't want to restrict you to any one version, hence you will have to import it yourself.
 
 ```jsx
-import Button from 'rebul/Button'; // or: import { Button } from 'rebul';
+import Button from 'rebul/lib/Button'; // or: import { Button } from 'rebul';
 import 'bulma/css/bulma.css';
 
 export default () => <Button color="primary">Hello world</Button>

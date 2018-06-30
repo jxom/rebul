@@ -13,8 +13,10 @@ export default () =>
 \`\`\`code
 lang: jsx
 ---
-import Tag from 'rebul/Tag';
-import Tags from 'rebul/Tags';
+import Tag from 'rebul/lib/Tag';
+import Tags from 'rebul/lib/Tags';
+// OR
+import { Tags, Tag } from 'rebul';
 \`\`\`
 
 ## Usage

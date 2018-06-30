@@ -15,8 +15,10 @@ export default () =>
 \`\`\`code
 lang: jsx
 ---
-import Button from 'rebul/Button';
-import Buttons from 'rebul/Buttons';
+import Button from 'rebul/lib/Button';
+import Buttons from 'rebul/lib/Buttons';
+// OR
+import { Button, Buttons } from 'rebul';
 \`\`\`
 
 ## Usage

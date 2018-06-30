@@ -27,7 +27,7 @@ Tabs.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   /** Alignment of the dropdown. Available values: `left`, `centered`, `right` */
-  align: PropTypes.oneOf(['left', 'centered', 'right']),
+  align: sharedPropTypes.align,
   /** Size of the tabs Available values: `small`, `medium`, `large` */
   size: sharedPropTypes.size,
   /** Are tabs box styled? */

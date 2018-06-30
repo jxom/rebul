@@ -1,6 +1,5 @@
 import React from 'react';
 import { markdown, TableSpecimen } from 'catalog';
-import Playground from 'component-playground';
 import parsePropTypes from './utils/parse-prop-types';
 
 import Container from '../src/Container/Container';
@@ -12,7 +11,9 @@ export default () =>
 \`\`\`code
 lang: jsx
 ---
-import Container from 'rebul/Container';
+import Container from 'rebul/lib/Container';
+// OR
+import { Container } from 'rebul';
 \`\`\`
 
 ## Usage

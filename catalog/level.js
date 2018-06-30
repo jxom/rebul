@@ -13,7 +13,9 @@ export default () =>
 \`\`\`code
 lang: jsx
 ---
-import Level from 'rebul/Level';
+import Level from 'rebul/lib/Level';
+// OR
+import { Level } from 'rebul';
 \`\`\`
 
 ### Basic

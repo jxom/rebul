@@ -11,7 +11,9 @@ export default () =>
 \`\`\`code
 lang: jsx
 ---
-import Media from 'rebul/Media';
+import Media from 'rebul/lib/Media';
+// OR
+import { Media } from 'rebul';
 \`\`\`
 
 ### Basic

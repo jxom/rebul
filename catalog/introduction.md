@@ -25,7 +25,7 @@ Rebul does not depend on Bulma's stylesheets as we don't want to restrict you to
 lang: jsx
 ---
 import 'bulma/css/bulma.css';
-import Button from 'rebul/Button'; // or: import { Button } from 'rebul';
+import Button from 'rebul/lib/Button'; // or: import { Button } from 'rebul';
 
 export default () => <Button color="primary">Hello world</Button>
 ```

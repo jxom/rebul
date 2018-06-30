@@ -13,7 +13,9 @@ export default () =>
   \`\`\`code
   lang: jsx
   ---
-  import Menu from 'rebul/Menu';
+  import Menu from 'rebul/lib/Menu';
+  // OR
+  import { Menu } from 'rebul';
   \`\`\`
 
   ### Basic

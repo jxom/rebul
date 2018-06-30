@@ -12,7 +12,9 @@ export default () =>
 \`\`\`code
 lang: jsx
 ---
-import Icon from 'rebul/Icon';
+import Icon from 'rebul/lib/Icon';
+// OR
+import { Icon } from 'rebul';
 \`\`\`
 
 ## Usage

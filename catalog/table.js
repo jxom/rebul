@@ -18,7 +18,9 @@ export default () =>
 \`\`\`code
 lang: jsx
 ---
-import Table from 'rebul/Table';
+import Table from 'rebul/lib/Table';
+// OR
+import { Table } from 'rebul';
 \`\`\`
 
 ## Usage

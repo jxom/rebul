@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 
+export const align = PropTypes.oneOf(['left', 'centered', 'right']);
 export const color = PropTypes.oneOf([
   'white',
   'light',

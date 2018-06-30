@@ -12,7 +12,9 @@ export default () =>
 \`\`\`code
 lang: jsx
 ---
-import SelectField from 'rebul/SelectField';
+import SelectField from 'rebul/lib/SelectField';
+// OR
+import { SelectField } from 'rebul';
 \`\`\`
 
 ## Usage

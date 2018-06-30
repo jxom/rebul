@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Toggle from 'react-toggled';
 
+import * as sharedPropTypes from '../_prop-types';
 import ClickOutside from '../utils/ClickOutside';
 import DropdownContent from './DropdownContent';
 import DropdownDivider from './DropdownDivider';
@@ -76,7 +77,7 @@ class Dropdown extends React.Component {
 
 Dropdown.propTypes = {
   /** Alignment of the dropdown. Available values: `left`, `centered`, `right` */
-  align: PropTypes.oneOf(['left', 'centered', 'right']),
+  align: sharedPropTypes.align,
   children: PropTypes.node,
   className: PropTypes.string,
   /** Close the menu when an item is clicked */

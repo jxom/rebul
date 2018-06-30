@@ -12,7 +12,9 @@ export default () =>
 \`\`\`code
 lang: jsx
 ---
-import TextAreaField from 'rebul/TextAreaField';
+import TextAreaField from 'rebul/lib/TextAreaField';
+// OR
+import { TextAreaField } from 'rebul';
 \`\`\`
 
 ## Usage

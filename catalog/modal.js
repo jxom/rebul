@@ -13,7 +13,9 @@ export default () =>
 \`\`\`code
 lang: jsx
 ---
-import Modal from 'rebul/Modal';
+import Modal from 'rebul/lib/Modal';
+// OR
+import { Modal } from 'rebul';
 \`\`\`
 
 ### Basic
