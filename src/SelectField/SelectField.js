@@ -34,13 +34,7 @@ const SelectField = ({
   ...props
 }) => {
   return (
-    <Field
-      id={id}
-      isHorizontal={isHorizontal}
-      label={labelName}
-      labelSize={labelSize}
-      {...props}
-    >
+    <Field id={id} isHorizontal={isHorizontal} label={labelName} labelSize={labelSize} {...props}>
       {(labelName || labelComponent) && (
         <FieldLabel isHorizontal={isHorizontal} isNormal size={labelSize}>
           {labelName || labelComponent}
