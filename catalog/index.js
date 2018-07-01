@@ -28,6 +28,7 @@ const imports = {
   Menu: require('../src/Menu/Menu'),
   Message: require('../src/Message/Message'),
   Modal: require('../src/Modal/Modal'),
+  Navbar: require('../src/Navbar/Navbar'),
   Notification: require('../src/Notification/Notification'),
   Pagination: require('../src/Pagination/Pagination'),
   Panel: require('../src/Panel/Panel'),
@@ -216,6 +217,11 @@ const pages = [
         title: 'Modal',
         path: '/components/modal',
         content: pageLoader(() => import('./modal.js'))
+      },
+      {
+        title: 'Navbar',
+        path: '/components/navbar',
+        content: pageLoader(() => import('./navbar.js'))
       },
       {
         title: 'Pagination',
