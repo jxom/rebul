@@ -5,7 +5,11 @@ import * as sharedPropTypes from '../_prop-types';
 
 const Icon = ({ className, color, iconClass, size, ...props }) => (
   <span
-    className={`icon ${classNames(size ? `is-${size}` : '', color ? `has-text-${color}` : '', className || '')}`}
+    className={classNames('icon', {
+      [`is-${size}`]: Boolean(size),
+      [`has-text-${color}`]: Boolean(color),
+      [className]: Boolean(className)
+    })}
     {...props}
   >
     <i className={iconClass} />

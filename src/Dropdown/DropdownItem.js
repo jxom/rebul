@@ -16,7 +16,10 @@ class DropdownItem extends React.PureComponent {
       <Consumer>
         {({ closeOnItemClick, hide }) => (
           <Element
-            className={classNames('dropdown-item', isActive ? 'is-active' : '', className || '')}
+            className={classNames('dropdown-item', {
+              'is-active': isActive,
+              [className]: Boolean(className)
+            })}
             {...props}
             onClick={e => this.handleClick({ e, closeOnItemClick, hide })}
           >

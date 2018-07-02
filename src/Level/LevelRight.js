@@ -5,7 +5,7 @@ import classNames from 'classnames';
 class LevelRight extends React.Component {
   render = () => {
     const { children, className } = this.props;
-    return <div className={classNames('level-right', className || '')}>{children}</div>;
+    return <div className={classNames('level-right', { [className]: Boolean(className) })}>{children}</div>;
   };
 }
 

@@ -6,7 +6,9 @@ class CardHeaderTitle extends React.Component {
   render = () => {
     const { children, className, element } = this.props;
     const Element = element || 'p';
-    return <Element className={classNames('card-header-title', className || '')}>{children}</Element>;
+    return (
+      <Element className={classNames('card-header-title', { [className]: Boolean(className) })}>{children}</Element>
+    );
   };
 }
 

@@ -5,7 +5,7 @@ import classNames from 'classnames';
 class MediaContent extends React.Component {
   render = () => {
     const { children, className } = this.props;
-    return <div className={classNames('media-content', className || '')}>{children}</div>;
+    return <div className={classNames('media-content', { [className]: Boolean(className) })}>{children}</div>;
   };
 }
 

@@ -14,7 +14,11 @@ class Message extends React.Component {
     const { children, className, color, textSize } = this.props;
     return (
       <div
-        className={classNames('message', className || '', color ? `is-${color}` : '', textSize ? `is-${textSize}` : '')}
+        className={classNames('message', {
+          [`is-${color}`]: Boolean(color),
+          [`is-${textSize}`]: Boolean(textSize),
+          [className]: Boolean(className)
+        })}
       >
         {children}
       </div>

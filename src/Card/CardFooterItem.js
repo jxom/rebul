@@ -7,7 +7,11 @@ class CardFooterItem extends React.Component {
     const { children, className, element, onClick, ...props } = this.props;
     const Element = element || 'div';
     return (
-      <Element className={classNames('card-footer-item', className || '')} onClick={onClick} {...props}>
+      <Element
+        className={classNames('card-footer-item', { [className]: Boolean(className) })}
+        onClick={onClick}
+        {...props}
+      >
         {children}
       </Element>
     );

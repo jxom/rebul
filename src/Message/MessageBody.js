@@ -6,7 +6,7 @@ class MessageBody extends React.Component {
   render = () => {
     const { children, className, element } = this.props;
     const Element = element || 'div';
-    return <Element className={classNames('message-body', className || '')}>{children}</Element>;
+    return <Element className={classNames('message-body', { [className]: Boolean(className) })}>{children}</Element>;
   };
 }
 

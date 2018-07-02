@@ -5,13 +5,13 @@ import * as sharedPropTypes from '../_prop-types';
 
 const FieldControl = ({ children, className, color, isExpanded, isLoading, leftIconName, rightIconName, ...props }) => (
   <div
-    className={`control ${classNames(
-      isExpanded ? 'is-expanded' : '',
-      isLoading ? 'is-loading' : '',
-      leftIconName ? 'has-icons-left' : '',
-      rightIconName ? 'has-icons-right' : '',
-      className || ''
-    )}`}
+    className={classNames('control', {
+      'is-expanded': isExpanded,
+      'is-loading': isLoading,
+      'has-icons-left': Boolean(leftIconName),
+      'has-icons-right': Boolean(rightIconName),
+      [className]: Boolean(className)
+    })}
   >
     {children}
     {leftIconName && (

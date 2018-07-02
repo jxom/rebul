@@ -5,7 +5,7 @@ import classNames from 'classnames';
 class CardHeader extends React.Component {
   render = () => {
     const { children, className } = this.props;
-    return <header className={classNames('card-header', className || '')}>{children}</header>;
+    return <header className={classNames('card-header', { [className]: Boolean(className) })}>{children}</header>;
   };
 }
 

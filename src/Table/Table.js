@@ -20,14 +20,14 @@ class Table extends React.Component {
     const { children, className, isBordered, isFullWidth, isHoverable, isNarrow, isStriped, ...props } = this.props;
     return (
       <table
-        className={`table ${classNames(
-          isBordered ? 'is-bordered' : '',
-          isFullWidth ? 'is-fullwidth' : '',
-          isHoverable ? 'is-hoverable' : '',
-          isNarrow ? 'is-narrow' : '',
-          isStriped ? 'is-striped' : '',
-          className || ''
-        )}`}
+        className={classNames('table', {
+          'is-bordered': isBordered,
+          'is-fullwidth': isFullWidth,
+          'is-hoverable': isHoverable,
+          'is-narrow': isNarrow,
+          'is-striped': isStriped,
+          [className]: Boolean(className)
+        })}
         {...props}
       >
         {children}

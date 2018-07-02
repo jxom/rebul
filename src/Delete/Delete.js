@@ -4,7 +4,13 @@ import classNames from 'classnames';
 import * as sharedPropTypes from '../_prop-types';
 
 const Delete = ({ className, element: Element, size, ...props }) => (
-  <Element className={classNames('delete', size ? `is-${size}` : '', className || '')} {...props} />
+  <Element
+    className={classNames('delete', {
+      [`is-${size}`]: Boolean(size),
+      [className]: Boolean(className)
+    })}
+    {...props}
+  />
 );
 
 Delete.propTypes = {

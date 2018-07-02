@@ -6,7 +6,13 @@ import Delete from '../Delete/Delete';
 
 const Notification = ({ children, className, color, onClickClose, ...props }) => {
   return (
-    <div className={`notification ${classNames(color ? `is-${color}` : '', className || '')}`} {...props}>
+    <div
+      className={classNames('notification', {
+        [`is-${color}`]: Boolean(color),
+        [className]: Boolean(className)
+      })}
+      {...props}
+    >
       {onClickClose && <Delete onClick={onClickClose} />}
       {children}
     </div>

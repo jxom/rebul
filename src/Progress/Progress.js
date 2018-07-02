@@ -6,7 +6,11 @@ import * as sharedPropTypes from '../_prop-types';
 const Progress = ({ children, className, color, maxValue, size, value, ...props }) => {
   return (
     <progress
-      className={`progress ${classNames(color ? `is-${color}` : '', size ? `is-${size}` : '', className || '')}`}
+      className={classNames('progress', {
+        [`is-${color}`]: color,
+        [`is-${size}`]: size,
+        [className]: Boolean(className)
+      })}
       max={maxValue}
       value={value}
       {...props}

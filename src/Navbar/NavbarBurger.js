@@ -6,7 +6,7 @@ const NavbarBrand = ({ className, isActive, onClick, target, ...props }) => (
   <a
     aria-label="menu"
     aria-expanded="false"
-    className={classNames('navbar-burger', isActive ? 'is-active' : '', className || '')}
+    className={classNames('navbar-burger', { 'is-active': Boolean(isActive), [className]: Boolean(className) })}
     data-target={target}
     onClick={onClick}
     role="button"
@@ -20,8 +20,10 @@ const NavbarBrand = ({ className, isActive, onClick, target, ...props }) => (
 
 NavbarBrand.propTypes = {
   className: PropTypes.string,
+  /** If true, the burger turns into a cross. */
   isActive: PropTypes.bool,
   onClick: PropTypes.func,
+  /** ID of the menu section. E.g. Value would be `'menu'` if <Navbar.Menu id="menu"> */
   target: PropTypes.string
 };
 

@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 const Buttons = ({ children, className, hasAddons, ...props }) => {
   return (
-    <div className={classNames('buttons', hasAddons ? 'has-addons' : '', className || '')} {...props}>
+    <div className={classNames('buttons', { 'has-addons': hasAddons, [className]: Boolean(className) })} {...props}>
       {children}
     </div>
   );

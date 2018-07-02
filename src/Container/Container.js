@@ -5,7 +5,14 @@ import classNames from 'classnames';
 const CONTAINER_SIZES = ['fluid', 'desktop', 'widescreen', 'fullhd'];
 
 const Container = ({ children, className, size }) => (
-  <div className={classNames('container', size ? `is-${size}` : '', className || '')}>{children}</div>
+  <div
+    className={classNames('container', {
+      [`is-${size}`]: Boolean(size),
+      [className]: Boolean(className)
+    })}
+  >
+    {children}
+  </div>
 );
 
 Container.propTypes = {

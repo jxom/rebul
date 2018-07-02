@@ -4,7 +4,13 @@ import classNames from 'classnames';
 import * as sharedPropTypes from '../_prop-types';
 
 const HelpText = ({ color, children }) => (
-  <p className={`help ${classNames(color ? `is-${color}` : '')}`}>{children}</p>
+  <p
+    className={classNames('help', {
+      [`is-${color}`]: color
+    })}
+  >
+    {children}
+  </p>
 );
 
 HelpText.propTypes = {

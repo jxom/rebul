@@ -3,7 +3,13 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const NavbarMenu = ({ children, className, isActive, ...props }) => (
-  <div className={classNames('navbar-menu', isActive ? 'is-active' : '', className || '')} {...props}>
+  <div
+    className={classNames('navbar-menu', {
+      'is-active': isActive,
+      [className]: Boolean(className)
+    })}
+    {...props}
+  >
     {children}
   </div>
 );
@@ -11,6 +17,7 @@ const NavbarMenu = ({ children, className, isActive, ...props }) => (
 NavbarMenu.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
+  /** If true, the menu is active */
   isActive: PropTypes.bool
 };
 

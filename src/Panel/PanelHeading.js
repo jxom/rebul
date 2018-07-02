@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const PanelHeading = ({ children, className, element: Element }) => (
-  <Element className={classNames('panel-heading', className || '')}>{children}</Element>
+  <Element className={classNames('panel-heading', { [className]: Boolean(className) })}>{children}</Element>
 );
 
 PanelHeading.propTypes = {

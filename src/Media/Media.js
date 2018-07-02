@@ -14,7 +14,7 @@ class Media extends React.Component {
 
   render = () => {
     const { children, className } = this.props;
-    return <article className={classNames('media', className || '')}>{children}</article>;
+    return <article className={classNames('media', { [className]: Boolean(className) })}>{children}</article>;
   };
 }
 

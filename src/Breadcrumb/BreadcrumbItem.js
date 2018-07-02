@@ -5,7 +5,7 @@ import classNames from 'classnames';
 const BreadcrumbItem = ({ icon, isActive, className, children, element, href, onClick, ...props }) => {
   const Element = element;
   return (
-    <li className={classNames(isActive ? 'is-active' : '', className || '')}>
+    <li className={classNames({ 'is-active': isActive, [className]: Boolean(className) })}>
       <Element
         onClick={onClick}
         {...(isActive ? { 'aria-current': 'page' } : {})}

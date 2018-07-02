@@ -31,7 +31,7 @@ class Modal extends React.Component {
                 hide,
                 toggle
               })}
-            <div className={classNames('modal', on ? 'is-active' : '', className || '')}>
+            <div className={classNames('modal', { 'is-active': on, [className]: Boolean(className) })}>
               <div className="modal-background" />
               <ClickOutside onClickOutside={hide}>
                 <div aria-modal="true" className="modal-content" role="dialog">

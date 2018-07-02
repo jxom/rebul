@@ -18,11 +18,11 @@ class Field extends React.Component {
     const { children, className, color, hasAddons, helpText, isHorizontal, ...props } = this.props;
     return (
       <div
-        className={`field ${classNames(
-          isHorizontal ? 'is-horizontal' : '',
-          hasAddons ? 'has-addons' : '',
-          className || ''
-        )}`}
+        className={classNames('field', {
+          'is-horizontal': isHorizontal,
+          'has-addons': hasAddons,
+          [className]: Boolean(className)
+        })}
         {...props}
       >
         {children}

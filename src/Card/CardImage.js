@@ -5,7 +5,7 @@ import classNames from 'classnames';
 class CardImage extends React.Component {
   render = () => {
     const { children, className } = this.props;
-    return <div className={classNames('card-image', className || '')}>{children}</div>;
+    return <div className={classNames('card-image', { [className]: Boolean(className) })}>{children}</div>;
   };
 }
 

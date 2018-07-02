@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 const Section = ({ children, className, ...props }) => {
   return (
-    <section className={`section ${className || ''}`} {...props}>
+    <section className={classNames('section', { [className]: Boolean(className) })} {...props}>
       {children}
     </section>
   );

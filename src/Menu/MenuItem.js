@@ -7,7 +7,7 @@ class MenuItem extends React.Component {
     const { children, className, element: Element, isActive, subMenu, ...props } = this.props;
     return (
       <li>
-        <Element className={classNames(isActive ? 'is-active' : '', className || '')} {...props}>
+        <Element className={classNames({ 'is-active': isActive, [className]: Boolean(className) })} {...props}>
           {children}
         </Element>
         {subMenu}

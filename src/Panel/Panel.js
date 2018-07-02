@@ -14,7 +14,7 @@ class Panel extends React.Component {
   render = () => {
     const { children, className, ...props } = this.props;
     return (
-      <nav className={classNames('panel', className || '')} {...props}>
+      <nav className={classNames('panel', { [className]: Boolean(className) })} {...props}>
         {children}
       </nav>
     );

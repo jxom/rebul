@@ -4,7 +4,13 @@ import classNames from 'classnames';
 
 const TableRow = ({ children, className, isSelected, ...props }) => {
   return (
-    <tr className={classNames(isSelected ? 'is-selected' : '', className || '')} {...props}>
+    <tr
+      className={classNames({
+        'is-selected': isSelected,
+        [className]: Boolean(className)
+      })}
+      {...props}
+    >
       {children}
     </tr>
   );

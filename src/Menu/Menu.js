@@ -13,7 +13,7 @@ class Menu extends React.Component {
 
   render = () => {
     const { children, className } = this.props;
-    return <aside className={classNames('menu', className || '')}>{children}</aside>;
+    return <aside className={classNames('menu', { [className]: Boolean(className) })}>{children}</aside>;
   };
 }
 

@@ -5,7 +5,7 @@ import classNames from 'classnames';
 class ModalCardHead extends React.Component {
   render = () => {
     const { children, className } = this.props;
-    return <header className={classNames('modal-card-head', className || '')}>{children}</header>;
+    return <header className={classNames('modal-card-head', { [className]: Boolean(className) })}>{children}</header>;
   };
 }
 

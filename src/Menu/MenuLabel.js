@@ -5,7 +5,7 @@ import classNames from 'classnames';
 class MenuLabel extends React.Component {
   render = () => {
     const { children, className, element: Element } = this.props;
-    return <Element className={classNames('menu-label', className || '')}>{children}</Element>;
+    return <Element className={classNames('menu-label', { [className]: Boolean(className) })}>{children}</Element>;
   };
 }
 

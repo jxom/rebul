@@ -47,26 +47,25 @@ const Column = ({
   sizeFullHD
 }) => (
   <div
-    className={classNames(
-      'column',
-      isNarrow ? 'is-narrow' : '',
-      isNarrowMobile ? 'is-narrow-mobile' : '',
-      isNarrowTablet ? 'is-narrow-tablet' : '',
-      isNarrowDesktop ? 'is-narrow-desktop' : '',
-      offset ? `is-offset-${offset}` : '',
-      offsetMobile ? `is-offset-${offsetMobile}-mobile` : '',
-      offsetTablet ? `is-offset-${offsetTablet}-tablet` : '',
-      offsetDesktop ? `is-offset-${offsetDesktop}-desktop` : '',
-      offsetWidescreen ? `is-offset-${offsetWidescreen}-widescreen` : '',
-      offsetFullHD ? `is-offset-${offsetFullHD}-fullhd` : '',
-      size ? `is-${size}` : '',
-      sizeMobile ? `is-${sizeMobile}-mobile` : '',
-      sizeTablet ? `is-${sizeTablet}-tablet` : '',
-      sizeDesktop ? `is-${sizeDesktop}-desktop` : '',
-      sizeWidescreen ? `is-${sizeWidescreen}-widescreen` : '',
-      sizeFullHD ? `is-${sizeFullHD}-fullhd` : '',
-      className || ''
-    )}
+    className={classNames('column', {
+      'is-narrow': isNarrow,
+      'is-narrow-mobile': isNarrowMobile,
+      'is-narrow-tablet': isNarrowTablet,
+      'is-narrow-desktop': isNarrowDesktop,
+      [`is-offset-${offset}`]: Boolean(offset),
+      [`is-offset-${offsetMobile}-mobile`]: Boolean(offsetMobile),
+      [`is-offset-${offsetTablet}-tablet`]: Boolean(offsetTablet),
+      [`is-offset-${offsetDesktop}-desktop`]: Boolean(offsetDesktop),
+      [`is-offset-${offsetWidescreen}-widescreen`]: Boolean(offsetWidescreen),
+      [`is-offset-${offsetFullHD}-fullhd`]: Boolean(offsetFullHD),
+      [`is-${size}`]: Boolean(size),
+      [`is-${sizeMobile}-mobile`]: Boolean(sizeMobile),
+      [`is-${sizeTablet}-tablet`]: Boolean(sizeTablet),
+      [`is-${sizeDesktop}-desktop`]: Boolean(sizeDesktop),
+      [`is-${sizeWidescreen}-widescreen`]: Boolean(sizeWidescreen),
+      [`is-${sizeFullHD}-fullhd`]: Boolean(sizeFullHD),
+      [className]: Boolean(className)
+    })}
   >
     {children}
   </div>

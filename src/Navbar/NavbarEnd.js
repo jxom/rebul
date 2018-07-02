@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const NavbarEnd = ({ children, className, ...props }) => (
-  <div className={classNames('navbar-end', className || '')} {...props}>
+  <div className={classNames('navbar-end', { [className]: Boolean(className) })} {...props}>
     {children}
   </div>
 );

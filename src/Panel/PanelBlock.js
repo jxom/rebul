@@ -3,7 +3,14 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const PanelBlock = ({ children, className, element: Element, isActive }) => (
-  <Element className={classNames('panel-block', isActive ? 'is-active' : '', className || '')}>{children}</Element>
+  <Element
+    className={classNames('panel-block', {
+      'is-active': isActive,
+      [className]: Boolean(className)
+    })}
+  >
+    {children}
+  </Element>
 );
 
 PanelBlock.propTypes = {

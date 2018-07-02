@@ -49,12 +49,12 @@ const TextAreaField = ({
               aria-label={labelName}
               autoComplete={autoComplete}
               autoFocus={autoFocus}
-              className={`textarea ${classNames(
-                color ? `is-${color}` : '',
-                inputSize ? `is-${inputSize}` : '',
-                state ? `is-${state}` : '',
-                className || ''
-              )}`}
+              className={classNames('textarea', {
+                [`is-${color}`]: color,
+                [`is-${inputSize}`]: inputSize,
+                [`is-${state}`]: state,
+                [className]: Boolean(className)
+              })}
               disabled={isDisabled}
               onBlur={onBlur}
               onChange={e => onChange && onChange(e.target.value, e)}

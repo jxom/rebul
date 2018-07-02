@@ -200,7 +200,7 @@ showSource: true
       <Navbar.Link {...getDropdownButtonProps()}>Docs</Navbar.Link>
     }
   >
-    <Navbar.Item element="a" href="#">
+    <Navbar.Item element="a" href="#" isActive>
       About
     </Navbar.Item>
     <Navbar.Item element="a" href="#">
@@ -223,7 +223,7 @@ showSource: true
       Docs
     </Navbar.Link>
     <Navbar.Dropdown>
-      <Navbar.Item element="a" href="#">
+      <Navbar.Item element="a" href="#" isActive>
         About
       </Navbar.Item>
       <Navbar.Item element="a" href="#">
@@ -245,7 +245,7 @@ showSource: true
       Docs
     </Navbar.Link>
     <Navbar.Dropdown>
-      <Navbar.Item element="a" href="#">
+      <Navbar.Item element="a" href="#" isActive>
         About
       </Navbar.Item>
       <Navbar.Item element="a" href="#">
@@ -271,7 +271,7 @@ showSource: true
           Docs
         </Navbar.Link>
         <Navbar.Dropdown>
-          <Navbar.Item element="a" href="#">
+          <Navbar.Item element="a" href="#" isActive>
             About
           </Navbar.Item>
           <Navbar.Item element="a" href="#">
@@ -286,7 +286,7 @@ showSource: true
           Docs
         </Navbar.Link>
         <Navbar.Dropdown isRight>
-          <Navbar.Item element="a" href="#">
+          <Navbar.Item element="a" href="#" isActive>
             About
           </Navbar.Item>
           <Navbar.Item element="a" href="#">
@@ -299,13 +299,497 @@ showSource: true
 </Navbar>
 \`\`\`
 
+#### Dropup
+
+If you would like a dropup menu, supply a \`isDropup\` along with \`hasDropdown\` to \`<Navbar.Item>\`.
+
+\`\`\`react
+showSource: true
+---
+<Navbar>
+  <Navbar.Item hasDropdown isDropup isHoverable>
+    <Navbar.Link>
+      Docs
+    </Navbar.Link>
+    <Navbar.Dropdown>
+      <Navbar.Item element="a" href="#" isActive>
+        About
+      </Navbar.Item>
+      <Navbar.Item element="a" href="#">
+        Contact
+      </Navbar.Item>
+    </Navbar.Dropdown>
+  </Navbar.Item>
+</Navbar>
+\`\`\`
+
+#### Boxed dropdowns
+
+\`\`\`react
+showSource: true
+---
+<Navbar isTransparent>
+  <Navbar.Item hasDropdown isHoverable>
+    <Navbar.Link>
+      Docs
+    </Navbar.Link>
+    <Navbar.Dropdown isBoxed>
+      <Navbar.Item element="a" href="#" isActive>
+        About
+      </Navbar.Item>
+      <Navbar.Item element="a" href="#">
+        Contact
+      </Navbar.Item>
+    </Navbar.Dropdown>
+  </Navbar.Item>
+</Navbar>
+\`\`\`
+
+#### Dropdown divider
+
+You can divide dropdown items using a \`<Navbar.Divider>\` component.
+
+\`\`\`react
+showSource: true
+---
+<Navbar>
+  <Navbar.Item hasDropdown isHoverable>
+    <Navbar.Link>
+      Docs
+    </Navbar.Link>
+    <Navbar.Dropdown>
+      <Navbar.Item element="a" href="#" isActive>
+        About
+      </Navbar.Item>
+      <Navbar.Item element="a" href="#">
+        Contact
+      </Navbar.Item>
+      <Navbar.Divider />
+      <Navbar.Item element="a" href="#">
+        More...
+      </Navbar.Item>
+    </Navbar.Dropdown>
+  </Navbar.Item>
+</Navbar>
+\`\`\`
+
+### Colors
+
+You can change the color of a \`<Navbar>\` component by supplying a \`color\` prop with one of the values:
+
+- \`primary\`
+- \`link\`
+- \`info\`
+- \`success\`
+- \`warning\`
+- \`danger\`
+- \`black\`
+- \`dark\`
+- \`light\`
+- \`white\`
+
+\`\`\`react
+<Navbar color="primary">
+  <Navbar.Brand>
+    <Navbar.Item element="a" href="https://bulma.io">
+      <img
+        src="https://bulma.io/images/bulma-logo-white.png"
+        alt="Bulma: a modern CSS framework based on Flexbox"
+        width="112"
+        height="28"
+      />
+    </Navbar.Item>
+    <Navbar.Burger />
+  </Navbar.Brand>
+  <Navbar.Menu>
+    <Navbar.Start>
+      <Navbar.Item element="a" href="#">
+        Home
+      </Navbar.Item>
+      <Navbar.Item element="a" href="#">
+        About
+      </Navbar.Item>
+      <Navbar.Item element="a" href="#">
+        Contact
+      </Navbar.Item>
+    </Navbar.Start>
+    <Navbar.End>
+      <Navbar.Item>
+        <Button color="primary">
+          <Icon iconClass="fa fa-download" style={{ marginRight: '5px' }} />
+          Download
+        </Button>
+      </Navbar.Item>
+    </Navbar.End>
+  </Navbar.Menu>
+</Navbar>
+\`\`\`
+
+\`\`\`react
+<Navbar color="link">
+  <Navbar.Brand>
+    <Navbar.Item element="a" href="https://bulma.io">
+      <img
+        src="https://bulma.io/images/bulma-logo-white.png"
+        alt="Bulma: a modern CSS framework based on Flexbox"
+        width="112"
+        height="28"
+      />
+    </Navbar.Item>
+    <Navbar.Burger />
+  </Navbar.Brand>
+  <Navbar.Menu>
+    <Navbar.Start>
+      <Navbar.Item element="a" href="#">
+        Home
+      </Navbar.Item>
+      <Navbar.Item element="a" href="#">
+        About
+      </Navbar.Item>
+      <Navbar.Item element="a" href="#">
+        Contact
+      </Navbar.Item>
+    </Navbar.Start>
+    <Navbar.End>
+      <Navbar.Item>
+        <Button color="primary">
+          <Icon iconClass="fa fa-download" style={{ marginRight: '5px' }} />
+          Download
+        </Button>
+      </Navbar.Item>
+    </Navbar.End>
+  </Navbar.Menu>
+</Navbar>
+\`\`\`
+
+\`\`\`react
+<Navbar color="info">
+  <Navbar.Brand>
+    <Navbar.Item element="a" href="https://bulma.io">
+      <img
+        src="https://bulma.io/images/bulma-logo-white.png"
+        alt="Bulma: a modern CSS framework based on Flexbox"
+        width="112"
+        height="28"
+      />
+    </Navbar.Item>
+    <Navbar.Burger />
+  </Navbar.Brand>
+  <Navbar.Menu>
+    <Navbar.Start>
+      <Navbar.Item element="a" href="#">
+        Home
+      </Navbar.Item>
+      <Navbar.Item element="a" href="#">
+        About
+      </Navbar.Item>
+      <Navbar.Item element="a" href="#">
+        Contact
+      </Navbar.Item>
+    </Navbar.Start>
+    <Navbar.End>
+      <Navbar.Item>
+        <Button color="primary">
+          <Icon iconClass="fa fa-download" style={{ marginRight: '5px' }} />
+          Download
+        </Button>
+      </Navbar.Item>
+    </Navbar.End>
+  </Navbar.Menu>
+</Navbar>
+\`\`\`
+
+\`\`\`react
+<Navbar color="success">
+  <Navbar.Brand>
+    <Navbar.Item element="a" href="https://bulma.io">
+      <img
+        src="https://bulma.io/images/bulma-logo-white.png"
+        alt="Bulma: a modern CSS framework based on Flexbox"
+        width="112"
+        height="28"
+      />
+    </Navbar.Item>
+    <Navbar.Burger />
+  </Navbar.Brand>
+  <Navbar.Menu>
+    <Navbar.Start>
+      <Navbar.Item element="a" href="#">
+        Home
+      </Navbar.Item>
+      <Navbar.Item element="a" href="#">
+        About
+      </Navbar.Item>
+      <Navbar.Item element="a" href="#">
+        Contact
+      </Navbar.Item>
+    </Navbar.Start>
+    <Navbar.End>
+      <Navbar.Item>
+        <Button color="primary">
+          <Icon iconClass="fa fa-download" style={{ marginRight: '5px' }} />
+          Download
+        </Button>
+      </Navbar.Item>
+    </Navbar.End>
+  </Navbar.Menu>
+</Navbar>
+\`\`\`
+
+\`\`\`react
+<Navbar color="warning">
+  <Navbar.Brand>
+    <Navbar.Item element="a" href="https://bulma.io">
+      <img
+        src="https://bulma.io/images/bulma-logo.png"
+        alt="Bulma: a modern CSS framework based on Flexbox"
+        width="112"
+        height="28"
+      />
+    </Navbar.Item>
+    <Navbar.Burger />
+  </Navbar.Brand>
+  <Navbar.Menu>
+    <Navbar.Start>
+      <Navbar.Item element="a" href="#">
+        Home
+      </Navbar.Item>
+      <Navbar.Item element="a" href="#">
+        About
+      </Navbar.Item>
+      <Navbar.Item element="a" href="#">
+        Contact
+      </Navbar.Item>
+    </Navbar.Start>
+    <Navbar.End>
+      <Navbar.Item>
+        <Button color="primary">
+          <Icon iconClass="fa fa-download" style={{ marginRight: '5px' }} />
+          Download
+        </Button>
+      </Navbar.Item>
+    </Navbar.End>
+  </Navbar.Menu>
+</Navbar>
+\`\`\`
+
+
+\`\`\`react
+<Navbar color="danger">
+  <Navbar.Brand>
+    <Navbar.Item element="a" href="https://bulma.io">
+      <img
+        src="https://bulma.io/images/bulma-logo-white.png"
+        alt="Bulma: a modern CSS framework based on Flexbox"
+        width="112"
+        height="28"
+      />
+    </Navbar.Item>
+    <Navbar.Burger />
+  </Navbar.Brand>
+  <Navbar.Menu>
+    <Navbar.Start>
+      <Navbar.Item element="a" href="#">
+        Home
+      </Navbar.Item>
+      <Navbar.Item element="a" href="#">
+        About
+      </Navbar.Item>
+      <Navbar.Item element="a" href="#">
+        Contact
+      </Navbar.Item>
+    </Navbar.Start>
+    <Navbar.End>
+      <Navbar.Item>
+        <Button color="primary">
+          <Icon iconClass="fa fa-download" style={{ marginRight: '5px' }} />
+          Download
+        </Button>
+      </Navbar.Item>
+    </Navbar.End>
+  </Navbar.Menu>
+</Navbar>
+\`\`\`
+
+
+\`\`\`react
+<Navbar color="black">
+  <Navbar.Brand>
+    <Navbar.Item element="a" href="https://bulma.io">
+      <img
+        src="https://bulma.io/images/bulma-logo-white.png"
+        alt="Bulma: a modern CSS framework based on Flexbox"
+        width="112"
+        height="28"
+      />
+    </Navbar.Item>
+    <Navbar.Burger />
+  </Navbar.Brand>
+  <Navbar.Menu>
+    <Navbar.Start>
+      <Navbar.Item element="a" href="#">
+        Home
+      </Navbar.Item>
+      <Navbar.Item element="a" href="#">
+        About
+      </Navbar.Item>
+      <Navbar.Item element="a" href="#">
+        Contact
+      </Navbar.Item>
+    </Navbar.Start>
+    <Navbar.End>
+      <Navbar.Item>
+        <Button color="primary">
+          <Icon iconClass="fa fa-download" style={{ marginRight: '5px' }} />
+          Download
+        </Button>
+      </Navbar.Item>
+    </Navbar.End>
+  </Navbar.Menu>
+</Navbar>
+\`\`\`
+
+
+\`\`\`react
+<Navbar color="dark">
+  <Navbar.Brand>
+    <Navbar.Item element="a" href="https://bulma.io">
+      <img
+        src="https://bulma.io/images/bulma-logo-white.png"
+        alt="Bulma: a modern CSS framework based on Flexbox"
+        width="112"
+        height="28"
+      />
+    </Navbar.Item>
+    <Navbar.Burger />
+  </Navbar.Brand>
+  <Navbar.Menu>
+    <Navbar.Start>
+      <Navbar.Item element="a" href="#">
+        Home
+      </Navbar.Item>
+      <Navbar.Item element="a" href="#">
+        About
+      </Navbar.Item>
+      <Navbar.Item element="a" href="#">
+        Contact
+      </Navbar.Item>
+    </Navbar.Start>
+    <Navbar.End>
+      <Navbar.Item>
+        <Button color="primary">
+          <Icon iconClass="fa fa-download" style={{ marginRight: '5px' }} />
+          Download
+        </Button>
+      </Navbar.Item>
+    </Navbar.End>
+  </Navbar.Menu>
+</Navbar>
+\`\`\`
+
+
+\`\`\`react
+<Navbar color="light">
+  <Navbar.Brand>
+    <Navbar.Item element="a" href="https://bulma.io">
+      <img
+        src="https://bulma.io/images/bulma-logo.png"
+        alt="Bulma: a modern CSS framework based on Flexbox"
+        width="112"
+        height="28"
+      />
+    </Navbar.Item>
+    <Navbar.Burger />
+  </Navbar.Brand>
+  <Navbar.Menu>
+    <Navbar.Start>
+      <Navbar.Item element="a" href="#">
+        Home
+      </Navbar.Item>
+      <Navbar.Item element="a" href="#">
+        About
+      </Navbar.Item>
+      <Navbar.Item element="a" href="#">
+        Contact
+      </Navbar.Item>
+    </Navbar.Start>
+    <Navbar.End>
+      <Navbar.Item>
+        <Button color="primary">
+          <Icon iconClass="fa fa-download" style={{ marginRight: '5px' }} />
+          Download
+        </Button>
+      </Navbar.Item>
+    </Navbar.End>
+  </Navbar.Menu>
+</Navbar>
+\`\`\`
+
+
+\`\`\`react
+<Navbar color="white">
+  <Navbar.Brand>
+    <Navbar.Item element="a" href="https://bulma.io">
+      <img
+        src="https://bulma.io/images/bulma-logo.png"
+        alt="Bulma: a modern CSS framework based on Flexbox"
+        width="112"
+        height="28"
+      />
+    </Navbar.Item>
+    <Navbar.Burger />
+  </Navbar.Brand>
+  <Navbar.Menu>
+    <Navbar.Start>
+      <Navbar.Item element="a" href="#">
+        Home
+      </Navbar.Item>
+      <Navbar.Item element="a" href="#">
+        About
+      </Navbar.Item>
+      <Navbar.Item element="a" href="#">
+        Contact
+      </Navbar.Item>
+    </Navbar.Start>
+    <Navbar.End>
+      <Navbar.Item>
+        <Button color="primary">
+          <Icon iconClass="fa fa-download" style={{ marginRight: '5px' }} />
+          Download
+        </Button>
+      </Navbar.Item>
+    </Navbar.End>
+  </Navbar.Menu>
+</Navbar>
+\`\`\`
 
   ## Playground
 
 ${(
     <Playground
       codeText={`<Navbar>
- test
+  <Navbar.Brand>
+    <Navbar.Item element="a" href="https://bulma.io">
+      <img
+        src="https://bulma.io/images/bulma-logo.png"
+        alt="Bulma: a modern CSS framework based on Flexbox"
+        width="112"
+        height="28"
+      />
+    </Navbar.Item>
+    <Navbar.Burger />
+  </Navbar.Brand>
+  <Navbar.Menu>
+    <Navbar.Item element="a" href="#">
+      Home
+    </Navbar.Item>
+    <Navbar.Item element="a" href="#">
+      About
+    </Navbar.Item>
+    <Navbar.Item element="a" href="#">
+      Contact
+    </Navbar.Item>
+  </Navbar.Menu>
 </Navbar>`}
       scope={{ React, Navbar }}
       theme="dracula"
@@ -315,6 +799,42 @@ ${(
 ## \`<Navbar>\` Props
 
 ${<TableSpecimen rows={parsePropTypes(Navbar)} />}
+
+## \`<Navbar.Brand>\` Props
+
+${<TableSpecimen rows={parsePropTypes(Navbar.Brand)} />}
+
+## \`<Navbar.Burger>\` Props
+
+${<TableSpecimen rows={parsePropTypes(Navbar.Burger)} />}
+
+## \`<Navbar.Divider>\` Props
+
+${<TableSpecimen rows={parsePropTypes(Navbar.Divider)} />}
+
+## \`<Navbar.Dropdown>\` Props
+
+${<TableSpecimen rows={parsePropTypes(Navbar.Dropdown)} />}
+
+## \`<Navbar.End>\` Props
+
+${<TableSpecimen rows={parsePropTypes(Navbar.End)} />}
+
+## \`<Navbar.Item>\` Props
+
+${<TableSpecimen rows={parsePropTypes(Navbar.Item)} />}
+
+## \`<Navbar.Link>\` Props
+
+${<TableSpecimen rows={parsePropTypes(Navbar.Link)} />}
+
+## \`<Navbar.Menu>\` Props
+
+${<TableSpecimen rows={parsePropTypes(Navbar.Menu)} />}
+
+## \`<Navbar.Start>\` Props
+
+${<TableSpecimen rows={parsePropTypes(Navbar.Start)} />}
 
 
 ## Reference

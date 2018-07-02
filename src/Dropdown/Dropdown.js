@@ -41,13 +41,13 @@ class Dropdown extends React.Component {
       <Toggle defaultOn={initiallyIsActive} {...(isActive !== null ? { on: isActive } : {})}>
         {({ getTogglerElementProps, getTogglerProps, on, setOn: show, setOff: hide, toggle }) => (
           <div
-            className={`dropdown ${classNames(
-              align ? `is-${align}` : '',
-              on ? 'is-active' : '',
-              isDropup ? 'is-up' : '',
-              isHoverable ? 'is-hoverable' : '',
-              className || ''
-            )}`}
+            className={classNames('dropdown', {
+              [`is-${align}`]: align,
+              'is-active': on,
+              'is-up': Boolean(isDropup),
+              'is-hoverable': Boolean(isHoverable),
+              [className]: Boolean(className)
+            })}
             {...props}
           >
             <ClickOutside onClickOutside={hide}>

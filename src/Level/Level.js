@@ -12,7 +12,9 @@ class Level extends React.Component {
 
   render = () => {
     const { children, className, isMobile } = this.props;
-    return <div className={classNames('level', isMobile ? 'is-mobile' : '', className || '')}>{children}</div>;
+    return (
+      <div className={classNames('level', { 'is-mobile': isMobile, [className]: Boolean(className) })}>{children}</div>
+    );
   };
 }
 

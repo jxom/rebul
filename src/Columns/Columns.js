@@ -4,13 +4,12 @@ import classNames from 'classnames';
 
 const Columns = ({ breakpoint, children, className, isGapless, isMultiline }) => (
   <div
-    className={classNames(
-      'columns',
-      breakpoint ? `is-${breakpoint}` : '',
-      isGapless ? 'is-gapless' : '',
-      isMultiline ? 'is-multiline' : '',
-      className || ''
-    )}
+    className={classNames('columns', {
+      [`is-${breakpoint}`]: breakpoint,
+      'is-gapless': isGapless,
+      'is-multiline': isMultiline,
+      [className]: Boolean(className)
+    })}
   >
     {children}
   </div>

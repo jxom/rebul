@@ -6,7 +6,7 @@ class ModalCardTitle extends React.Component {
   render = () => {
     const { children, className } = this.props;
     return (
-      <p id="modal-title" className={classNames('modal-card-title', className || '')}>
+      <p id="modal-title" className={classNames('modal-card-title', { [className]: Boolean(className) })}>
         {children}
       </p>
     );

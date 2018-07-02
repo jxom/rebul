@@ -4,7 +4,13 @@ import classNames from 'classnames';
 
 const Tags = ({ children, className, hasAddons, ...props }) => {
   return (
-    <div className={classNames('tags', hasAddons ? 'has-addons' : '', className || '')} {...props}>
+    <div
+      className={classNames('tags', {
+        'has-addons': hasAddons,
+        [className]: Boolean(className)
+      })}
+      {...props}
+    >
       {children}
     </div>
   );

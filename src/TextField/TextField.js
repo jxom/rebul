@@ -67,13 +67,13 @@ const TextField = ({
               aria-label={labelName}
               autoComplete={autoComplete}
               autoFocus={autoFocus}
-              className={`input ${classNames(
-                color ? `is-${color}` : '',
-                inputSize ? `is-${inputSize}` : '',
-                isRounded ? 'is-rounded' : '',
-                state ? `is-${state}` : '',
-                className || ''
-              )}`}
+              className={classNames('input', {
+                [`is-${color}`]: Boolean(color),
+                [`is-${inputSize}`]: Boolean(inputSize),
+                [`is-${state}`]: Boolean(state),
+                'is-rounded': isRounded,
+                [className]: Boolean(className)
+              })}
               disabled={isDisabled}
               max={max}
               maxLength={maxLength}

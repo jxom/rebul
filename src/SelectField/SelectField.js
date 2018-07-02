@@ -44,14 +44,14 @@ const SelectField = ({
         <Field color={color} helpText={helpText}>
           <FieldControl leftIconName={leftIconName}>
             <div
-              className={`select ${classNames(
-                color ? `is-${color}` : '',
-                isLoading ? 'is-loading' : '',
-                isMultiSelect ? 'is-multiple' : '',
-                isRounded ? 'is-rounded' : '',
-                inputSize ? `is-${inputSize}` : '',
-                className || ''
-              )}`}
+              className={classNames('select', {
+                [`is-${color}`]: color,
+                [`is-${inputSize}`]: inputSize,
+                'is-loading': isLoading,
+                'is-multiple': isMultiSelect,
+                'is-rounded': isRounded,
+                [className]: Boolean(className)
+              })}
               disabled={isDisabled}
             >
               <select

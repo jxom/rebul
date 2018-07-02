@@ -6,16 +6,15 @@ import * as sharedPropTypes from '../_prop-types';
 const Tabs = ({ children, className, align, size, isBoxed, isToggle, isToggleRounded, isFullWidth, ...props }) => {
   return (
     <div
-      className={classNames(
-        'tabs',
-        align ? `is-${align}` : '',
-        size ? `is-${size}` : '',
-        isBoxed ? 'is-boxed' : '',
-        isToggle ? 'is-toggle' : '',
-        isToggleRounded ? 'is-toggle-rounded' : '',
-        isFullWidth ? 'is-fullwidth' : '',
-        className || ''
-      )}
+      className={classNames('tabs', {
+        [`is-${align}`]: align,
+        [`is-${size}`]: size,
+        'is-boxed': isBoxed,
+        'is-toggle': isToggle,
+        'is-toggle-rounded': isToggleRounded,
+        'is-fullwidth': isFullWidth,
+        [className]: Boolean(className)
+      })}
       {...props}
     >
       <ul>{children}</ul>

@@ -20,12 +20,12 @@ const getDeleteWrapperMarginLeft = ({ children, size }) => {
 const Tag = ({ children, className, color, isRounded, onClickDelete, size, ...props }) => {
   return (
     <span
-      className={`tag ${classNames(
-        color ? `is-${color}` : '',
-        size ? `is-${size}` : '',
-        isRounded ? 'is-rounded' : '',
-        className || ''
-      )}`}
+      className={classNames('tag', {
+        [`is-${color}`]: Boolean(color),
+        [`is-${size}`]: Boolean(size),
+        'is-rounded': isRounded,
+        [className]: Boolean(className)
+      })}
       {...props}
     >
       {children}

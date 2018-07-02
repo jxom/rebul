@@ -4,7 +4,13 @@ import classNames from 'classnames';
 
 const Tab = ({ children, className, isActive, ...props }) => {
   return (
-    <li className={`${classNames(isActive ? 'is-active' : '', className || '')}`} {...props}>
+    <li
+      className={classNames({
+        'is-active': isActive,
+        [className]: Boolean(className)
+      })}
+      {...props}
+    >
       <a>{children}</a>
     </li>
   );

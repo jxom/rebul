@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 const Footer = ({ children, className, ...props }) => {
   return (
-    <footer className={`footer ${className || ''}`} {...props}>
+    <footer className={classNames('footer', { [className]: Boolean(className) })} {...props}>
       {children}
     </footer>
   );

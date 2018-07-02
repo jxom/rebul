@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const HeroHead = ({ children, className }) => (
-  <div className={classNames('hero-body', className || '')}>{children}</div>
+  <div className={classNames('hero-body', { [className]: Boolean(className) })}>{children}</div>
 );
 
 HeroHead.propTypes = {

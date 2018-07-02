@@ -6,12 +6,13 @@ const Title = ({ children, className, element, isSpaced, isSubTitle, size, ...pr
   const Element = element || `h${size || '1'}`;
   return (
     <Element
-      className={classNames(
-        isSubTitle ? 'subtitle' : 'title',
-        size ? `is-${size}` : '',
-        isSpaced ? 'is-spaced' : '',
-        className || ''
-      )}
+      className={classNames({
+        [`is-${size}`]: Boolean(size),
+        'is-spaced': isSpaced,
+        title: !isSubTitle,
+        subtitle: isSubTitle,
+        [className]: Boolean(className)
+      })}
       {...props}
     >
       {children}

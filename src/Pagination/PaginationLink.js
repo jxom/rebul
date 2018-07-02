@@ -5,7 +5,10 @@ import classNames from 'classnames';
 const PaginationLink = ({ children, className, element: Element, isCurrent, isDisabled, onClick, ...props }) => (
   <li>
     <Element
-      className={classNames('pagination-link', isCurrent ? 'is-current' : '', className || '')}
+      className={classNames('pagination-link', {
+        'is-current': isCurrent,
+        [className]: Boolean(className)
+      })}
       disabled={isDisabled}
       onClick={onClick}
       tabIndex={0}

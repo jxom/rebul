@@ -5,7 +5,7 @@ import classNames from 'classnames';
 class MenuList extends React.Component {
   render = () => {
     const { children, className } = this.props;
-    return <ul className={classNames('menu-list', className || '')}>{children}</ul>;
+    return <ul className={classNames('menu-list', { [className]: Boolean(className) })}>{children}</ul>;
   };
 }
 

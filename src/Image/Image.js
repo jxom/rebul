@@ -3,7 +3,13 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const Image = ({ alt, className, size, src, ...props }) => (
-  <figure className={classNames('image', size ? `is-${size}x${size}` : '', className || '')} {...props}>
+  <figure
+    className={classNames('image', {
+      [`is-${size}x${size}`]: Boolean(size),
+      [className]: Boolean(className)
+    })}
+    {...props}
+  >
     <img src={src} alt={alt} />
   </figure>
 );

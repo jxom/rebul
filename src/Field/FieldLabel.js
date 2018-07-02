@@ -4,12 +4,24 @@ import classNames from 'classnames';
 import * as sharedPropTypes from '../_prop-types';
 
 const Label = ({ children, className, size }) => (
-  <label className={`label ${classNames(size ? `is-${size}` : '', className || '')}`}>{children}</label>
+  <label
+    className={classNames('label', {
+      [`is-${size}`]: Boolean(size),
+      [className]: Boolean(className)
+    })}
+  >
+    {children}
+  </label>
 );
 
 const FieldLabel = ({ children, className, isHorizontal, isNormal, size, ...props }) =>
   isHorizontal ? (
-    <div className={classNames(isHorizontal ? 'field-label' : '', isNormal ? 'is-normal' : '')}>
+    <div
+      className={classNames({
+        'field-label': isHorizontal,
+        'is-normal': isNormal
+      })}
+    >
       <Label className={className} size={size}>
         {children}
       </Label>

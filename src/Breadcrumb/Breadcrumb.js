@@ -13,12 +13,12 @@ class Breadcrumb extends React.Component {
     return (
       <nav
         aria-label="breadcrumbs"
-        className={`breadcrumb ${classNames(
-          align ? `is-${align}` : '',
-          separator ? `has-${separator}-separator` : '',
-          size ? `is-${size}` : '',
-          className || ''
-        )}`}
+        className={classNames('breadcrumb', {
+          [`is-${align}`]: Boolean(align),
+          [`has-${separator}-separator`]: Boolean(separator),
+          [`is-${size}`]: Boolean(size),
+          [className]: Boolean(className)
+        })}
         {...props}
       >
         <ul>{children}</ul>

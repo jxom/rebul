@@ -6,7 +6,7 @@ class LevelItem extends React.Component {
   render = () => {
     const { children, className, element } = this.props;
     const Element = element || 'div';
-    return <Element className={classNames('level-item', className || '')}>{children}</Element>;
+    return <Element className={classNames('level-item', { [className]: Boolean(className) })}>{children}</Element>;
   };
 }
 

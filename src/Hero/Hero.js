@@ -17,13 +17,12 @@ class Hero extends React.Component {
     const { children, className, color, isBold, size } = this.props;
     return (
       <div
-        className={classNames(
-          'hero',
-          size ? `is-${size}` : '',
-          color ? `is-${color}` : '',
-          isBold ? 'is-bold' : '',
-          className || ''
-        )}
+        className={classNames('hero', {
+          [`is-${size}`]: Boolean(size),
+          [`is-${color}`]: Boolean(color),
+          'is-bold': isBold,
+          [className]: Boolean(className)
+        })}
       >
         {children}
       </div>

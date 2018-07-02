@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 const Box = ({ children, className, ...props }) => {
   return (
-    <div className={`box ${className || ''}`} {...props}>
+    <div className={classNames('box', { [className]: Boolean(className) })} {...props}>
       {children}
     </div>
   );

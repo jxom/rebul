@@ -20,12 +20,12 @@ class Pagination extends React.Component {
     const { align, children, className, isRounded, size, ...props } = this.props;
     return (
       <nav
-        className={`pagination ${classNames(
-          align ? `is-${align}` : '',
-          isRounded ? 'is-rounded' : '',
-          size ? `is-${size}` : '',
-          className || ''
-        )}`}
+        className={classNames('pagination', {
+          [`is-${align}`]: Boolean(align),
+          [`is-${size}`]: Boolean(size),
+          'is-rounded': isRounded,
+          [className]: Boolean(className)
+        })}
         aria-label="pagination"
         {...props}
       >

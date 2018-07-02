@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const FieldBody = ({ children, className, ...props }) => (
-  <div className={`field-body ${classNames(className || '')}`}>{children}</div>
+  <div className={classNames('field-body', { [className]: Boolean(className) })}>{children}</div>
 );
 
 FieldBody.propTypes = {

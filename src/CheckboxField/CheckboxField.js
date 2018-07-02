@@ -54,7 +54,7 @@ class CheckboxField extends React.Component {
         <FieldBody>
           <Field color={color} helpText={helpText}>
             <FieldControl>
-              <label className={classNames('checkbox', className || '')} disabled={isDisabled}>
+              <label className={classNames('checkbox', { [className]: Boolean(className) })} disabled={isDisabled}>
                 <input
                   aria-label={labelName}
                   disabled={isDisabled}

@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 const PaginationNext = ({ children, className, element: Element, isDisabled, onClick, ...props }) => (
   <Element
-    className={classNames('pagination-next', className || '')}
+    className={classNames('pagination-next', { [className]: Boolean(className) })}
     disabled={isDisabled}
     onClick={onClick}
     tabIndex={0}

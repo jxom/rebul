@@ -21,18 +21,18 @@ const Button = ({
   const Element = element;
   return (
     <Element
-      className={`button ${classNames(
-        color ? `is-${color}` : '',
-        size ? `is-${size}` : '',
-        isInverted ? 'is-inverted' : '',
-        isLoading ? 'is-loading' : '',
-        isOutlined ? 'is-outlined' : '',
-        isRounded ? 'is-rounded' : '',
-        isSelected ? 'is-selected' : '',
-        isStatic ? 'is-static' : '',
-        state ? `is-${state}` : '',
-        className || ''
-      )}`}
+      className={classNames('button', {
+        [`is-${color}`]: Boolean(color),
+        [`is-${size}`]: Boolean(size),
+        'is-inverted': isInverted,
+        'is-loading': isLoading,
+        'is-outlined': isOutlined,
+        'is-rounded': isRounded,
+        'is-selected': isSelected,
+        'is-static': isStatic,
+        [`is-${state}`]: Boolean(state),
+        [className]: Boolean(className)
+      })}
       {...props}
     >
       {children}

@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 const PaginationEllipsis = ({ className }) => (
   <li>
-    <span className={classNames('pagination-ellipsis', className || '')}>&hellip;</span>
+    <span className={classNames('pagination-ellipsis', { [className]: Boolean(className) })}>&hellip;</span>
   </li>
 );
 
