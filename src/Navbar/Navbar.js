@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import Toggle from 'react-toggled';
 import * as sharedPropTypes from '../_prop-types';
 
 import NavbarBrand from './NavbarBrand';
@@ -13,8 +14,6 @@ import NavbarMenu from './NavbarMenu';
 import NavbarStart from './NavbarStart';
 import NavbarEnd from './NavbarEnd';
 
-// TODO: Control dropdown
-// TODO: Control mobile menu
 class Navbar extends React.Component {
   static Brand = NavbarBrand;
   static Burger = NavbarBurger;
@@ -26,8 +25,31 @@ class Navbar extends React.Component {
   static Menu = NavbarMenu;
   static Start = NavbarStart;
 
+  getBurgerProps = (props = {}, { isMenuActive, toggleMenuActive }) => ({
+    ...props,
+    isActive: isMenuActive,
+    onClick: () => {
+      props.onClick && props.onClick();
+      toggleMenuActive();
+    }
+  });
+
+  getMenuProps = (props = {}, { isMenuActive }) => ({
+    ...props,
+    isActive: isMenuActive
+  });
+
   render = () => {
-    const { children, className, color, isFixedBottom, isFixedTop, isTransparent, ...props } = this.props;
+    const {
+      children,
+      className,
+      color,
+      isMenuInitiallyActive,
+      isFixedBottom,
+      isFixedTop,
+      isTransparent,
+      ...props
+    } = this.props;
     return (
       <nav
         className={classNames('navbar', {
@@ -40,7 +62,21 @@ class Navbar extends React.Component {
         aria-label="navigation"
         {...props}
       >
-        {children}
+        {typeof children === 'function' ? (
+          <Toggle defaultOn={isMenuInitiallyActive}>
+            {({ on: isMenuActive, setOn: setMenuActive, setOff: setMenuInactive, toggle: toggleMenuActive }) =>
+              children({
+                getBurgerProps: props => this.getBurgerProps(props, { isMenuActive, toggleMenuActive }),
+                getMenuProps: props => this.getMenuProps(props, { isMenuActive }),
+                isMenuActive,
+                setMenuActive,
+                setMenuInactive
+              })
+            }
+          </Toggle>
+        ) : (
+          children
+        )}
       </nav>
     );
   };
@@ -51,6 +87,8 @@ Navbar.propTypes = {
   className: PropTypes.string,
   /** Color of the navbar. Available values: `white`, `light`, `dark`, `black`, `text`, `primary`, `link`, `info`, `success`, `warning`, `danger` */
   color: sharedPropTypes.color,
+  /** If true, the menu is active by default. */
+  isMenuInitiallyActive: PropTypes.bool,
   /** If true, fixes the navbar to the bottom of the page. */
   isFixedBottom: PropTypes.bool,
   /** If true, fixes the navbar to the top of the page. */
@@ -62,6 +100,7 @@ Navbar.propTypes = {
 Navbar.defaultProps = {
   className: null,
   color: null,
+  isMenuInitiallyActive: false,
   isFixedBottom: false,
   isFixedTop: false,
   isTransparent: false

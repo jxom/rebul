@@ -5,7 +5,7 @@ import classNames from 'classnames';
 const NavbarBrand = ({ className, isActive, onClick, target, ...props }) => (
   <a
     aria-label="menu"
-    aria-expanded="false"
+    aria-expanded={isActive ? 'true' : 'false'}
     className={classNames('navbar-burger', { 'is-active': Boolean(isActive), [className]: Boolean(className) })}
     data-target={target}
     onClick={onClick}

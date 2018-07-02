@@ -46,15 +46,57 @@ export default () =>
 
   You can add the \`isActive\` prop to \`<Navbar.Burger>\` to turn it into a cross.
 
-  ### Navbar menu
+  ### Navbar Menu
 
   The \`<Navbar.Menu>\` is also a direct child of \`<Navbar>\` and a sibling of \`<Navbar.Brand>\`.
 
   It is only visible on desktop devices (>= 1024px) and hidden on touch devices (< 1024px).
   To enable it for touch devices, supply an \`isActive\` prop to \`<Navbar.Menu>\`.
 
+  #### Controlled Menu
+
+  Rebul has the ability to control the state of the burger and menu, simply spread the \`getBurgerProps()\` and \`getMenuProps()\` props to \`<Navbar.Burger>\` and \`<Navbar.Menu>\` respectively.
+
   \`\`\`react
   showSource: true
+  ---
+<Navbar>
+  {({ getBurgerProps, getMenuProps }) => (
+    <React.Fragment>
+      <Navbar.Brand>
+        <Navbar.Item element="a" href="https://bulma.io">
+        <img
+          src="https://bulma.io/images/bulma-logo.png"
+          alt="Bulma: a modern CSS framework based on Flexbox"
+          width="112"
+          height="28"
+        />
+        </Navbar.Item>
+        <Navbar.Burger {...getBurgerProps()} />
+      </Navbar.Brand>
+      <Navbar.Menu {...getMenuProps()}>
+        <Navbar.Item element="a" href="#">
+          Home
+        </Navbar.Item>
+        <Navbar.Item element="a" href="#">
+          About
+        </Navbar.Item>
+        <Navbar.Item element="a" href="#">
+          Contact
+        </Navbar.Item>
+      </Navbar.Menu>
+    </React.Fragment>
+  )}
+</Navbar>
+  \`\`\`
+
+  #### Uncontrolled Menu
+
+  If you would like to control the menu state yourself, you can just use the \`onClick\`/\`isActive\` props on \`<Navbar.Burger>\` and \`<Navbar.Menu>\`.
+
+  \`\`\`react
+  showSource: true
+  state: { isMenuActive: false }
   ---
 <Navbar>
   <Navbar.Brand>
@@ -66,9 +108,12 @@ export default () =>
       height="28"
     />
     </Navbar.Item>
-    <Navbar.Burger />
+    <Navbar.Burger
+      isActive={state.isMenuActive}
+      onClick={() => setState(prevState => ({ isMenuActive: !prevState.isMenuActive }))}
+    />
   </Navbar.Brand>
-  <Navbar.Menu>
+  <Navbar.Menu isActive={state.isMenuActive}>
     <Navbar.Item element="a" href="#">
       Home
     </Navbar.Item>
@@ -186,7 +231,7 @@ lang: jsx
 
 ### Dropdown menu
 
-#### Clickable dropdown (uncontrolled logic)
+#### Clickable dropdown (controlled logic)
 
 \`<Navbar.Item>\` also convinently has the ability to control the logic of the dropdown. Just supply a \`hasDropdown\` prop (true/false) with a \`dropdownTrigger\` prop (trigger component), and \`<Navbar.Item>\` will return render props.
 
@@ -196,8 +241,8 @@ showSource: true
 <Navbar>
   <Navbar.Item
     hasDropdown
-    dropdownTrigger={({ getDropdownButtonProps }) =>
-      <Navbar.Link {...getDropdownButtonProps()}>Docs</Navbar.Link>
+    dropdownTrigger={({ getProps }) =>
+      <Navbar.Link {...getProps()}>Docs</Navbar.Link>
     }
   >
     <Navbar.Item element="a" href="#" isActive>
@@ -210,16 +255,19 @@ showSource: true
 </Navbar>
 \`\`\`
 
-#### Clickable dropdown (controlled logic)
+#### Clickable dropdown (uncontrolled logic)
 
 If you would like to control the navbar dropdown logic yourself. You can just use the native components.
 
 \`\`\`react
 showSource: true
+state: { isDropdownActive: false }
 ---
 <Navbar>
-  <Navbar.Item hasDropdown>
-    <Navbar.Link>
+  <Navbar.Item hasDropdown isActive={state.isDropdownActive}>
+    <Navbar.Link
+      onClick={() => setState(prevState => ({ isDropdownActive: !prevState.isDropdownActive }))}
+    >
       Docs
     </Navbar.Link>
     <Navbar.Dropdown>
