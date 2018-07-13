@@ -19,7 +19,7 @@ const Tags = ({ children, className, hasAddons, ...props }) => {
 Tags.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  hasAddons: PropTypes.boolean
+  hasAddons: PropTypes.bool
 };
 
 Tags.defaultProps = {

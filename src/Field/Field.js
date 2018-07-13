@@ -15,7 +15,8 @@ class Field extends React.Component {
   static Text = HelpText;
 
   render = () => {
-    const { children, className, color, hasAddons, helpText, isHorizontal, ...props } = this.props;
+    /* eslint-disable react/prop-types */
+    const { children, className, color, hasAddons, helpText, labelSize: _, isHorizontal, ...props } = this.props;
     return (
       <div
         className={classNames('field', {

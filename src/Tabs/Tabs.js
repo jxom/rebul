@@ -30,13 +30,13 @@ Tabs.propTypes = {
   /** Size of the tabs Available values: `small`, `medium`, `large` */
   size: sharedPropTypes.size,
   /** Are tabs box styled? */
-  isBoxed: PropTypes.boolean,
+  isBoxed: PropTypes.bool,
   /** Are tabs toggle styled? */
-  isToggle: PropTypes.boolean,
+  isToggle: PropTypes.bool,
   /** Are tabs rounded toggle styled? */
-  isToggleRounded: PropTypes.boolean,
+  isToggleRounded: PropTypes.bool,
   /** Are tabs fullwidth? */
-  isFullWidth: PropTypes.boolean
+  isFullWidth: PropTypes.bool
 };
 
 Tabs.defaultProps = {

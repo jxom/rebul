@@ -14,6 +14,5 @@ componentPaths.map(async componentPath => {
       return;
     }
     const component = JSON.parse(stdout);
-    console.log(component);
   } catch (err) {}
 });

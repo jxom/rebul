@@ -20,6 +20,7 @@ const imports = {
   Delete: require('../src/Delete/Delete'),
   Dropdown: require('../src/Dropdown/Dropdown'),
   Footer: require('../src/Footer/Footer'),
+  FileUpload: require('../src/FileUpload/FileUpload'),
   Hero: require('../src/Hero/Hero'),
   Icon: require('../src/Icon/Icon'),
   Image: require('../src/Image/Image'),
@@ -168,6 +169,11 @@ const pages = [
         title: 'Checkbox Field',
         path: '/form/checkbox-field',
         content: pageLoader(() => import('./checkbox-field.js'))
+      },
+      {
+        title: 'File Upload',
+        path: '/form/file-upload',
+        content: pageLoader(() => import('./file-upload.js'))
       },
       {
         title: 'Text Field',

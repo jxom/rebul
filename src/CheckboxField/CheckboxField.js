@@ -33,6 +33,7 @@ class CheckboxField extends React.Component {
       color,
       helpText,
       inputProps,
+      isChecked: _,
       isDisabled,
       isHorizontal,
       labelComponent,

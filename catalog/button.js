@@ -6,8 +6,6 @@ import parsePropTypes from './utils/parse-prop-types';
 import Button from '../src/Button/Button';
 import Buttons from '../src/Button/Buttons';
 
-console.log(Button.__docgenInfo);
-
 export default () =>
   markdown`
 ## Import
