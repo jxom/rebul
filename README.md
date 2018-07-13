@@ -1,10 +1,8 @@
 <p align="center"><img src="./rebul.png" width="300px"></img></p>
 
-# [Rebul](https://rebul.now.sh) (Work In Progress 🚧)
+# [Rebul](https://rebul.now.sh)
 
 > React UI Component Library built with the [Bulma CSS Framework](https://bulma.io/)
-
-This library is currently under development, meaning the component API's will most likely change. Please have a look at the [1.0.0 Roadmap](https://github.com/jxom/rebul/issues/1) for detailed progress of the status of each component, and where you might like to help out.
 
 ## Installation
 
@@ -17,11 +15,16 @@ npm install rebul bulma
 Rebul does not depend on Bulma's stylesheets as we don't want to restrict you to any one version, hence you will have to import it yourself.
 
 ```jsx
-import Button from 'rebul/lib/Button'; // or: import { Button } from 'rebul';
 import 'bulma/css/bulma.css';
+
+import Button from 'rebul/lib/Button'; // or: import { Button } from 'rebul';
 
 export default () => <Button color="primary">Hello world</Button>
 ```
+
+## Documentation
+
+[Go to the docs](https://rebul.now.sh/)
 
 ## Developing
 
