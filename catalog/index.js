@@ -39,6 +39,7 @@ const imports = {
   Tabs: require('../src/Tabs/Tabs'),
   Tag: require('../src/Tag/Tag'),
   Tags: require('../src/Tag/Tags'),
+  Tile: require('../src/Tile/Tile'),
   CheckboxField: require('../src/CheckboxField/CheckboxField'),
   TextField: require('../src/TextField/TextField'),
   TextAreaField: require('../src/TextAreaField/TextAreaField'),
@@ -92,6 +93,11 @@ const pages = [
         title: 'Section',
         path: '/elements/section',
         content: pageLoader(() => import('./section.js'))
+      },
+      {
+        title: 'Tile',
+        path: '/elements/tile',
+        content: pageLoader(() => import('./tile.js'))
       }
     ]
   },

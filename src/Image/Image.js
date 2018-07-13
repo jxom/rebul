@@ -19,13 +19,14 @@ Image.propTypes = {
   alt: PropTypes.string.isRequired,
   className: PropTypes.string,
   /** Size of image. Available values: `16`, `24`, `32`, `48`, `64`, `96`, `128` */
-  size: PropTypes.oneOf(['16', '24', '32', '48', '64', '96', '128']).isRequired,
+  size: PropTypes.oneOf(['16', '24', '32', '48', '64', '96', '128']),
   /** Image source URL */
   src: PropTypes.string.isRequired
 };
 
 Image.defaultProps = {
-  className: null
+  className: null,
+  size: null
 };
 
 export default Image;

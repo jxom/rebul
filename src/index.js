@@ -30,4 +30,5 @@ export * from './Table/index.js';
 export * from './Tag/index.js';
 export * from './TextAreaField/index.js';
 export * from './TextField/index.js';
+export * from './Tile/index.js';
 export * from './Title/index.js';
