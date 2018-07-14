@@ -81,8 +81,8 @@ const TextField = ({
               minLength={minLength}
               name={name}
               onBlur={onBlur}
-              onChange={e => onChange && onChange(e.target.value, e)}
-              onFocus={onBlur}
+              onChange={onChange}
+              onFocus={onFocus}
               pattern={pattern}
               placeholder={placeholder}
               readOnly={isReadOnly}

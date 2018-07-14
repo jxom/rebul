@@ -59,8 +59,8 @@ const SelectField = ({
                 className={classNames(state ? `is-${state}` : '')}
                 multiple={isMultiSelect}
                 onBlur={onBlur}
-                onChange={e => onChange && onChange(e.target.value, e)}
-                onFocus={onBlur}
+                onChange={onChange}
+                onFocus={onFocus}
                 value={value}
                 {...inputProps}
               >

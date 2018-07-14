@@ -57,8 +57,8 @@ const TextAreaField = ({
               })}
               disabled={isDisabled}
               onBlur={onBlur}
-              onChange={e => onChange && onChange(e.target.value, e)}
-              onFocus={onBlur}
+              onChange={onChange}
+              onFocus={onFocus}
               placeholder={placeholder}
               readOnly={isReadOnly}
               rows={rows}
