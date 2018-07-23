@@ -54,45 +54,47 @@ const TextField = ({
         </FieldLabel>
       )}
       <FieldBody>
-        <Field color={color} hasAddons={Boolean(leftAddonComponent || rightAddonComponent)} helpText={helpText}>
-          {leftAddonComponent && <FieldControl>{leftAddonComponent}</FieldControl>}
-          <FieldControl
-            color={color}
-            isExpanded={isExpanded}
-            isLoading={isLoading}
-            leftIconName={leftIconName}
-            rightIconName={rightIconName}
-          >
-            <input
-              aria-label={labelName}
-              autoComplete={autoComplete}
-              autoFocus={autoFocus}
-              className={classNames('input', {
-                [`is-${color}`]: Boolean(color),
-                [`is-${inputSize}`]: Boolean(inputSize),
-                [`is-${state}`]: Boolean(state),
-                'is-rounded': isRounded,
-                [className]: Boolean(className)
-              })}
-              disabled={isDisabled}
-              max={max}
-              maxLength={maxLength}
-              min={min}
-              minLength={minLength}
-              name={name}
-              onBlur={onBlur}
-              onChange={onChange}
-              onFocus={onFocus}
-              pattern={pattern}
-              placeholder={placeholder}
-              readOnly={isReadOnly}
-              spellCheck={spellCheck}
-              step={step}
-              value={value}
-              {...inputProps}
-            />
-          </FieldControl>
-          {rightAddonComponent && <FieldControl>{rightAddonComponent}</FieldControl>}
+        <Field color={color} helpText={helpText}>
+          <Field hasAddons={Boolean(leftAddonComponent || rightAddonComponent)}>
+            {leftAddonComponent && <FieldControl>{leftAddonComponent}</FieldControl>}
+            <FieldControl
+              color={color}
+              isExpanded={isExpanded}
+              isLoading={isLoading}
+              leftIconName={leftIconName}
+              rightIconName={rightIconName}
+            >
+              <input
+                aria-label={labelName}
+                autoComplete={autoComplete}
+                autoFocus={autoFocus}
+                className={classNames('input', {
+                  [`is-${color}`]: Boolean(color),
+                  [`is-${inputSize}`]: Boolean(inputSize),
+                  [`is-${state}`]: Boolean(state),
+                  'is-rounded': isRounded,
+                  [className]: Boolean(className)
+                })}
+                disabled={isDisabled}
+                max={max}
+                maxLength={maxLength}
+                min={min}
+                minLength={minLength}
+                name={name}
+                onBlur={onBlur}
+                onChange={onChange}
+                onFocus={onFocus}
+                pattern={pattern}
+                placeholder={placeholder}
+                readOnly={isReadOnly}
+                spellCheck={spellCheck}
+                step={step}
+                value={value}
+                {...inputProps}
+              />
+            </FieldControl>
+            {rightAddonComponent && <FieldControl>{rightAddonComponent}</FieldControl>}
+          </Field>
         </Field>
       </FieldBody>
     </Field>

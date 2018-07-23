@@ -190,6 +190,7 @@ span: 3
   </span>}
   />
   <TextField
+    helpText="Enter your money"
     isExpanded
     labelName="Username"
     placeholder="Amount of money"
